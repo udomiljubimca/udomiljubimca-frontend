@@ -1,24 +1,24 @@
 .slider {
   position: relative;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 100%;
 }
 
 .image {
-  width: 1000px;
-  height: 600px;
+  width: 500px;
+  height: 300px;
   border-radius: 10px;
 }
 
 .right-arrow {
   position: absolute;
-  top: 50%;
-  right: 32px;
+  top: 45%;
+  right: 300px;
   font-size: 3rem;
-  color: #000;
+  color: #ff8b42;
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -26,10 +26,10 @@
 
 .left-arrow {
   position: absolute;
-  top: 50%;
-  left: 32px;
+  top: 45%;
+  left: 300px;
   font-size: 3rem;
-  color: #000;
+  color: #ff8b42;
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -44,4 +44,10 @@
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
 }

@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
 import './App.css';
-import Slider from './components/pet-profile/Slider';
-import { SliderData } from './components/pet-profile/SliderData';
+import Slider from './components/pet-profile/slider/Slider';
+import { SliderData } from './components/pet-profile/slider/SliderData';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className='App'>
-      <h1>Udomi ljubimca</h1>
+      <Header />
       <Slider slides={SliderData} />
     </div>
   );
