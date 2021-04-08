@@ -1,37 +1,31 @@
-import React, { useState } from "react";
-import { SliderData } from "./SliderData";
+import React from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import "./Slider.css";
 import Favorite from "./Favorite";
 
-const Slider = ({ slides }) => {
-  const [current, setCurrent] = useState(0);
-  const length = slides.length;
-
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
-
-  if (!Array.isArray(slides) || slides.length <= 0) {
+const Slider = (props) => {
+  if (!Array.isArray(props.slides) || props.slides.length <= 0) {
     return null;
   }
 
   return (
     <div className="container">
       <section className="slider">
-        <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-        <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-        {SliderData.map((slide, index) => {
+        <FaArrowAltCircleLeft
+          className="left-arrow"
+          onClick={props.prevSlide}
+        />
+        <FaArrowAltCircleRight
+          className="right-arrow"
+          onClick={props.nextSlide}
+        />
+        {props.slides.map((slide, index) => {
           return (
             <div
-              className={index === current ? "slide active" : "slide"}
+              className={index === props.current ? "slide active" : "slide"}
               key={index}
             >
-              {index === current && (
+              {index === props.current && (
                 <img src={slide.image} alt="" className="image" />
               )}
             </div>
