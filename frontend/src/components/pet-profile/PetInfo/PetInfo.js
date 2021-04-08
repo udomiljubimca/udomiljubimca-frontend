@@ -29,7 +29,20 @@ const PetInfo = () => {
         <p className="infoParagraphs">Karakter</p>
         <p className="infoParagraphs">Navike</p>
         <h3>Moja priča</h3>
-        <p>lorem</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          condimentum metus sed leo laoreet, at bibendum metus ultrices.
+          Praesent neque sapien, ultrices nec erat blandit, ultrices tincidunt
+          dui. Etiam at semper augue. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Vivamus vel velit sed nisl bibendum tristique sed sit
+          amet metus. Morbi at porttitor elit. Mauris quis lectus gravida,
+          tincidunt libero sed, venenatis leo. Praesent elementum, ipsum sed
+          eleifend lobortis, lorem mauris eleifend massa, in aliquet mauris urna
+          nec nisl. Cras at rhoncus velit. Nulla rhoncus risus scelerisque
+          mauris fringilla tincidunt. Sed nisl elit, aliquam ac odio sed,
+          porttitor congue ligula. Nam eget lectus ligula. Aliquam quis eleifend
+          massa.
+        </p>
       </div>
       <div className="mapInfo">
         <p>MAPA</p>
