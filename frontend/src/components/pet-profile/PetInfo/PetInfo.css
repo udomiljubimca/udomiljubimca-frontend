@@ -1,0 +1,27 @@
+.petInfo {
+  border: 1px solid gray;
+  margin: 25px auto;
+  height: 520px;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.infoAbout {
+  height: 95%;
+  width: 55%;
+}
+.mapInfo {
+  border: 1px solid blue;
+  height: 90%;
+  width: 40%;
+}
+.name {
+  margin: 0;
+}
+.pawIcon {
+  padding: 0 10px;
+}
+.infoParagraphs {
+  text-transform: uppercase;
+}
