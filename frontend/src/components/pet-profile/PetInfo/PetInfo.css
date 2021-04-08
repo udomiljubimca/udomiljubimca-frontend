@@ -25,3 +25,10 @@
 .infoParagraphs {
   text-transform: uppercase;
 }
+
+.favoriteImage {
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 200px;
+  margin-top: -50px;
+}

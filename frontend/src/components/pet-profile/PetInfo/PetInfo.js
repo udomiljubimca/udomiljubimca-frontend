@@ -1,38 +1,39 @@
-import React from "react";
+import React from 'react';
 
-import "./PetInfo.css";
-import { FaPaw } from "react-icons/fa";
-import { SliderData } from "../slider/SliderData";
+import './PetInfo.css';
+import { FaPaw } from 'react-icons/fa';
+import { SliderData } from '../slider/SliderData';
 
 const PetInfo = ({ current }) => {
   return (
-    <div className="petInfo">
-      <div className="infoAbout">
-        <h1 className="name">Naziv</h1>
+    <div className='petInfo'>
+      <div className='infoAbout'>
+        <h1 className='name'>Naziv</h1>
         <hr />
         <p>
           {SliderData[current].type}
-          <FaPaw className="pawIcon" />
+          <FaPaw className='pawIcon' />
           {SliderData[current].sex}
         </p>
         <hr />
         <p>
           {SliderData[current].size}
-          <FaPaw className="pawIcon" />
+          <FaPaw className='pawIcon' />
           {SliderData[current].sex}
-          <FaPaw className="pawIcon" />
+          <FaPaw className='pawIcon' />
           {SliderData[current].age}
-          <FaPaw className="pawIcon" />
+          <FaPaw className='pawIcon' />
           {SliderData[current].breed}
         </p>
-        <p className="infoParagraphs">Vakcine</p>
-        <p className="infoParagraphs">Zdravje</p>
-        <p className="infoParagraphs">Karakter</p>
-        <p className="infoParagraphs">Navike</p>
+        <p className='infoParagraphs'>Vakcine</p>
+        <p className='infoParagraphs'>Zdravlje</p>
+        <p className='infoParagraphs'>Karakter</p>
+        <p className='infoParagraphs'>Navike</p>
         <h3>Moja priča</h3>
         <p>{SliderData[current].description}</p>
       </div>
-      <div className="mapInfo">
+      <div className='mapInfo'>
+        <img className='favoriteImage' src={SliderData[current].image} alt='' />
         <p>MAPA</p>
       </div>
     </div>
