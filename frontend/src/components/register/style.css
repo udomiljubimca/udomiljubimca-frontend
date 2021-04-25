@@ -1,0 +1,24 @@
+h1 {
+    color: grey;
+}
+
+
+form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+
+.email {
+    width: 500px;
+    height: 40px;
+    font-size: 22px;
+    padding-left: 10px;
+}
+
+.details input{
+  width: 200px;
+  height: 40px;
+    
+}
