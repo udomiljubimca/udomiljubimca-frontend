@@ -1,0 +1,17 @@
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    background-color:#169DA8;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+li {
+
+    list-style-type: none;
+    font-size: 20px;
+}

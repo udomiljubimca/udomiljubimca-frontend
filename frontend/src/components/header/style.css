@@ -1,0 +1,19 @@
+
+
+li {
+
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background-color: #FFFFFF;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
