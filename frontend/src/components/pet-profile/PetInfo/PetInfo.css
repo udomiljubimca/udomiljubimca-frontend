@@ -1,11 +1,15 @@
 .petInfo {
   border: 1px solid gray;
   margin: 25px auto;
-  height: 520px;
+  min-height: 100vh;
   width: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+}
+.sliderDiv {
+  flex: 1;
 }
 .infoAbout {
   height: 95%;

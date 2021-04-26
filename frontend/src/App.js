@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 import "./App.css";
-import Slider from "./components/pet-profile/slider/Slider";
-import { SliderData } from "./components/pet-profile/slider/SliderData";
+import { SliderData } from "./components/pet-profile/Slider/SliderData";
 import Header from "./components/Header";
 import Cards from "./components/pet-profile/Cards/Cards";
 import PetInfo from "./components/pet-profile/PetInfo/PetInfo";
@@ -23,13 +22,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Slider
+      <PetInfo
         slides={SliderData}
         current={current}
         prevSlide={prevSlide}
         nextSlide={nextSlide}
       />
-      <PetInfo current={current} />
       <Cards />
       <Footer />
     </div>

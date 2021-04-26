@@ -2,38 +2,50 @@ import React from "react";
 
 import "./PetInfo.css";
 import { FaPaw } from "react-icons/fa";
-import { SliderData } from "../slider/SliderData";
+import { SliderData } from "../Slider/SliderData";
+import Slider from "../Slider/Slider";
 
-const PetInfo = ({ current }) => {
+const PetInfo = (props) => {
   return (
     <div className="petInfo">
+      <Slider
+        className="sliderDiv"
+        slides={props.slides}
+        current={props.current}
+        prevSlide={props.prevSlide}
+        nextSlide={props.nextSlide}
+      />
       <div className="infoAbout">
         <h1 className="name">Naziv</h1>
         <hr />
         <p>
-          {SliderData[current].type}
+          {SliderData[props.current].type}
           <FaPaw className="pawIcon" />
-          {SliderData[current].sex}
+          {SliderData[props.current].sex}
         </p>
         <hr />
         <p>
-          {SliderData[current].size}
+          {SliderData[props.current].size}
           <FaPaw className="pawIcon" />
-          {SliderData[current].sex}
+          {SliderData[props.current].sex}
           <FaPaw className="pawIcon" />
-          {SliderData[current].age}
+          {SliderData[props.current].age}
           <FaPaw className="pawIcon" />
-          {SliderData[current].breed}
+          {SliderData[props.current].breed}
         </p>
         <p className="infoParagraphs">Vakcine</p>
         <p className="infoParagraphs">Zdravlje</p>
         <p className="infoParagraphs">Karakter</p>
         <p className="infoParagraphs">Navike</p>
         <h3>Moja priča</h3>
-        <p>{SliderData[current].description}</p>
+        <p>{SliderData[props.current].description}</p>
       </div>
       <div className="mapInfo">
-        <img className="favoriteImage" src={SliderData[current].image} alt="" />
+        <img
+          className="favoriteImage"
+          src={SliderData[props.current].image}
+          alt=""
+        />
         <p>MAPA</p>
       </div>
     </div>
