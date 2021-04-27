@@ -1,12 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid hotpink;
+}
 .slider {
   position: relative;
   height: 50vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
-
 .image {
   width: 500px;
   height: 300px;
@@ -44,10 +49,4 @@
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  width: 80%;
 }

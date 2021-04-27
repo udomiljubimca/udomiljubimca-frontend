@@ -1,7 +1,6 @@
 import React from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import "./Slider.css";
-import Favorite from "./Favorite";
 
 const Slider = (props) => {
   if (!Array.isArray(props.slides) || props.slides.length <= 0) {
@@ -33,9 +32,10 @@ const Slider = (props) => {
         })}
       </section>
       <section>
-        <Favorite />
+        <div>mala slika</div>
+        <div>mala slika</div>
+        <div>mala slika</div>
       </section>
-      <section>{/* <ProfileCard /> */}</section>
     </div>
   );
 };

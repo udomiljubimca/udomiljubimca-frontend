@@ -1,52 +1,73 @@
 import React from "react";
 
 import "./PetInfo.css";
-import { FaPaw } from "react-icons/fa";
+import { FaPaw, FaHeart } from "react-icons/fa";
 import { SliderData } from "../Slider/SliderData";
 import Slider from "../Slider/Slider";
 
 const PetInfo = (props) => {
   return (
     <div className="petInfo">
-      <Slider
-        className="sliderDiv"
-        slides={props.slides}
-        current={props.current}
-        prevSlide={props.prevSlide}
-        nextSlide={props.nextSlide}
-      />
-      <div className="infoAbout">
-        <h1 className="name">Naziv</h1>
-        <hr />
-        <p>
-          {SliderData[props.current].type}
-          <FaPaw className="pawIcon" />
-          {SliderData[props.current].sex}
-        </p>
-        <hr />
-        <p>
-          {SliderData[props.current].size}
-          <FaPaw className="pawIcon" />
-          {SliderData[props.current].sex}
-          <FaPaw className="pawIcon" />
-          {SliderData[props.current].age}
-          <FaPaw className="pawIcon" />
-          {SliderData[props.current].breed}
-        </p>
-        <p className="infoParagraphs">Vakcine</p>
-        <p className="infoParagraphs">Zdravlje</p>
-        <p className="infoParagraphs">Karakter</p>
-        <p className="infoParagraphs">Navike</p>
-        <h3>Moja priča</h3>
-        <p>{SliderData[props.current].description}</p>
-      </div>
-      <div className="mapInfo">
-        <img
-          className="favoriteImage"
-          src={SliderData[props.current].image}
-          alt=""
+      <div className="wrapper">
+        <h1 className="petName">
+          Ime ljubimca : Lorem <FaHeart className="heartIconPetName" />
+        </h1>
+        <Slider
+          className="sliderDiv"
+          slides={props.slides}
+          current={props.current}
+          prevSlide={props.prevSlide}
+          nextSlide={props.nextSlide}
         />
-        <p>MAPA</p>
+        <div className="infoAbout">
+          <div className="leftInfoAbout">
+            <div className="infoAboutFirst indentP">
+              <p className="firstP">Naziv udruženja</p>
+              <FaPaw className="pawIcon" />
+              <p className="firstP">Beograd</p>
+              <FaPaw className="pawIcon" />
+              <p className="firstP">01.01.2021.</p>
+            </div>
+            <hr />
+            <p className="indentP">
+              {SliderData[props.current].type}
+              <FaPaw className="pawIcon" />
+              {SliderData[props.current].sex}
+              <FaPaw className="pawIcon" />
+              {SliderData[props.current].size}
+              <FaPaw className="pawIcon" />
+              {SliderData[props.current].age}
+            </p>
+            <hr />
+            <p className="infoParagraphs indentP">Vakcinisan: Da</p>
+            <p className="infoParagraphs indentP">Zdravlje: Dobro</p>
+            <p className="infoParagraphs indentP">Karakter: Lorem ipsum</p>
+            <p className="infoParagraphs indentP">Navike: Lorem ipsum</p>
+            <p className="infoParagraphs indentP">
+              Posebne potrebe: Lorem ipsum
+            </p>
+          </div>
+          <div className="rightInfoAbout">
+            <img
+              className="favoriteImage"
+              src={SliderData[props.current].image}
+              alt=""
+            />
+            <button>Udomi me</button>
+          </div>
+        </div>
+        <div className="mapInfo indentP">
+          <h3 className="indentP">Moja priča</h3>
+          <p className="indentP">{SliderData[props.current].description}</p>
+        </div>
+        <div className="videoDiv">
+          <a href="/">Uslovi za udomljavanje</a>
+          <video controls></video>
+          <div>
+            <button>Uredi profil</button>
+            <button>Udomljen</button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -8,31 +8,63 @@
   align-items: center;
   flex-wrap: wrap;
 }
+.wrapper {
+  width: 90%;
+}
+.petName {
+  margin: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+.heartIconPetName {
+  padding-left: 10px;
+}
 .sliderDiv {
   flex: 1;
 }
 .infoAbout {
-  height: 95%;
-  width: 55%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.rightInfoAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.indentP {
+  margin-left: 40px;
+}
+.infoAboutFirst {
+  display: flex;
 }
 .mapInfo {
+  width: 100%;
   border: 1px solid blue;
-  height: 90%;
-  width: 40%;
+  margin: 0 auto;
 }
-.name {
-  margin: 0;
+.firstP {
+  margin: 0 0 0 40px;
 }
 .pawIcon {
   padding: 0 10px;
 }
-.infoParagraphs {
+/* .infoParagraphs {
   text-transform: uppercase;
-}
+} */
 
 .favoriteImage {
   height: 150px;
-  border-radius: 50%;
-  margin-left: 200px;
-  margin-top: -50px;
+}
+.videoDiv {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.videoDiv a {
+  text-decoration: none;
 }
