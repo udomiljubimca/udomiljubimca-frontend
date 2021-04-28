@@ -2,26 +2,27 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  border: 1px solid hotpink;
+  height: 30%;
+  /* border: 1px solid hotpink; */
 }
 .slider {
   position: relative;
-  height: 50vh;
+  height: 90%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
 .image {
-  width: 500px;
-  height: 300px;
-  border-radius: 10px;
+  width: 550px;
+  height: 350px;
+  border-radius: 5px;
 }
 
 .right-arrow {
   position: absolute;
   top: 45%;
-  right: 300px;
+  right: 500px;
   font-size: 3rem;
   color: #ff8b42;
   z-index: 10;
@@ -32,7 +33,7 @@
 .left-arrow {
   position: absolute;
   top: 45%;
-  left: 300px;
+  left: 130px;
   font-size: 3rem;
   color: #ff8b42;
   z-index: 10;
@@ -48,5 +49,11 @@
 .slide.active {
   opacity: 1;
   transition-duration: 1s;
-  transform: scale(1.08);
+  /* transform: scale(1.08); */
+}
+.sideImages {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

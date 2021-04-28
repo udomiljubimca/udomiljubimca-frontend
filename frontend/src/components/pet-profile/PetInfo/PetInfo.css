@@ -2,7 +2,7 @@
   border: 1px solid gray;
   margin: 25px auto;
   min-height: 100vh;
-  width: 80%;
+  width: 75%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -26,6 +26,10 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  /* border: 1px solid red; */
+}
+.leftInfoAbout {
+  /* border: 1px solid green; */
 }
 .rightInfoAbout {
   display: flex;
@@ -38,15 +42,13 @@
 }
 .infoAboutFirst {
   display: flex;
+  /* align-items: center; */
 }
 .mapInfo {
   width: 100%;
-  border: 1px solid blue;
   margin: 0 auto;
 }
-.firstP {
-  margin: 0 0 0 40px;
-}
+
 .pawIcon {
   padding: 0 10px;
 }

@@ -4,12 +4,12 @@ import "./Header.css";
 const Header = () => {
   return (
     <header className="header">
-      <div className="wrapper">
+      <div className="wrapperHeader">
         <div className="header-container container-nav">
           <div className="site-title">
             <svg
-              width="177"
-              height="100"
+              width="167"
+              height="90"
               viewBox="0 0 177 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

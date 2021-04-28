@@ -1,12 +1,11 @@
 header {
-  height: 180px;
+  height: 150px;
   display: flex;
   flex-direction: column;
 }
-.wrapper {
+.wrapperHeader {
   height: 100%;
   width: 100%;
-  border: 1px solid green;
 }
 .header-container {
   width: 100%;

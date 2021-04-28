@@ -31,7 +31,7 @@ const Slider = (props) => {
           );
         })}
       </section>
-      <section>
+      <section className="sideImages">
         <div>mala slika</div>
         <div>mala slika</div>
         <div>mala slika</div>
