@@ -33,7 +33,13 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <a href="!#">Pocetna</a>
+                <a href="!#">Početna</a>
+              </li>
+              <li>
+                <a href="!#">Udruženja</a>
+              </li>
+              <li>
+                <a href="!#">Saveti &darr;</a>
               </li>
               <li>
                 <a href="!#">Blog</a>
@@ -42,7 +48,7 @@ const Header = () => {
                 <a href="!#">Prijavi se</a>
               </li>
               <li>
-                <a href="!#">Registruj se</a>
+               <button> <a href="!#">Registruj se</a></button>
               </li>
             </ul>
           </nav>
