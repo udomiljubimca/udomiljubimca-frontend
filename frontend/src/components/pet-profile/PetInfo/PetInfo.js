@@ -4,6 +4,7 @@ import "./PetInfo.css";
 import { FaPaw, FaHeart } from "react-icons/fa";
 import { SliderData } from "../Slider/SliderData";
 import Slider from "../Slider/Slider";
+import { Button } from "react-bootstrap";
 
 const PetInfo = (props) => {
   return (
@@ -53,7 +54,7 @@ const PetInfo = (props) => {
               src={SliderData[props.current].image}
               alt=""
             />
-            <button>Udomi me</button>
+            <Button variant="primary">UDOMI ME</Button>
           </div>
         </div>
         <div className="mapInfo indentP">
@@ -62,10 +63,10 @@ const PetInfo = (props) => {
         </div>
         <div className="videoDiv">
           <a href="/">Uslovi za udomljavanje</a>
-          <video controls></video>
-          <div>
-            <button>Uredi profil</button>
-            <button>Udomljen</button>
+          <video className="videoPet" controls></video>
+          <div className="buttonDiv">
+            <Button variant="light">Uredi profil</Button>
+            <Button variant="light">Udomljen</Button>
           </div>
         </div>
       </div>

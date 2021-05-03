@@ -3,7 +3,6 @@
   justify-content: center;
   width: 100%;
   height: 30%;
-  /* border: 1px solid hotpink; */
 }
 .slider {
   position: relative;
@@ -11,11 +10,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 73%;
 }
 .image {
-  width: 550px;
-  height: 350px;
+  width: 98%;
+  height: 430px;
   border-radius: 5px;
 }
 
@@ -49,11 +48,14 @@
 .slide.active {
   opacity: 1;
   transition-duration: 1s;
-  /* transform: scale(1.08); */
 }
 .sideImages {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.sideImage {
+  height: 31%;
+  border: 1px solid red;
 }
