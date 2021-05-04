@@ -99,42 +99,66 @@ const Text3 = styled.p`
       top: 60px;
 `
 
+const UdomitiH4 = styled.h4`
+
+font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 150%;
+
+
+color: #000000;
+
+position:relative;
+left:91px;
+
+`
+
 
 function KakoUdomitiLjubimca() {
   return (
-    <DivFlex>
 
-      <Box1>
-        <DodatnaKocka />
-        <Kocka />
-        <Trougao />
-      </Box1>
+    <div>
 
-      <Box2>
-        <Trougao1 />
-        <Kocka />
-        <Trougao />
-      </Box2>
-      <div>
-        <Trougao1 />
-        <Kocka />
-        <Trougao />
-      </div>
+      <UdomitiH4>Kako udomiti ljubimce</UdomitiH4>
 
-      <Text1>
-        Lorem ipsum dolor sit amet, consec tetur adipiscing elit.
+      <DivFlex>
+        <Box1>
+          <DodatnaKocka />
+          <Kocka />
+          <Trougao />
+        </Box1>
+
+        <Box2>
+          <Trougao1 />
+          <Kocka />
+          <Trougao />
+        </Box2>
+        <div>
+          <Trougao1 />
+          <Kocka />
+          <Trougao />
+        </div>
+
+        <Text1>
+          Lorem ipsum dolor sit amet, consec tetur adipiscing elit.
      </Text1>
 
-      <Text2>
-        Lorem ipsum dolor sit amet, consec tetur adipiscing elit.
+        <Text2>
+          Lorem ipsum dolor sit amet, consec tetur adipiscing elit.
     </Text2>
 
-      <Text3>
-        Lorem ipsum dolor sit amet, consec tetur adipiscing elit.
+        <Text3>
+          Lorem ipsum dolor sit amet, consec tetur adipiscing elit.
     </Text3>
 
 
-    </DivFlex>
+      </DivFlex>
+
+
+    </div>
+
   )
 }
 

@@ -1,14 +1,10 @@
-.container{
-  margin: auto;
-  width: 1183px;
-}
-
-/* Header */
+/* Headerr */
 
 .divDispaly{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #FFFFFF;
+
   
 }
-

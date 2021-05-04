@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const FooterDiv = styled.div`
-  width:1920px;
+  width:100%;
   height:238px;
   background: #169DA8;
   margin-top:50px;
@@ -13,8 +13,10 @@ const FooterDiv = styled.div`
 const Ul = styled.nav`
  
  width:1220px;
+ height:200px;
  display:flex;
  justify-content:space-around;
+ align-items:center;
  
   `
 
@@ -45,9 +47,11 @@ const Ancor = styled.a`
 `
 
 const PositoinDiv = styled.div`
-position: absolute;
+width:1183px;
+margin: auto;
+/* position: absolute;
 left:255px;
-top:150px;
+top:150px; */
 
 
 `

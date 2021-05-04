@@ -5,7 +5,6 @@ import styled from 'styled-components';
 const DivCard = styled.div`
   width:350px;
   height:427px;
-  background-color:#fff;
   box-sizing:border-box;
   
 `
@@ -23,6 +22,7 @@ const InnerDiv = styled.div`
 const Img = styled.img`
   width:350px;
   height:200px;
+  background-color:#C4C4C4;
  
   
  
@@ -40,7 +40,7 @@ const Paragraf = styled.p`
  
  `
 
-function Udomiti({ podaci }) {
+function Blog({ podaciBlog }) {
 
 
   return (
@@ -50,8 +50,8 @@ function Udomiti({ podaci }) {
 
 
         <Img />
-        <h1> {podaci.naslov}</h1>
-        <Paragraf>{podaci.text}</Paragraf>
+        <h1> {podaciBlog.naslov}</h1>
+        <Paragraf>{podaciBlog.text}</Paragraf>
 
 
       </InnerDiv>
@@ -61,4 +61,4 @@ function Udomiti({ podaci }) {
   )
 }
 
-export default Udomiti
+export default Blog

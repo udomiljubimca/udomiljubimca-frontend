@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { FaChevronDown } from "react-icons/fa";
 
 
 
@@ -8,9 +8,11 @@ const Ul = styled.nav`
  width:890px;
  display:flex;
  justify-content:space-around;
+ align-items:center;
  margin-top:10px;
  margin:0px;
- position: relative;
+
+
  `
 
 const Li = styled.li`
@@ -18,6 +20,10 @@ const Li = styled.li`
   width:59px;
   height:18px;
   flex-basis:${({ parametarWith }) => parametarWith};
+
+  & h5{
+    margin:0;
+  }
 
  `
 const Ancor = styled.a`
@@ -44,7 +50,7 @@ const DropUl = styled.ul`
  box-sizing: border-box;
  border-radius: 4px;
  position: absolute;
- top:55px;
+ 
 
  display:none;
 
@@ -53,15 +59,22 @@ const DropUl = styled.ul`
 
 const LiDrop = styled.li`
   list-style:none;
+  position:relative;
 
   
   height:18px;
   flex-basis:${({ parametarWith }) => parametarWith};
   
+  & h5{
+    margin:0px;
+  }
+
   &:hover ${DropUl}{
     display:block;
     z-index:1;
   }
+
+
 
 `
 const DropLi = styled.li`
@@ -89,14 +102,15 @@ const DropAncor = styled.a`
 ////////// drop-down menu za REGISTRUJ SE /////////////
 
 const UlDropDownReg = styled.ul`
-  width: 141px;
-  height: 88px;
+  width: 140px;
+  height: 84px;
   background: #FFFFFF;
-  border: 2px solid #169DA8;
   box-sizing: border-box;
   border-radius: 4px;
   position: absolute;
   top: 20px;
+  left:2px;
+
 
   /* na hover se otkriva drop menu(setuje dispaly:blok) */
   display: none;
@@ -113,7 +127,9 @@ const RegLi = styled.li`
   border-radius: 6px;
   list-style: none;
   position: relative;
-  top: 25px;
+
+
+
 
   &:hover ${UlDropDownReg}{
     display:block;
@@ -142,15 +158,23 @@ const DropH5 = styled.h5`
 
 const LiDropReg = styled.li`
 
+  width:142px;
+  height:36px;
   list-style: none;
+  padding-bottom:6px;
   position: relative;
-  top: 10px;
-  right: 20px;
-  margin-top: 5px;
+ 
+  right: 42px;
+  /* margin-top: 5px; */
+  /* background-color:#C0DDDF; */
+
+  &:hover{
+    background-color:#C0DDDF;
+  }
 
 `
 const AncorReg = styled.a`
-
+ 
   text-decoration: none;
   font-family: Rubik;
   font-style: normal;
@@ -159,15 +183,36 @@ const AncorReg = styled.a`
   line-height: 150%;
   color: #111111;
 
+
 `
 
+const SavetiIcon = styled(FaChevronDown)`
 
-function Nav() {
+  position:absolute;
+  top: 6px;
+  left:45px;
+
+  height:12px;
+
+ `
+
+const RefSpan = styled.span`
+   position: relative;
+   top:8px;
+   left:16px;
+
+ 
+ `
+
+
+function Nav({ popUp }) {
+
+  console.log(popUp)
   return (
     <Ul>
       <Li parametarWith={'74px'} ><Ancor href="#"> <h5>Pocetna</h5></Ancor></Li>
       <Li parametarWith={'90px'} ><Ancor href="#"> <h5>Udruzenje</h5></Ancor></Li>
-      <LiDrop parametarWith={'58px'} ><Ancor href="#"> <h5>Saveti</h5></Ancor>
+      <LiDrop parametarWith={'58px'} ><Ancor href="#"> <h5>Saveti</h5> <SavetiIcon /></Ancor>
         <DropUl >
 
           <DropLi><DropAncor href="#">Cesto pitanje</DropAncor></DropLi>
@@ -177,12 +222,16 @@ function Nav() {
         </DropUl>
       </LiDrop>
       <Li parametarWith={'42px'} ><Ancor href="#"><h5>Blog</h5></Ancor></Li>
-      <Li parametarWith={'84px'} ><Ancor href="#"><h5>Prijavi se</h5></Ancor></Li>
+
+
+      <Li parametarWith={'84px'} onClick={() => popUp(true)} ><Ancor href="#"><h5>Prijavi se</h5></Ancor></Li>
+
+
       <RegLi><AcnorRegistar href="#"><DropH5>Registruje se</DropH5></AcnorRegistar>
         <UlDropDownReg>
 
-          <LiDropReg> <AncorReg href="#"> Kao korisnik</AncorReg> </LiDropReg>
-          <LiDropReg> <AncorReg href="#"> Kao udruzenje</AncorReg> </LiDropReg>
+          <LiDropReg> <AncorReg href="#"> <RefSpan>Kao udruzenje</RefSpan> </AncorReg> </LiDropReg>
+          <LiDropReg> <AncorReg href="#"> <RefSpan>Kao korisnik</RefSpan></AncorReg> </LiDropReg>
 
         </UlDropDownReg>
 

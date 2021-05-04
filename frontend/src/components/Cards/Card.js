@@ -18,8 +18,8 @@ const IndividualCard = styled.div`
   width: 275px;
   height: 371px;
   border-radius: 8px;
-  background-color: #fff;
-  border:2px solid #aaa;
+  background-color:${({ blure }) => blure ? '#C4C4C4;' : '#fff'};
+  border:2px solid ${({ blure }) => blure ? '#C4C4C4;' : '#aaa'};
   box-sizing: border-box;
   border-radius: 8px;
   line-height: 20px;
@@ -32,12 +32,13 @@ const IndividualCard = styled.div`
 const Img = styled.img`
 
   box-sizing: border-box;
-  background-color: #eee;
-  /* border:2px solid #aaa; */
+  background-color:${({ blure }) => blure ? '#C4C4C4;' : '#aaa'};
+  border:2px solid ${({ blure }) => blure ? '#C4C4C4;' : '#aaa'};
   border-collapse: collapse;
   border-radius: 8px;
   width: 275px;
   height: 219px;
+
 `
 
 const Heading = styled.h1`
@@ -54,14 +55,16 @@ const Paragraf = styled.p`
   margin: 0;
 `
 
-function Card({ ljubimac, like }) {
+function Card({ ljubimac, like, changeStyle }) {
   console.log('card' + like)
+
+
   return (
     <DivCard>
       {
         ljubimac.map(podaci => {
           return (
-            <IndividualCard key={podaci.id}>
+            <IndividualCard key={podaci.id} blure={changeStyle}>
               <Heart
                 kojeSrce={podaci} isLike={like}
               />
@@ -70,7 +73,7 @@ function Card({ ljubimac, like }) {
               <Paragraf>Pol: {podaci.pol}</Paragraf>
               <Paragraf>Starost:  {podaci.starost}</Paragraf>
               <Paragraf>Mesto:  {podaci.mesto}</Paragraf>
-              <Paragraf>Sortiraj:  {podaci.countLike}</Paragraf>
+
             </IndividualCard>
           )
         })

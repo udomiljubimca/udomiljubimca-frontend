@@ -1,12 +1,17 @@
 import './App.css';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-import Main from './components/Main'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Content from './components/Content'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
+
+import styled from 'styled-components';
 
 function App() {
+
+
+  const [popup, setPopup] = useState(false)
 
   const [podaciLjubimci, setState] = useState([
     {
@@ -16,7 +21,7 @@ function App() {
       starost: 'junuor',
       mesto: "Beograd",
       isLike: false,
-      countLike: 1
+
     },
     {
       id: 2,
@@ -25,7 +30,7 @@ function App() {
       starost: 'junuor',
       mesto: "Beograd",
       isLike: false,
-      countLike: 12
+
     },
     {
       id: 3,
@@ -34,7 +39,7 @@ function App() {
       starost: 'junuor',
       mesto: "Beograd",
       isLike: false,
-      countLike: 12
+
     },
     {
       id: 4,
@@ -43,7 +48,7 @@ function App() {
       starost: 'junuor',
       mesto: "Beograd",
       isLike: false,
-      countLike: 5
+
     },
     {
       id: 5,
@@ -52,7 +57,7 @@ function App() {
       starost: 'junuor',
       mesto: "Beograd",
       isLike: false,
-      countLike: 2
+
     },
     {
       id: 6,
@@ -61,7 +66,7 @@ function App() {
       starost: 'junuor',
       mesto: "Beograd",
       isLike: false,
-      countLike: 7
+
     },
     {
       id: 7,
@@ -70,7 +75,7 @@ function App() {
       starost: 'junuor',
       mesto: "Beograd",
       isLike: false,
-      countLike: 22
+
     },
     {
       id: 8,
@@ -79,9 +84,59 @@ function App() {
       starost: 'junuor',
       mesto: "Beograd",
       isLike: false,
-      countLike: 9
+
     }
   ])
+
+  const [userData, setUserData] = useState([])
+
+
+  // kada korisnik nije kliknuo na prijavi se onda postoji scroll a kad korisnik klikne na prijavi se scroll nestaje (kao da se zamrzne slika i prikazuje se samo popup za prijavi se)
+  // u useEffectu gledamo na promene promenljive popup(sto je state, i ako se promeni state dolazi do rendera-obradivanja komponente) ako je true(korisnik je kliknu na prijavi se - direktno gadjamo DOM-UI)
+  // kad korisnik pritisne X na popup menja se popup na false i koritimo clean up u useEffet-u(da ocistimo sa DOM-a tj. UI-a na overflow hidden)
+  useEffect(() => {
+
+    if (popup) {
+      document.body.style.overflow = 'hidden'
+    }
+    return () => {
+      document.body.style.overflow = 'scroll'
+    }
+  }, [popup])
+
+
+
+
+
+
+  // funkcija koja prima argument da li je korisnik kliknuo PRijavi se link(ako jeste primice true ako nije primimce false)
+  const triggerPopUp = (isTrigger) => {
+    console.log("PRITISNIT JE POPUP", isTrigger)
+
+    setPopup(isTrigger)
+  }
+
+  const removePopUp = (isTrigger) => {
+
+    console.log("PRITISNIT JE ZA REMOVE POPUP", isTrigger)
+
+    setPopup(isTrigger)
+
+  }
+
+
+  const sendPrijaviSe = (pickData) => {
+
+    console.log('KORISNICKI PODACI', pickData)
+
+    setUserData([pickData])
+
+
+
+  }
+
+  console.log("USER DATA", userData)
+
 
   // funkcija koja uzima id od kliknutig carda
   const isLike = (id) => {
@@ -94,31 +149,20 @@ function App() {
     ))
   }
 
-  // sortiraj po nepopularnosti 
-  const nepopularni = () => {
-    // kopiram podatke posto useState ne moze da radi sa referencom od istog niza(menjanje istog niza tj referenciranje ka istom nizu)
-    const kopijaPodataka = [...podaciLjubimci]
-
-    setState(
-      kopijaPodataka.sort((a, b) => a.countLike - b.countLike)
-    )
-
-    console.log('sort', kopijaPodataka)
-  }
-
-  // sortiraj po popularnosti
-  const popularni = () => {
-    // kopiram podatke posto useState ne moze da radi sa referencom od istog niza(menjanje istog niza tj referenciranje ka istom nizu)
-    const kopijaPodataka = [...podaciLjubimci]
-
-    setState(
-      kopijaPodataka.sort((a, b) => b.countLike - a.countLike)
-    )
-
-    console.log('sort', kopijaPodataka)
-
-  }
   console.log('novi podaci', podaciLjubimci)
+
+
+  // document.body.style.overflow = "hidden"
+
+  ////////////////// stil ///////////////
+
+
+  const AppDiv = styled.div`
+  
+
+  background-color:${({ showBackgraund }) => showBackgraund ? '#C4C4C4' : '#E5E5E5;'};
+  
+`
 
 
 
@@ -128,22 +172,29 @@ function App() {
   // Main
   // footer
   return (
-    <div className='App'>
-      <Header />
-      <Main
+    <AppDiv showBackgraund={popup}>
+      <Header
+        trigger={triggerPopUp}
+
+      />
+      <Content
         podaci={podaciLjubimci}
         like={isLike}
-        prikaziNepopularne={nepopularni}
-        prikaziPopularne={popularni}
 
+        removeTrigger={removePopUp}
+
+        isTrigger={popup}
+
+        sendData={sendPrijaviSe}
+
+        resizeHeight={popup}
       />
       <Footer />
 
 
-    </div>
+    </AppDiv>
   );
 }
 
 export default App;
-// <Main podaci={podaciLjubimci} like={isLike} />
-// <Footer />
+

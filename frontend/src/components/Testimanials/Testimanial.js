@@ -4,6 +4,7 @@ import styled from "styled-components"
 const FelxItem = styled.div`
  flex-basis:350px;
  height:235px;
+ background-color:#fff;
  border: 1px solid #169DA8;
  box-sizing: border-box;
  border-radius: 6px;
