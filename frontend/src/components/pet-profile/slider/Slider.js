@@ -32,13 +32,17 @@ const Slider = (props) => {
         })}
       </section>
       <section className="sideImages">
-        <div className="sideImage">
-          <img src="" alt="petImg1" />
+        <div className="sideImageDiv">
+          <img
+            src={props.slides[props.current].image}
+            alt="petImg1"
+            className="sideImage"
+          />
         </div>
-        <div className="sideImage">
+        <div className="sideImageDiv">
           <img src="" alt="petImg2" />
         </div>
-        <div className="sideImage">
+        <div className="sideImageDiv">
           <img src="" alt="petImg3" />
         </div>
       </section>

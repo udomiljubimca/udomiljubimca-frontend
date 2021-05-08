@@ -49,11 +49,7 @@ const PetInfo = (props) => {
             </p>
           </div>
           <div className="rightInfoAbout">
-            <img
-              className="favoriteImage"
-              src={SliderData[props.current].image}
-              alt=""
-            />
+            <img className="favoriteImage" src="" alt="udruzenjeImg" />
             <Button variant="primary">UDOMI ME</Button>
           </div>
         </div>
