@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./Slider.css";
 
 const Slider = (props) => {
@@ -10,14 +10,8 @@ const Slider = (props) => {
   return (
     <div className="container">
       <section className="slider">
-        <FaArrowAltCircleLeft
-          className="left-arrow"
-          onClick={props.prevSlide}
-        />
-        <FaArrowAltCircleRight
-          className="right-arrow"
-          onClick={props.nextSlide}
-        />
+        <FaArrowLeft className="left-arrow" onClick={props.prevSlide} />
+        <FaArrowRight className="right-arrow" onClick={props.nextSlide} />
         {props.slides.map((slide, index) => {
           return (
             <div
