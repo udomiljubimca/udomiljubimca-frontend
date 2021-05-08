@@ -25,16 +25,22 @@ const Slider = (props) => {
               key={index}
             >
               {index === props.current && (
-                <img src={slide.image} alt="" className="image" />
+                <img src={slide.image} alt="mainPetImg" className="image" />
               )}
             </div>
           );
         })}
       </section>
       <section className="sideImages">
-        <div className="sideImage">mala slika</div>
-        <div className="sideImage">mala slika</div>
-        <div className="sideImage">mala slika</div>
+        <div className="sideImage">
+          <img src="" alt="petImg1" />
+        </div>
+        <div className="sideImage">
+          <img src="" alt="petImg2" />
+        </div>
+        <div className="sideImage">
+          <img src="" alt="petImg3" />
+        </div>
       </section>
     </div>
   );
