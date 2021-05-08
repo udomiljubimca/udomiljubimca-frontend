@@ -40,11 +40,24 @@ const PetInfo = (props) => {
               {SliderData[props.current].age}
             </p>
             <hr />
-            <p className="infoParagraphs">Vakcinisan: Da</p>
-            <p className="infoParagraphs">Zdravlje: Dobro</p>
-            <p className="infoParagraphs">Karakter: Lorem ipsum</p>
-            <p className="infoParagraphs">Navike: Lorem ipsum</p>
-            <p className="infoParagraphs">Posebne potrebe: Lorem ipsum</p>
+            <p className="infoParagraphs">
+              <strong>Vakcinisan</strong> Da
+            </p>
+            <p className="infoParagraphs">
+              <strong>Zdravlje</strong> Dobro
+            </p>
+            <p className="infoParagraphs">
+              <strong>Karakter</strong> Lorem ipsum
+            </p>
+            <p className="infoParagraphs">
+              <strong>Posebne navike</strong> Lorem ipsum
+            </p>
+            <p className="infoParagraphs">
+              <strong>Dobar život sa</strong> Lorem ipsum
+            </p>
+            <p className="infoParagraphs">
+              <strong>Nije dobar život sa</strong> Lorem ipsum
+            </p>
           </div>
           <div className="rightInfoAbout">
             <img className="favoriteImage" src="" alt="udruzenjeImg" />
@@ -52,7 +65,8 @@ const PetInfo = (props) => {
           </div>
         </div>
         <div className="storyInfo ">
-          <h3>Moja priča</h3>
+          <hr />
+          <h2>Moja priča</h2>
           <p>{SliderData[props.current].description}</p>
         </div>
         <div className="videoDiv">
