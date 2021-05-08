@@ -37,25 +37,19 @@
   align-items: center;
   margin-right: 60px;
 }
-.indentP {
-  margin-left: 40px;
-}
 .infoAboutFirst {
   display: flex;
   align-items: center;
 }
-.mapInfo {
+.firstP {
+}
+.storyInfo {
   width: 100%;
   margin: 0 auto;
 }
-
 .pawIcon {
   padding: 0 10px;
 }
-/* .infoParagraphs {
-  text-transform: uppercase;
-} */
-
 .favoriteImage {
   height: 130px;
 }

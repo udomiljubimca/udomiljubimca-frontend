@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaRegHeart } from "react-icons/fa";
 import "./Slider.css";
 
 const Slider = (props) => {
@@ -24,6 +24,7 @@ const Slider = (props) => {
             </div>
           );
         })}
+        <FaRegHeart className="sliderHeartIcon" />
       </section>
       <section className="sideImages">
         <div className="sideImageDiv">

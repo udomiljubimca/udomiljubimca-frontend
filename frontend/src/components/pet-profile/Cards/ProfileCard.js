@@ -2,12 +2,12 @@ import React from "react";
 
 import "./ProfileCard.css";
 import { Card } from "react-bootstrap";
-import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 
 const ProfileCard = (props) => {
   return (
     <Card className="card">
-      <FaHeart className="heartIcon" />
+      <FaRegHeart className="heartIcon" />
       <Card.Img variant="top" src={props.image} className="imgPet" />
       <Card.Body className="cardBody">
         <Card.Title className="cardTitle">{props.type}</Card.Title>

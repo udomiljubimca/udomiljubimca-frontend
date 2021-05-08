@@ -1,17 +1,17 @@
 import React from "react";
 
 import "./PetInfo.css";
-import { FaPaw, FaHeart } from "react-icons/fa";
+import { FaPaw, FaRegHeart } from "react-icons/fa";
 import { SliderData } from "../Slider/SliderData";
 import Slider from "../Slider/Slider";
-import { Button } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
 const PetInfo = (props) => {
   return (
     <div className="petInfo">
       <div className="wrapper">
         <h1 className="petName">
-          Ime ljubimca : Lorem <FaHeart className="heartIconPetName" />
+          Ime ljubimca : Lorem <FaRegHeart className="heartIconPetName" />
         </h1>
         <Slider
           className="sliderDiv"
@@ -22,7 +22,7 @@ const PetInfo = (props) => {
         />
         <div className="infoAbout">
           <div className="leftInfoAbout">
-            <div className="infoAboutFirst indentP">
+            <div className="infoAboutFirst">
               <p className="firstP">Naziv udruženja</p>
               <FaPaw className="pawIcon" />
               <p className="firstP">Beograd</p>
@@ -30,7 +30,7 @@ const PetInfo = (props) => {
               <p className="firstP">01.01.2021.</p>
             </div>
             <hr />
-            <p className="indentP">
+            <p>
               {SliderData[props.current].type}
               <FaPaw className="pawIcon" />
               {SliderData[props.current].sex}
@@ -40,22 +40,20 @@ const PetInfo = (props) => {
               {SliderData[props.current].age}
             </p>
             <hr />
-            <p className="infoParagraphs indentP">Vakcinisan: Da</p>
-            <p className="infoParagraphs indentP">Zdravlje: Dobro</p>
-            <p className="infoParagraphs indentP">Karakter: Lorem ipsum</p>
-            <p className="infoParagraphs indentP">Navike: Lorem ipsum</p>
-            <p className="infoParagraphs indentP">
-              Posebne potrebe: Lorem ipsum
-            </p>
+            <p className="infoParagraphs">Vakcinisan: Da</p>
+            <p className="infoParagraphs">Zdravlje: Dobro</p>
+            <p className="infoParagraphs">Karakter: Lorem ipsum</p>
+            <p className="infoParagraphs">Navike: Lorem ipsum</p>
+            <p className="infoParagraphs">Posebne potrebe: Lorem ipsum</p>
           </div>
           <div className="rightInfoAbout">
             <img className="favoriteImage" src="" alt="udruzenjeImg" />
             <Button variant="primary">UDOMI ME</Button>
           </div>
         </div>
-        <div className="mapInfo indentP">
-          <h3 className="indentP">Moja priča</h3>
-          <p className="indentP">{SliderData[props.current].description}</p>
+        <div className="storyInfo ">
+          <h3>Moja priča</h3>
+          <p>{SliderData[props.current].description}</p>
         </div>
         <div className="videoDiv">
           <a href="/">Uslovi za udomljavanje</a>
