@@ -30,7 +30,7 @@ const PetInfo = (props) => {
               <p className="firstP">01.01.2021.</p>
             </div>
             <hr />
-            <p>
+            <p style={{ margin: "0" }}>
               {SliderData[props.current].type}
               <FaPaw className="pawIcon" />
               {SliderData[props.current].sex}
@@ -41,26 +41,32 @@ const PetInfo = (props) => {
             </p>
             <hr />
             <p className="infoParagraphs">
-              <strong>Vakcinisan</strong> Da
+              <strong>Vakcinisan</strong>
+              <p style={{ marginTop: "0px" }}>Da</p>
             </p>
             <p className="infoParagraphs">
-              <strong>Zdravlje</strong> Dobro
+              <strong>Zdravlje</strong>
+              <p style={{ marginTop: "0px" }}>Dobro</p>
             </p>
             <p className="infoParagraphs">
-              <strong>Karakter</strong> Lorem ipsum
+              <strong>Karakter</strong>
+              <p style={{ marginTop: "0px" }}>Lorem ipsum</p>
             </p>
             <p className="infoParagraphs">
-              <strong>Posebne navike</strong> Lorem ipsum
+              <strong>Posebne navike</strong>
+              <p style={{ marginTop: "0px" }}>Lorem ipsum</p>
             </p>
             <p className="infoParagraphs">
-              <strong>Dobar život sa</strong> Lorem ipsum
+              <strong>Dobar život sa</strong>
+              <p style={{ marginTop: "0px" }}>Lorem ipsum</p>
             </p>
             <p className="infoParagraphs">
-              <strong>Nije dobar život sa</strong> Lorem ipsum
+              <strong>Nije dobar život sa</strong>
+              <p style={{ marginTop: "0px" }}>Lorem ipsum</p>
             </p>
           </div>
           <div className="rightInfoAbout">
-            <img className="favoriteImage" src="" alt="udruzenjeImg" />
+            <img className="associationImage" src="" alt="associationImg" />
             {/* Ne dodaje se klasa */}
             <Button variant="primary">UDOMI ME</Button>
           </div>
