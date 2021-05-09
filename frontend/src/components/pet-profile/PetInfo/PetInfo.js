@@ -61,6 +61,7 @@ const PetInfo = (props) => {
           </div>
           <div className="rightInfoAbout">
             <img className="favoriteImage" src="" alt="udruzenjeImg" />
+            {/* Ne dodaje se klasa */}
             <Button variant="primary">UDOMI ME</Button>
           </div>
         </div>
@@ -73,6 +74,7 @@ const PetInfo = (props) => {
           <a href="/">Uslovi za udomljavanje</a>
           <video className="videoPet" controls></video>
           <div className="buttonDiv">
+            {/* Ne dodaje se klasa */}
             <Button variant="light">Uredi profil</Button>
             <Button variant="light">Udomljen</Button>
           </div>
