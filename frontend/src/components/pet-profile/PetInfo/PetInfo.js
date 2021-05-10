@@ -80,8 +80,8 @@ const PetInfo = (props) => {
           <video className='videoPet' controls></video>
           <div className='buttonDiv'>
             {/* Ne dodaje se klasa */}
-            <Button variant='light'>Uredi profil</Button>
-            <Button variant='light'>Udomljen</Button>
+            <Button variant='warning'>Uredi profil</Button>
+            <Button variant='success'>Udomljen</Button>
           </div>
         </div>
       </div>

@@ -7,7 +7,12 @@
     "size": "small",
     "age": "junior",
     "breed": "mix",
-    "image": "https://placedog.net/800/640?id=52",
+    "image": [
+      "https://placedog.net/800/640?id=52",
+      "https://placedog.net/800/640?id=52",
+      "https://placedog.net/800/640?id=52",
+      "https://placedog.net/800/640?id=52"
+    ],
     "description": "Enim deleniti quaerat beatae officiis. Quia perspiciatis voluptas incidunt est iste illum commodi quis. Consectetur occaecati beatae dolor",
     "vaccines": "no",
     "health": "great",
@@ -21,7 +26,12 @@
     "size": "small",
     "age": "junior",
     "breed": "mix",
-    "image": "https://placedog.net/800/640?id=78",
+    "image": [
+      "https://placedog.net/800/640?id=78",
+      "https://placedog.net/800/640?id=78",
+      "https://placedog.net/800/640?id=78",
+      "https://placedog.net/800/640?id=78"
+    ],
     "description": "Enim deleniti quaerat beatae officiis. Quia perspiciatis voluptas incidunt est iste illum commodi quis. Consectetur occaecati beatae dolor",
     "vaccines": "no",
     "health": "great",
@@ -35,7 +45,12 @@
     "size": "small",
     "age": "junior",
     "breed": "mix",
-    "image": "https://placedog.net/800/640?id=98",
+    "image": [
+      "https://placedog.net/800/640?id=98",
+      "https://placedog.net/800/640?id=98",
+      "https://placedog.net/800/640?id=98",
+      "https://placedog.net/800/640?id=98"
+    ],
     "description": "Enim deleniti quaerat beatae officiis. Quia perspiciatis voluptas incidunt est iste illum commodi quis. Consectetur occaecati beatae dolor",
     "vaccines": "yes",
     "health": "great",
@@ -49,7 +64,12 @@
     "size": "big",
     "age": "senior",
     "breed": "mix",
-    "image": "https://placedog.net/800/640?id=12",
+    "image": [
+      "https://placedog.net/800/640?id=12",
+      "https://placedog.net/800/640?id=12",
+      "https://placedog.net/800/640?id=12",
+      "https://placedog.net/800/640?id=12"
+    ],
     "description": "Enim deleniti quaerat beatae officiis. Quia perspiciatis voluptas incidunt est iste illum commodi quis. Consectetur occaecati beatae dolor",
     "vaccines": "no",
     "health": "great",
@@ -63,7 +83,12 @@
     "size": "medium",
     "age": "junior",
     "breed": "mix",
-    "image": "https://placedog.net/800/640?id=122",
+    "image": [
+      "https://placedog.net/800/640?id=112",
+      "https://placedog.net/800/640?id=112",
+      "https://placedog.net/800/640?id=112",
+      "https://placedog.net/800/640?id=112"
+    ],
     "description": "Enim deleniti quaerat beatae officiis. Quia perspiciatis voluptas incidunt est iste illum commodi quis. Consectetur occaecati beatae dolor",
     "vaccines": "yes",
     "health": "great",
@@ -77,7 +102,12 @@
     "size": "small",
     "age": "senior",
     "breed": "mix",
-    "image": "https://placedog.net/800/640?id=66",
+    "image": [
+      "https://placedog.net/800/640?id=67",
+      "https://placedog.net/800/640?id=67",
+      "https://placedog.net/800/640?id=67",
+      "https://placedog.net/800/640?id=67"
+    ],
     "description": "Enim deleniti quaerat beatae officiis. Quia perspiciatis voluptas incidunt est iste illum commodi quis. Consectetur occaecati beatae dolor",
     "vaccines": "no",
     "health": "great",
@@ -91,7 +121,12 @@
     "size": "small",
     "age": "junior",
     "breed": "mix",
-    "image": "https://placedog.net/800/640?id=87",
+    "image": [
+      "https://placedog.net/800/640?id=87",
+      "https://placedog.net/800/640?id=87",
+      "https://placedog.net/800/640?id=87",
+      "https://placedog.net/800/640?id=87"
+    ],
     "description": "Enim deleniti quaerat beatae officiis. Quia perspiciatis voluptas incidunt est iste illum commodi quis. Consectetur occaecati beatae dolor",
     "vaccines": "no",
     "health": "great",
@@ -105,7 +140,12 @@
     "size": "medium",
     "age": "senior",
     "breed": "mix",
-    "image": "https://placedog.net/800/640?id=48",
+    "image": [
+      "https://placedog.net/800/640?id=55",
+      "https://placedog.net/800/640?id=55",
+      "https://placedog.net/800/640?id=55",
+      "https://placedog.net/800/640?id=55"
+    ],
     "description": "Enim deleniti quaerat beatae officiis. Quia perspiciatis voluptas incidunt est iste illum commodi quis. Consectetur occaecati beatae dolor",
     "vaccines": "yes",
     "health": "medium",

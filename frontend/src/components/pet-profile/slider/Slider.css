@@ -65,5 +65,7 @@
 .sideImage {
   height: 100%;
   width: 100%;
+}
+.sideImage.active {
   opacity: 0.6;
 }
