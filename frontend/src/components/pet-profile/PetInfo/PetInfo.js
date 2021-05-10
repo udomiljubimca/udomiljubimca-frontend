@@ -57,17 +57,16 @@ const PetInfo = (props) => {
               <p style={{ marginTop: '0px' }}>Lorem ipsum</p>
             </p>
             <p className='infoParagraphs'>
-              <strong>Dobar život sa</strong>
+              <strong>Dobar za život sa</strong>
               <p style={{ marginTop: '0px' }}>Lorem ipsum</p>
             </p>
             <p className='infoParagraphs'>
-              <strong>Nije dobar život sa</strong>
+              <strong>Nije dobar za život sa</strong>
               <p style={{ marginTop: '0px' }}>Lorem ipsum</p>
             </p>
           </div>
           <div className='rightInfoAbout'>
             <img className='associationImage' src='' alt='associationImg' />
-            {/* Ne dodaje se klasa */}
             <Button variant='primary'>UDOMI ME</Button>
           </div>
         </div>
