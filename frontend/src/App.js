@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import "./App.css";
-import { SliderData } from "./components/pet-profile/Slider/SliderData";
-import Header from "./components/Header";
-import Cards from "./components/pet-profile/Cards/Cards";
-import PetInfo from "./components/pet-profile/PetInfo/PetInfo";
-import Footer from "./components/Footer";
+import './App.css';
+import { SliderData } from './components/pet-profile/slider/SliderData';
+import Header from './components/Header';
+import Cards from './components/pet-profile/Cards/Cards';
+import PetInfo from './components/pet-profile/PetInfo/PetInfo';
+import Footer from './components/Footer';
 
 function App() {
   const [current, setCurrent] = useState(0);
@@ -20,7 +20,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
       <PetInfo
         slides={SliderData}
