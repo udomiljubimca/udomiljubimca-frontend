@@ -4,6 +4,8 @@
 display: flex;
 justify-content: space-around;
 width: 100%;
+background-color: #E5E5E5;
+height: 100vh;
 
     
 }
@@ -46,6 +48,12 @@ input {
 
     width: 50%;
     margin-bottom: 10px;
+    background-color: #E5E5E5;
+    border: 1px solid black;
+    height: 30px;
+    padding-left: 5px;
+    font-weight: bolder;
+    border-radius: 3px;
 
 }
 
@@ -62,3 +70,4 @@ input {
     border: none;
     height: 25px;
 }
+

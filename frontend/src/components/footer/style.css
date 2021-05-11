@@ -2,12 +2,19 @@
 .footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 90px;
     background-color:#169DA8;
-    padding-left: 250px;
-    padding-right: 250px;
+    /* padding-left: 250px;
+    padding-right: 250px; */
+    
+
+
+    position: fixed;
+            bottom: 0;
+            width: 100%;
+
 }
 
 li {

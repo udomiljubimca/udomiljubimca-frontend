@@ -1,7 +1,7 @@
 
 import React from 'react';
 import style from "./style.css";
-
+import img2 from "./../../img/img2.jpg";
 
 const Register_form = () => {
     return (
@@ -13,8 +13,10 @@ const Register_form = () => {
 
                 <h4>Registruj se i udomi ljubimca!</h4>
 
-                <p>dheldhlewdhweideliwdewd eldjeidjedjeq eqldneideidjeip dcwdcwdcwec cwdcwecwe</p>
+                <p>lorem ipsum</p>
 
+                <img src={img2}></img>
+                            
             </div>
 
             
