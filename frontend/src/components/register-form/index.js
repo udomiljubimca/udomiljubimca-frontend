@@ -2,6 +2,9 @@
 import React from 'react';
 import style from "./style.css";
 import img2 from "./../../img/img2.jpg";
+import fb from "./../../img/fb.png";
+
+
 
 const Register_form = () => {
     return (
@@ -16,6 +19,7 @@ const Register_form = () => {
                 <p>lorem ipsum</p>
 
                 <img src={img2}></img>
+                
                             
             </div>
 
@@ -37,10 +41,38 @@ const Register_form = () => {
                     <input type = "button" value = "Registruj se" id="submit-btn"/>
                     {/* <button type="submit" className="registruj-btn">Registruj se</button>
                      */}
-
+                   
                 </form>
 
 
+                <div className='fb-picture'>
+
+                    {/* <img src={fb}></img> */}
+
+                    <i class="fab fa-facebook"></i>
+                    
+                    <i class="fab fa-google"></i>
+
+                    
+
+                </div>
+
+                <div>
+
+                    <input type='checkbox'></input>
+
+                    <a href="/">Prihvati uslove korišćenja</a>
+
+                </div>
+
+                <div>
+
+                     <p>Već si se registrovao</p>
+
+                     <a href="/">Prijavi se</a>
+
+
+                </div>
 
             </div>
 

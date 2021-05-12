@@ -23,9 +23,9 @@ h2 {
 
 .vertical-container {
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
     width: 50%;
 
 }
@@ -71,3 +71,10 @@ input {
     height: 25px;
 }
 
+
+.fb-picture > img {
+
+    height: 200 px;
+    width: 200px;
+
+}
