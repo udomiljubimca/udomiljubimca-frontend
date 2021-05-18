@@ -2,8 +2,8 @@ import React from 'react';
 
 import './PetInfo.css';
 import { FaPaw, FaRegHeart } from 'react-icons/fa';
-import { SliderData } from '../slider/SliderData';
-import Slider from '../slider/Slider';
+import { SliderData } from '../Slider/SliderData';
+import Slider from '../Slider/Slider';
 import Button from 'react-bootstrap/Button';
 
 const PetInfo = (props) => {

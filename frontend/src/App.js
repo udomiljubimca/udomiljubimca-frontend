@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import './App.css';
-import { SliderData } from './components/pet-profile/slider/SliderData';
+import { SliderData } from './components/pet-profile/Slider/SliderData';
 import Header from './components/Header';
 import Cards from './components/pet-profile/Cards/Cards';
 import PetInfo from './components/pet-profile/PetInfo/PetInfo';
