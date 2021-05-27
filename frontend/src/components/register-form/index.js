@@ -3,7 +3,7 @@ import React from 'react';
 import style from "./style.css";
 import img2 from "./../../img/img2.jpg";
 import fb from "./../../img/fb.png";
-
+import InputField from "./input_field";
 
 
 const Register_form = () => {
@@ -33,12 +33,12 @@ const Register_form = () => {
                 <form action="">
 
                     <h2>Registruj se!</h2>
-                    <input type="text" placeholder="Ime" />
-                    <input type="text" placeholder="Prezime" />
-                    <input type="text" placeholder="Email" />
-                    <input type="password" placeholder="Lozinka" />
-                    <input type="password" placeholder="Potvrdi lozinku" />
-                    <input type = "button" value = "Registruj se" id="submit-btn"/>
+                    <InputField type="text" placeholder="Ime"  />
+                    <InputField type="text" placeholder="Prezime" />
+                    <InputField type="text" placeholder="Email" />
+                    <InputField type="password" placeholder="Lozinka" />
+                    <InputField type="password" placeholder="Potvrdi lozinku" />
+                    <InputField type = "button" value = "Registruj se" id="submit-btn" />
                     {/* <button type="submit" className="registruj-btn">Registruj se</button>
                      */}
                    
