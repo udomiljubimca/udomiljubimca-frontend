@@ -33,11 +33,11 @@ const Register_form = () => {
                 <form action="">
 
                     <h2>Registruj se!</h2>
-                    <InputField type="text" placeholder="Ime"  />
-                    <InputField type="text" placeholder="Prezime" />
-                    <InputField type="text" placeholder="Email" />
-                    <InputField type="password" placeholder="Lozinka" />
-                    <InputField type="password" placeholder="Potvrdi lozinku" />
+                    <InputField type="text" placeholder="Ime" name="ime" />
+                    <InputField type="text" placeholder="Prezime" name="prezime"/>
+                    <InputField type="text" placeholder="Email"  name="email"/>
+                    <InputField type="password" placeholder="Lozinka" name="lozinka"/>
+                    <InputField type="password" placeholder="Potvrdi lozinku"  name="potvrdiLozinku"/>
                     <InputField type = "button" value = "Registruj se" id="submit-btn" />
                     {/* <button type="submit" className="registruj-btn">Registruj se</button>
                      */}

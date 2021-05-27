@@ -1,4 +1,5 @@
 import { React } from "react";
+import style from "./style.css";
 
 
 const InputField = (props) => {
@@ -7,7 +8,7 @@ const InputField = (props) => {
 
         <>
             <div>
-                <input type={props.type} name={props.name}> </input>
+                <input type={props.type} name={props.name} placeholder={props.placeholder} />
             </div>
         </>
 
