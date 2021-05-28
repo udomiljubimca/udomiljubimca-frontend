@@ -1,81 +1,110 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+
+
 import style from "./style.css";
 import img2 from "./../../img/img2.jpg";
 import fb from "./../../img/fb.png";
+import facebook from "./../../img/facebook.png"
+import logogoogle from "./../../img/logogoogle.png"
 import InputField from "./input_field";
 
 
 const Register_form = () => {
+    const [value, setValue] = useState("")
+
+
+    const handleChange = (event) => {
+        const target = event.target
+        const value = target.type === "checkbox" ? target.checked : target.value
+        const name = target.name
+        setValue({[name]: value})
+        console.log(value)
+    }
+
+    
     return (
-        <div className = "container">
-
-
-
-            <div className = "register-description">
-
-                <h4>Registruj se i udomi ljubimca!</h4>
-
-                <p>lorem ipsum</p>
-
-                <img src={img2}></img>
-                
-                            
+        <div className="container">
+            <div className="register-description">
+                <div>
+                    <h4>Registruj se i udomi ljubimca!</h4>
+                    <p>lorem ipsum</p>
+                    <img src={img2}></img>
+                </div>
             </div>
-
-            
-
-
 
             <div className="vertical-container">
 
+                <div className="form-login-details">
+                    <form action="">
+                        <h2>Registruj se!</h2>
+                        <InputField
+                            type="text"
+                            placeholder="Ime"
+                            name="ime"
+                            value={value}
+                            handleChange={handleChange}
 
-                <form action="">
-
-                    <h2>Registruj se!</h2>
-                    <InputField type="text" placeholder="Ime" name="ime" />
-                    <InputField type="text" placeholder="Prezime" name="prezime"/>
-                    <InputField type="text" placeholder="Email"  name="email"/>
-                    <InputField type="password" placeholder="Lozinka" name="lozinka"/>
-                    <InputField type="password" placeholder="Potvrdi lozinku"  name="potvrdiLozinku"/>
-                    <InputField type = "button" value = "Registruj se" id="submit-btn" />
-                    {/* <button type="submit" className="registruj-btn">Registruj se</button>
-                     */}
-                   
-                </form>
+                        />
+                        <InputField
+                            type="text"
+                            placeholder="Prezime"
+                            name="prezime"
+                            value={value}
+                            handleChange={handleChange}
 
 
-                <div className='fb-picture'>
+                        />
+                        <InputField
+                            type="text"
+                            placeholder="Email"
+                            name="email"
+                            value={value}
+                            handleChange={handleChange}
 
-                    {/* <img src={fb}></img> */}
 
-                    <i class="fab fa-facebook"></i>
-                    
-                    <i class="fab fa-google"></i>
+                        />
+                        <InputField
+                            type="password"
+                            placeholder="Lozinka"
+                            name="lozinka"
+                            value={value}
+                            handleChange={handleChange}
 
-                    
 
+
+                        />
+                        <InputField
+                            type="password"
+                            placeholder="Potvrdi lozinku"
+                            name="potvrdiLozinku"
+                            value={value}
+                            handleChange={handleChange}
+
+
+
+                        />
+                        <button type="submit">Registruj se</button>
+
+                    </form>
+
+                    <div className='fb-picture'>
+                        <img src={facebook} />
+                        <img src={logogoogle} />
+                    </div>
+
+                    <div className="check-box">
+                        <input type='checkbox' style={{ width: "15px" }}></input>
+                        <a href="/">Prihvati uslove korišćenja</a>
+
+                    </div>
+
+                    <div className="link-prijava">
+                        <p>Već si se registrovao?</p>
+                        <a href="/">Prijavi se</a>
+                    </div>
                 </div>
-
-                <div>
-
-                    <input type='checkbox'></input>
-
-                    <a href="/">Prihvati uslove korišćenja</a>
-
-                </div>
-
-                <div>
-
-                     <p>Već si se registrovao</p>
-
-                     <a href="/">Prijavi se</a>
-
-
-                </div>
-
             </div>
-
 
 
 
