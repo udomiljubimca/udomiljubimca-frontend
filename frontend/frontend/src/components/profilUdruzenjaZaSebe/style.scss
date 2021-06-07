@@ -1,0 +1,94 @@
+.container {
+    background-color: white;
+    width: 60%;
+    margin: 0 auto;
+    height: 85vh;
+    border: 1px solid black;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
+
+.slika1 {
+    width: 500px;
+    height: 250px;
+    background-color: gray;
+}
+
+
+.slika2 {
+    margin-left: 20px;
+}
+
+.slika {
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+    margin-bottom: 25px;
+}
+
+
+.btn-doniraj {
+    background-color: #169DA8;
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5%;
+}
+.naziv-udruzenja {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 13%;
+        span {
+            margin-left: 10%;
+        }
+}
+
+.line {
+    height: 2px;
+    width: 74%;
+    margin:  0 auto;
+    background: black;
+}
+
+.box-details {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    span {
+        margin: 5px;
+    }
+}
+
+.box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    button {
+        border: 2px solid #169DA8;
+        border-radius: 3px;
+        color: #169DA8;
+        background-color: white;
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold
+    }
+    
+
+}
+
+
