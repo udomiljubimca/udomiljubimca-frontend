@@ -1,6 +1,7 @@
 import React from "react"
 import "./style.scss"
 
+import { GalleryCarousel } from "./../Carousel/index"
 
 export const ProfilUdruzenjaZaSebe = () => {
 
@@ -39,15 +40,20 @@ export const ProfilUdruzenjaZaSebe = () => {
                     </div>
                 </div>
                 <div className="box-opis">
+                
                     <span>O udruzenju</span>
                     <p>Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsut dolor sit amet.</p>
                 </div>
 
 
 
-
                 </div>
-
+                <h2>Galerija</h2>
+           <GalleryCarousel />
+           <div className="btn-uredi-poseti-ljubimca">
+            <button>Uredi profil</button>
+            <button>Poseti ljubimca</button>
+           </div>
             </div>
 
         </>
