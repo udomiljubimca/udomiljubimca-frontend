@@ -1,10 +1,10 @@
-import Cards from "./Cards/Cards";
-import Blogvi from "./Blog/Blogvi";
-import Testimanials from "./Testimanials/Testimonials";
-import KakoUdomitiLjubimca from "./KakoUdomitiLjubimca/KakoUdomitiLjubimca";
-import Popup from "./Modal/Modal";
+import Cards from './Cards/Cards';
+import Blogvi from './Blog/Blogvi';
+import Testimanials from './Testimanials/Testimonials';
+import KakoUdomitiLjubimca from './KakoUdomitiLjubimca/KakoUdomitiLjubimca';
+import Popup from './Popup/Popup';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const DivContainer = styled.div`
   margin: auto;

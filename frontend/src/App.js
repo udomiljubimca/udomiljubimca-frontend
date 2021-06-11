@@ -1,22 +1,24 @@
-import "./App.css";
-import { useState, useEffect } from "react";
+import './App.css';
+import { useState, useEffect } from 'react';
 
-import Content from "./components/Content";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Content from './components/Content';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 // router
 
-import ErrorPage from "./components/Error/ErrorPage";
-import BlogPage from "./components/BlogPage/BlogPage";
+// import ErrorPage from './components/Error';
+import BlogPage from './components/Blog/Blog';
+import Register from './components/Register/Register';
+import PetProfile from './components/PetProfile/PetProfile';
 
 // ne znam gde ce stajati
-import FiltriranjePsi from "./components/RezFiltriranjeZaPse/FiltriranjePsi";
+// import FiltriranjePsi from './components/RezFiltriranjeZaPse/FiltriranjePsi';
 
 //
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   const [popup, setPopup] = useState(false);
@@ -24,130 +26,130 @@ function App() {
   const [podaciLjubimci, setState] = useState([
     {
       id: 1,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 2,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 3,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 4,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 5,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 6,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 7,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 8,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 9,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 10,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 11,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 12,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 13,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 14,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 15,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
     {
       id: 16,
-      naziv: "naziv",
-      pol: "Muski",
-      starost: "junuor",
-      mesto: "Beograd",
+      naziv: 'naziv',
+      pol: 'Muski',
+      starost: 'junuor',
+      mesto: 'Beograd',
       isLike: false,
     },
   ]);
@@ -159,37 +161,37 @@ function App() {
   // kad korisnik pritisne X na popup menja se popup na false i koritimo clean up u useEffet-u(da ocistimo sa DOM-a tj. UI-a na overflow hidden)
   useEffect(() => {
     if (popup) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     }
     return () => {
-      document.body.style.overflow = "scroll";
+      document.body.style.overflow = 'scroll';
     };
   }, [popup]);
 
   // funkcija koja prima argument da li je korisnik kliknuo PRijavi se link(ako jeste primice true ako nije primimce false)
   const triggerPopUp = (isTrigger) => {
-    console.log("PRITISNIT JE POPUP", isTrigger);
+    console.log('PRITISNIT JE POPUP', isTrigger);
 
     setPopup(isTrigger);
   };
 
   const removePopUp = (isTrigger) => {
-    console.log("PRITISNIT JE ZA REMOVE POPUP", isTrigger);
+    console.log('PRITISNIT JE ZA REMOVE POPUP', isTrigger);
 
     setPopup(isTrigger);
   };
 
   const sendPrijaviSe = (pickData) => {
-    console.log("KORISNICKI PODACI", pickData);
+    console.log('KORISNICKI PODACI', pickData);
 
     setUserData([pickData]);
   };
 
-  console.log("USER DATA", userData);
+  console.log('USER DATA', userData);
 
   // funkcija koja uzima id od kliknutig carda
   const isLike = (id) => {
-    console.log("is like" + id);
+    console.log('is like' + id);
     // state se setuje u novi niz, tako sto ako je id jedna id iz stata, onda se pravi novi objekat sa starim podacima ali sa izmeno na isLike
     // naci ce jedan id na cards a sve ostalo korz petlju stavice stare podatke
     setState(
@@ -199,7 +201,7 @@ function App() {
     );
   };
 
-  console.log("novi podaci", podaciLjubimci);
+  console.log('novi podaci', podaciLjubimci);
 
   // document.body.style.overflow = "hidden"
 
@@ -207,7 +209,7 @@ function App() {
 
   const AppDiv = styled.div`
     background-color: ${({ showBackgraund }) =>
-      showBackgraund ? "#C4C4C4" : "#E5E5E5;"};
+      showBackgraund ? '#C4C4C4' : '#E5E5E5;'};
   `;
 
   // objasnjenje za strukturu home page
@@ -220,7 +222,7 @@ function App() {
         <Header trigger={triggerPopUp} />
 
         <Switch>
-          <Route exact path="/">
+          <Route exact path='/'>
             <Content
               podaci={podaciLjubimci}
               like={isLike}
@@ -231,21 +233,27 @@ function App() {
             />
           </Route>
 
-          <Route exact path="/blogs">
+          <Route exact path='/blogs'>
             <BlogPage />
           </Route>
+          <Route exact path='/register'>
+            <Register />
+          </Route>
+          <Route>
+            <PetProfile />
+          </Route>
 
-          <Route exact path="/filtriranjePsa">
+          {/* <Route exact path='/filtriranjePsa'>
             <FiltriranjePsi
               podaci={podaciLjubimci}
               like={isLike}
               isTrigger={popup}
             />
-          </Route>
-
-          <Route path="*">
+          </Route> */}
+          {/* 
+          <Route path='*'>
             <ErrorPage />
-          </Route>
+          </Route> */}
         </Switch>
 
         <Footer />
