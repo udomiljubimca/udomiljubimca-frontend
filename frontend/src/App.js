@@ -12,6 +12,8 @@ import BlogPage from './components/Blog/Blog';
 import Register from './components/Register/Register';
 import PetProfile from './components/PetProfile/PetProfile';
 
+import animals from './data/pets';
+
 // ne znam gde ce stajati
 // import FiltriranjePsi from './components/RezFiltriranjeZaPse/FiltriranjePsi';
 
@@ -22,137 +24,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   const [popup, setPopup] = useState(false);
+  const [pets, setPets] = useState(animals);
 
-  const [podaciLjubimci, setState] = useState([
-    {
-      id: 1,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 2,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 3,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 4,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 5,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 6,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 7,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 8,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 9,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 10,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 11,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 12,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 13,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 14,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 15,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-    {
-      id: 16,
-      naziv: 'naziv',
-      pol: 'Muski',
-      starost: 'junuor',
-      mesto: 'Beograd',
-      isLike: false,
-    },
-  ]);
 
   const [userData, setUserData] = useState([]);
 
@@ -194,14 +67,14 @@ function App() {
     console.log('is like' + id);
     // state se setuje u novi niz, tako sto ako je id jedna id iz stata, onda se pravi novi objekat sa starim podacima ali sa izmeno na isLike
     // naci ce jedan id na cards a sve ostalo korz petlju stavice stare podatke
-    setState(
-      podaciLjubimci.map((podaci) =>
-        podaci.id === id ? { ...podaci, isLike: !podaci.isLike } : podaci
+    setPets(
+      pets.map((petData) =>
+        petData.id === id ? { ...petData, isLike: !petData.isLike } : petData
       )
     );
   };
 
-  console.log('novi podaci', podaciLjubimci);
+  console.log('novi podaci', pets);
 
   // document.body.style.overflow = "hidden"
 
@@ -224,7 +97,7 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Content
-              podaci={podaciLjubimci}
+              podaci={pets}
               like={isLike}
               removeTrigger={removePopUp}
               isTrigger={popup}

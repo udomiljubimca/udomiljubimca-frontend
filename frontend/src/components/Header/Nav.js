@@ -221,7 +221,7 @@ function Nav({ popUp }) {
 
         </DropUl>
       </LiDrop>
-      <Li parametarWith={'42px'} ><Ancor href="#"><h5>Blog</h5></Ancor></Li>
+      <Li parametarWith={'42px'} ><Ancor href="/blogs"><h5>Blog</h5></Ancor></Li>
 
 
       <Li parametarWith={'84px'} onClick={() => popUp(true)} ><Ancor href="#"><h5>Prijavi se</h5></Ancor></Li>
