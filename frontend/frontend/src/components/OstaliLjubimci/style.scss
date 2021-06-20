@@ -1,0 +1,12 @@
+.cards {
+
+    flex: 1 0 21%; /* explanation below */
+    margin: 5px;
+}
+
+i {
+    content: "\f004";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

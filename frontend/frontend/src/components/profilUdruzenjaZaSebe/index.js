@@ -2,9 +2,9 @@ import React from "react"
 import "./style.scss"
 
 import { GalleryCarousel } from "./../Carousel/index"
+import { MediaCard } from "./../OstaliLjubimci/index"
 
 export const ProfilUdruzenjaZaSebe = () => {
-
 
 
     return (
@@ -55,6 +55,12 @@ export const ProfilUdruzenjaZaSebe = () => {
             <button>Poseti ljubimca</button>
            </div>
             </div>
+
+            <h2>Naziv udruzenja - 0stali ljubimci</h2>
+            <div className="container-2">
+            <MediaCard />
+            </div>
+            <h3>Prikazi jos</h3>
 
         </>
     )

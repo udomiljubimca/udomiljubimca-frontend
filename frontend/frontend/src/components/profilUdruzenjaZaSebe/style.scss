@@ -2,9 +2,17 @@
     background-color: white;
     width: 60%;
     margin: 0 auto;
-    height: 85vh;
+    height: 95vh;
     border: 1px solid black;
 }
+
+.container-2 {
+    width: 60%;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+}
+
 
 .img-box {
     display: flex;
