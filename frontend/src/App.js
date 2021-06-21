@@ -26,7 +26,6 @@ function App() {
   const [popup, setPopup] = useState(false);
   const [pets, setPets] = useState(animals);
 
-
   const [userData, setUserData] = useState([]);
 
   // kada korisnik nije kliknuo na prijavi se onda postoji scroll a kad korisnik klikne na prijavi se scroll nestaje (kao da se zamrzne slika i prikazuje se samo popup za prijavi se)
