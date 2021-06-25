@@ -66,8 +66,11 @@ const PetInfo = (props) => {
             </p>
           </div>
           <div className='rightInfoAbout'>
-            <img className='associationImage' src='' alt='associationImg' />
-            <Button variant='primary'>UDOMI ME</Button>
+            {/* <img className='associationImage' src='' alt='associationImg' /> */}
+            <div className='associationImage'>LOGO</div>
+            <Button className='adoptMe' variant='primary'>
+              UDOMI ME
+            </Button>
           </div>
         </div>
         <div className='storyInfo '>

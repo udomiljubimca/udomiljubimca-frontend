@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import "./Cards.css";
-import ProfileCard from "./ProfileCard";
+import './Cards.css';
+import ProfileCard from './ProfileCard';
 
 const Cards = () => {
   const [fetchedData, setFetchedData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/data.json")
+    fetch('http://localhost:3001/data.json')
       .then((response) => response.json())
       .then((responseData) => {
         setFetchedData(responseData);
@@ -18,7 +18,7 @@ const Cards = () => {
   }, []);
 
   return (
-    <div className="cards">
+    <div className='cards'>
       {fetchedData.map((el) => (
         <ProfileCard
           key={el.id}

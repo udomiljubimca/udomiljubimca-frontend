@@ -79,3 +79,14 @@
   display: flex;
   justify-content: space-between;
 }
+
+.associationImage {
+  width: 100px;
+  height: 100px;
+  background: gray;
+}
+
+.adoptMe {
+  width: 224px;
+  height: 64px;
+}

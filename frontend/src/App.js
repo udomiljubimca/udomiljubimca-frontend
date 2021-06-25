@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
 import './App.css';
-import { SliderData } from './components/pet-profile/Slider/SliderData';
-import Header from './components/Header';
-import Cards from './components/pet-profile/Cards/Cards';
-import PetInfo from './components/pet-profile/PetInfo/PetInfo';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Cards from './components/PetProfile/Cards/Cards';
+import PetInfo from './components/PetProfile/PetInfo/PetInfo';
+import Footer from './components/Footer/Footer';
+import { SliderData } from './components/PetProfile/Slider/SliderData';
+import PetProfileUser from './components/PetProfileUser/PetProfileUser';
 
 function App() {
   const [current, setCurrent] = useState(0);
