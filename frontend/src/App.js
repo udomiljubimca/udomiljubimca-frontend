@@ -21,6 +21,7 @@ import animals from './data/pets';
 import styled from 'styled-components';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import RegisterUserPage from './pages/RegisterUserPage';
 
 function App() {
   const [popup, setPopup] = useState(false);
@@ -109,7 +110,8 @@ function App() {
             <BlogPage />
           </Route>
           <Route exact path='/register'>
-            <Register />
+            {/* <Register /> */}
+            <RegisterUserPage/>
           </Route>
           <Route>
             <PetProfile />
