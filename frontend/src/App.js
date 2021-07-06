@@ -222,6 +222,7 @@ function App() {
               isTrigger={popup}
               sendData={sendPrijaviSe}
               resizeHeight={popup}
+              blogPosts={blogPosts}
             />
           </Route>
 
