@@ -1,10 +1,40 @@
-/* Headerr */
+body {
+  background-color: #e5e5e5;
+}
 
-.divDispaly{
+/**
+** Flex
+**/
+
+.flex {
+  display: flex;
+}
+
+.flex--space-between {
+  justify-content: space-between;
+}
+
+.flex--align-center {
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  display: block !important; /* slider container should be renamed */
+  box-sizing: border-box;
+}
+
+.divDispaly {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #FFFFFF;
-
-  
+  background: #ffffff;
 }
