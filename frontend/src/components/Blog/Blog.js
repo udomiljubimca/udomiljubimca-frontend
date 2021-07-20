@@ -1,44 +1,31 @@
-import styled from 'styled-components';
+import { React } from "react";
+import BlogCard from "./BlogCard";
+import blogHeader from "./assets/blog-hero.svg";
+import "./blog.css";
 
-const DivCard = styled.div`
-  width: 350px;
-  height: 427px;
-  box-sizing: border-box;
-`;
-const InnerDiv = styled.div`
-  width: 350px;
-  height: 355px;
-  font-style: normal;
-  font-weight: normal;
-  margin: auto;
-  text-align: center;
-`;
-
-const Img = styled.img`
-  width: 350px;
-  height: 200px;
-  background-color: #c4c4c4;
-`;
-
-const Paragraf = styled.p`
-  width: 318px;
-  height: 60px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #111111;
-  font-style: normal;
-`;
-
-function Blog({ podaciBlog }) {
+const Blog = ({ blogPosts }) => {
   return (
-    <DivCard>
-      <InnerDiv>
-        <Img />
-        <h1> {podaciBlog.naslov}</h1>
-        <Paragraf>{podaciBlog.text}</Paragraf>
-      </InnerDiv>
-    </DivCard>
+    <div className="container">
+      <div
+        className="blog-hero flex flex--space-between flex--align-center"
+        data-collapse="desktop"
+      >
+        <div className="blog-hero__info">
+          <h3 className="blog-box-title">BLOG UDOMI LJUBIMCA</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam
+            condimentum tempus diam.
+          </p>
+        </div>
+        <img src={blogHeader} alt="Udomi Ljubimca" />
+      </div>
+      <div className="flex flex--space-between flex-wrap">
+        {blogPosts.map((item) => (
+          <BlogCard title={item.title} desc={item.desc} url={item.url} />
+        ))}
+      </div>
+    </div>
   );
-}
+};
 
 export default Blog;

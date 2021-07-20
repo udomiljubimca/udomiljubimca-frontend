@@ -1,4 +1,4 @@
-.container {
+.container-slider {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -13,22 +13,22 @@
   width: 73%;
 }
 .image {
-  width: 98%;
-  height: 470px;
+  width: 747px;
+  height: 512px;
   border-radius: 5px;
   position: relative;
 }
 .sliderHeartIcon {
   position: absolute;
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
   top: 20px;
-  right: 45px;
+  right: 175px;
 }
 .right-arrow {
   position: absolute;
   top: 45%;
-  right: 40px;
+  right: 155px;
   font-size: 3rem;
   color: black;
   z-index: 10;
@@ -38,7 +38,7 @@
 .left-arrow {
   position: absolute;
   top: 45%;
-  left: 40px;
+  left: 30px;
   font-size: 3rem;
   color: black;
   z-index: 10;
@@ -54,17 +54,17 @@
   transition-duration: 1s;
 }
 .sideImages {
-  width: 26%;
+  /* width: 26%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.sideImageDiv {
+/* .sideImageDiv {
   height: 31%;
-}
+} */
 .sideImage {
-  height: 100%;
-  width: 100%;
+  height: 157px;
+  width: 259px;
 }
 .sideImage.active {
   opacity: 0.6;

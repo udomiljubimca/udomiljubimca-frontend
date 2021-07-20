@@ -8,7 +8,7 @@ const Slider = (props) => {
   }
 
   return (
-    <div className='container'>
+    <div className='container-slider'>
       <section className='slider'>
         <FaArrowLeft className='left-arrow' onClick={props.prevSlide} />
         <FaArrowRight className='right-arrow' onClick={props.nextSlide} />
