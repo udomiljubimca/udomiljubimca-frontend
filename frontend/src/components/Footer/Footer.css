@@ -22,13 +22,13 @@
   align-items: center;
 }
 
-.footer-nav a{
-    text-decoration:none;
-    color: #FFFFFF;
-    font-size: 18px;
-    width:80px;
-    line-height: 35px;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: 0.03em;
+.footer-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  width: 80px;
+  line-height: 35px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.03em;
 }
