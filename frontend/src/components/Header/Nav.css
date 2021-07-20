@@ -1,0 +1,151 @@
+.main-nav {
+  width: 890px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  margin: 0px;
+}
+
+.main-nav-item {
+  list-style: none;
+  width: 59px;
+  height: 18px;
+  /* flex-basis:${({ parametarWith }) => parametarWith}; */
+}
+
+.main-nav-item h5 {
+  margin: 0;
+}
+.main-nav-link {
+  text-decoration: none;
+  color: #111111;
+  width: 80px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.nav-dropdown-parent {
+  list-style: none;
+  position: relative;
+  height: 18px;
+  /* flex-basis:${({ parametarWith }) => parametarWith}; */
+}
+
+.nav-dropdown-parent h5 {
+  margin: 0px;
+}
+
+.nav-dropdown-parent:hover .nav-dropdown-list {
+  display: block;
+  z-index: 1;
+}
+
+.nav-dropdown-list {
+  width: 138px;
+  height: 124px;
+  margin: 0px;
+  padding: 0px;
+  background: #ffffff;
+  border: 2px solid #169da8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: absolute;
+  display: none;
+}
+
+.nav-dropdown-item {
+  display: block;
+  width: 106px;
+  height: 36px;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.nav-dropdown-link {
+  text-decoration: none;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #111111;
+}
+
+.nav-register-btn {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.nav-dropdown-reg-parent {
+  width: 142px;
+  height: 38px;
+  background: #169da8;
+  border-radius: 6px;
+  list-style: none;
+  position: relative;
+}
+.nav-dropdown-reg-parent:hover .nav-dropdown-reg-list {
+  display: block;
+  z-index: 1;
+}
+
+.nav-dropdown-reg-list {
+  width: 140px;
+  height: 84px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: absolute;
+  top: 20px;
+  left: 2px;
+  /* na hover se otkriva drop menu(setuje dispaly:blok) */
+  display: none;
+}
+
+.register-btn-heading {
+  margin: 0;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.register-dropdown-item {
+  width: 142px;
+  height: 36px;
+  list-style: none;
+  padding-bottom: 6px;
+  position: relative;
+
+  right: 42px;
+  /* margin-top: 5px; */
+  /* background-color:#C0DDDF; */
+}
+
+.register-dropdown-item:hover {
+  background-color: #c0dddf;
+}
+
+.reg-dropdown-link {
+  text-decoration: none;
+  /* font-family: Rubik; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #111111;
+}
+
+.reg-dropdown-link > span {
+  position: relative;
+  top: 8px;
+  left: 16px;
+}

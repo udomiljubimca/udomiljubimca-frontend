@@ -1,41 +1,15 @@
-import styled from 'styled-components';
-
-import Nav from './Nav'
-
-const HeaderDiv = styled.div`
-width:100%;
-height:64px;
-background: #FFFFFF;
-box-sizing: border-box;
-margin-bottom:30px;
-`
-const HederDivContainer = styled.div`
-
-  margin: auto;
-  width: 1183px;
-  height:64px;
-`
-const LogoStayle = styled.div`
-width:102px;
-height:42px;
-box-sizing: border-box;
-border: 2px solid #AAAAAA;
-background: #EEEEEE;
-`
-
+import "./Header.css";
+import Nav from "./Nav";
 
 function Header({ trigger }) {
   return (
-    <HeaderDiv>
-      <HederDivContainer className="divDispaly">
-        <LogoStayle />
-        <Nav
-          popUp={trigger}
-        />
-      </HederDivContainer>
-
-    </HeaderDiv>
-  )
+    <div className="header">
+      <div className="header-content">
+        <div className="header-logo" />
+        <Nav popUp={trigger} />
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;

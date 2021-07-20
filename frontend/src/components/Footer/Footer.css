@@ -1,0 +1,34 @@
+.footer {
+  width: 100%;
+  height: 238px;
+  background: #169da8;
+  margin-top: 50px;
+  position: relative;
+}
+
+.footer-content {
+  width: 1183px;
+  margin: auto;
+  /* position: absolute;
+    left:255px;
+    top:150px; */
+}
+
+.footer-nav {
+  width: 1220px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  width: 80px;
+  line-height: 35px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.03em;
+}
