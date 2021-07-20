@@ -1,36 +1,28 @@
-import styled from "styled-components";
+import React from "react";
 import "./Footer.css";
-
-const Li = styled.li`
-  list-style: none;
-  width: 59px;
-  height: 18px;
-  flex-basis: ${({ parametarWith }) => parametarWith};
-`;
 
 function Footer() {
   return (
     <div className="footer">
-      <div className="footer-content">
+      <div className="footer-content container">
         <ul className="footer-nav">
-          <Li parametarWith={"71px"}>
-            {" "}
-            <a href="#">O Nama</a>{" "}
-          </Li>
-          <Li parametarWith={"139px"}>
-            {" "}
-            <a href="#">Prijevi problem</a>{" "}
-          </Li>
-          <Li parametarWith={"156px"}>
-            {" "}
-            <a href="#">Uslovi koriscenja</a>{" "}
-          </Li>
-          <Li parametarWith={"72px"}>
-            {" "}
-            <a href="#">Konctact</a>{" "}
-          </Li>
+          <li>
+            <a href="/#">O Nama</a>
+          </li>
+          <li>
+            <a href="/#">Prijevi problem</a>
+          </li>
+          <li>
+            <a href="/#">Uslovi korišćenja</a>
+          </li>
+          <li>
+            <a href="/#">Kontakt</a>
+          </li>
         </ul>
       </div>
+      <p className="footer-copyright">
+        &copy; 2021 Udomi Ljubimca | All Rights Reserved
+      </p>
     </div>
   );
 }

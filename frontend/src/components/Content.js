@@ -1,5 +1,4 @@
 import Cards from "./Cards/Cards";
-import Blog from "./Blog/Blog";
 import Testimanials from "./Testimanials/Testimonials";
 import KakoUdomitiLjubimca from "./KakoUdomitiLjubimca/KakoUdomitiLjubimca";
 import Popup from "./Popup/Popup";
@@ -23,8 +22,14 @@ const UdomiH4 = styled.h4`
   margin: 20px 0 15px 0;
 `;
 
-const Content = ({ podaci, like, isTrigger, removeTrigger, sendData, blogPosts }) => {
-  console.log(podaci);
+const Content = ({
+  podaci,
+  like,
+  isTrigger,
+  removeTrigger,
+  sendData,
+  blogPosts,
+}) => {
   return (
     <DivContainer>
       <Popup
@@ -42,10 +47,14 @@ const Content = ({ podaci, like, isTrigger, removeTrigger, sendData, blogPosts }
       <h1>Blog</h1>
       <div className="flex flex--space-between flex-wrap">
         {blogPosts.slice(0, 3).map((item) => (
-          <BlogCard title={item.title} desc={item.desc} url={item.url} />
+          <BlogCard
+            key={item.title}
+            title={item.title}
+            desc={item.desc}
+            url={item.url}
+          />
         ))}
       </div>
-
     </DivContainer>
   );
 };

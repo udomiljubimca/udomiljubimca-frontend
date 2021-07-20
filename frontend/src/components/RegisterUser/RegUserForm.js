@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import useValidation from '../../hooks/use-validation';
+import React, { useState } from "react";
+import useValidation from "../../hooks/use-validation";
 
-import './RegUserForm.css';
-import eyeIcon from '../../assets/eye_icon.png';
+import "./RegUserForm.css";
+import eyeIcon from "../../assets/eye_icon.png";
 
-const validateName = (value) => value.trim() !== '';
+const validateName = (value) => value.trim() !== "";
 const validateEmail = (value) => {
   return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
     value
@@ -57,8 +57,8 @@ const RegUserForm = () => {
   } = useValidation(validatePassword);
 
   const showPasswordHandler = () => {
-    setShowPassword(prevState => !prevState);
-  }
+    setShowPassword((prevState) => !prevState);
+  };
 
   const showPasswordConfirmHandler = () => {
     setShowConfirmPassword((prevState) => !prevState);
@@ -86,11 +86,11 @@ const RegUserForm = () => {
     }
 
     if (!passwordsMatch) {
-      alert('Passwords do not match');
+      alert("Passwords do not match");
       return;
     }
 
-    alert('valid');
+    alert("valid");
 
     const user = {
       name: enteredFirstName,
@@ -98,8 +98,6 @@ const RegUserForm = () => {
       email: enteredEmail,
       password: enteredPassword,
     };
-
-    console.log(user);
 
     resetFirstNameInput();
     resetLastNameInput();
@@ -109,29 +107,29 @@ const RegUserForm = () => {
   };
 
   const firstNameClasses = !firstNameInputHasError
-    ? 'form-input'
-    : 'form-input invalid';
+    ? "form-input"
+    : "form-input invalid";
 
   const lastNameClasses = !lastNameInputHasError
-    ? 'form-input'
-    : 'form-input invalid';
+    ? "form-input"
+    : "form-input invalid";
 
   const emailClasses = !emailInputHasError
-    ? 'form-input'
-    : 'form-input invalid';
+    ? "form-input"
+    : "form-input invalid";
 
   const passwordClasses = !passwordInputHasError
-    ? 'form-input'
-    : 'form-input invalid';
+    ? "form-input"
+    : "form-input invalid";
 
   return (
-    <form className='regUser-form' onSubmit={formSubmitHandler}>
+    <form className="regUser-form" onSubmit={formSubmitHandler}>
       <input
         className={firstNameClasses}
-        type='text'
-        name='name'
-        id='name'
-        placeholder='Ime'
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Ime"
         value={enteredFirstName}
         onChange={firstNameChangedHandler}
         onBlur={firstNameInputBlurHandler}
@@ -139,10 +137,10 @@ const RegUserForm = () => {
       {firstNameInputHasError && <p>Please enter a first name...</p>}
       <input
         className={lastNameClasses}
-        type='text'
-        name='last-name'
-        id='last-name'
-        placeholder='Prezime'
+        type="text"
+        name="last-name"
+        id="last-name"
+        placeholder="Prezime"
         value={enteredLastName}
         onChange={lastNameChangedHandler}
         onBlur={lastNameInputBlurHandler}
@@ -150,27 +148,27 @@ const RegUserForm = () => {
       {lastNameInputHasError && <p>Please enter a last name...</p>}
       <input
         className={emailClasses}
-        type='email'
-        name='email'
-        id='email'
-        placeholder='Email'
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
         value={enteredEmail}
         onChange={emailChangedHandler}
         onBlur={emailInputBlurHandler}
       />
       {emailInputHasError && <p>Please enter a valid email address...</p>}
-      <div className='password-input'>
+      <div className="password-input">
         <input
           className={passwordClasses}
-          type={showPassword? 'text' : 'password'}
-          name='password'
-          id='password'
-          placeholder='Lozinka'
+          type={showPassword ? "text" : "password"}
+          name="password"
+          id="password"
+          placeholder="Lozinka"
           value={enteredPassword}
           onChange={passwordChangedHandler}
           onBlur={passwordInputBlurHandler}
         />
-        <img src={eyeIcon}  onClick={showPasswordHandler}/>
+        <img src={eyeIcon} onClick={showPasswordHandler} />
       </div>
       {passwordInputHasError && (
         <p>
@@ -178,18 +176,18 @@ const RegUserForm = () => {
           od 6 slova
         </p>
       )}
-      <div className='password-input'>
+      <div className="password-input">
         <input
-          type={showConfirmPassword ? 'text' : 'password'}
-          name='password-confirm'
-          id='password-confirm'
-          placeholder='Potvrdi lozinku'
+          type={showConfirmPassword ? "text" : "password"}
+          name="password-confirm"
+          id="password-confirm"
+          placeholder="Potvrdi lozinku"
           onBlur={passwordsMathcChecker}
         />
-        <img src={eyeIcon}  onClick={showPasswordConfirmHandler}/>
+        <img src={eyeIcon} onClick={showPasswordConfirmHandler} />
       </div>
 
-      <input type='submit' value='Registruj se' disabled={!formIsValid} />
+      <input type="submit" value="Registruj se" disabled={!formIsValid} />
     </form>
   );
 };
