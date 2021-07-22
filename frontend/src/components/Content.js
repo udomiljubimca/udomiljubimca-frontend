@@ -1,26 +1,9 @@
+import React from "react";
 import Cards from "./Cards/Cards";
 import Testimanials from "./Testimanials/Testimonials";
 import KakoUdomitiLjubimca from "./KakoUdomitiLjubimca/KakoUdomitiLjubimca";
 import Popup from "./Popup/Popup";
-
-import styled from "styled-components";
-
 import BlogCard from "./Blog/BlogCard";
-
-const DivContainer = styled.div`
-  margin: auto;
-  width: 1183px;
-  position: relative;
-`;
-const UdomiH4 = styled.h4`
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 25px;
-  color: #000000;
-  margin: 20px 0 15px 0;
-`;
 
 const Content = ({
   podaci,
@@ -31,13 +14,13 @@ const Content = ({
   blogPosts,
 }) => {
   return (
-    <DivContainer>
+    <div className="container">
       <Popup
         trigger={isTrigger}
         triggerOff={removeTrigger}
         pickUpData={sendData}
       />
-      <UdomiH4>Udomi ljubimce</UdomiH4>
+      <h4>Udomi ljubimce</h4>
       <Cards ljubimci={podaci} isLike={like} trigger={isTrigger} />
 
       <Testimanials />
@@ -55,7 +38,7 @@ const Content = ({
           />
         ))}
       </div>
-    </DivContainer>
+    </div>
   );
 };
 

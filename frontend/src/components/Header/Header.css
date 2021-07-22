@@ -1,14 +1,13 @@
 .header {
   width: 100%;
-  height: 64px;
   background: #ffffff;
   box-sizing: border-box;
   margin-bottom: 30px;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .header-content {
   margin: auto;
-  width: 1183px;
   height: 64px;
   display: flex;
   justify-content: space-between;
@@ -17,9 +16,37 @@
 }
 
 .header-logo {
-  width: 102px;
-  height: 42px;
-  box-sizing: border-box;
-  border: 2px solid #aaaaaa;
-  background: #eeeeee;
+  display: flex;
+  max-width: 250px;
+  width: 100%;
+}
+
+.header-logo img {
+  width: 100%;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .mobile-menu {
+    display: block;
+  }
+  .header-content {
+    justify-content: space-between;
+    height: auto;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  .header-logo {
+    max-width: 40%;
+    text-align: left;
+  }
 }

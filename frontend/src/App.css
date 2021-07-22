@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap");
+
 body {
-  background-color: #e5e5e5;
+  background-color: #fff;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
 }
 
 /**
@@ -28,7 +35,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  display: block !important; /* slider container should be renamed */
   box-sizing: border-box;
 }
 

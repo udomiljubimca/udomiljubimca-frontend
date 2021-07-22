@@ -1,7 +1,6 @@
 .main-nav {
-  width: 890px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   margin-top: 10px;
   margin: 0px;
@@ -9,19 +8,12 @@
 
 .main-nav-item {
   list-style: none;
-  width: 59px;
-  height: 18px;
-  /* flex-basis:${({ parametarWith }) => parametarWith}; */
+  margin-left: 30px;
 }
 
-.main-nav-item h5 {
-  margin: 0;
-}
 .main-nav-link {
   text-decoration: none;
-  color: #111111;
-  width: 80px;
-  font-family: Rubik;
+  color: #313131;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -31,12 +23,16 @@
 .nav-dropdown-parent {
   list-style: none;
   position: relative;
-  height: 18px;
-  /* flex-basis:${({ parametarWith }) => parametarWith}; */
 }
 
 .nav-dropdown-parent h5 {
   margin: 0px;
+}
+
+.nav-dropdown-parent svg {
+  position: relative;
+  top: 2px;
+  font-size: 15px;
 }
 
 .nav-dropdown-parent:hover .nav-dropdown-list {
@@ -68,32 +64,31 @@
 
 .nav-dropdown-link {
   text-decoration: none;
-  font-family: Rubik;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 150%;
-  color: #111111;
+  color: #313131;
 }
 
 .nav-register-btn {
-  text-decoration: none;
+  display: block;
+  min-width: 180px;
+  height: 50px;
   color: #ffffff;
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 24px;
+  background: #f75451;
+  border-radius: 30px;
+  text-decoration: none;
+  line-height: 50px;
+  text-align: center;
 }
 
 .nav-dropdown-reg-parent {
-  width: 142px;
-  height: 38px;
-  background: #169da8;
-  border-radius: 6px;
   list-style: none;
   position: relative;
+  margin-left: 30px;
 }
+
 .nav-dropdown-reg-parent:hover .nav-dropdown-reg-list {
   display: block;
   z-index: 1;
@@ -108,14 +103,7 @@
   position: absolute;
   top: 20px;
   left: 2px;
-  /* na hover se otkriva drop menu(setuje dispaly:blok) */
   display: none;
-}
-
-.register-btn-heading {
-  margin: 0;
-  margin-top: 5px;
-  text-align: center;
 }
 
 .register-dropdown-item {
@@ -124,10 +112,7 @@
   list-style: none;
   padding-bottom: 6px;
   position: relative;
-
   right: 42px;
-  /* margin-top: 5px; */
-  /* background-color:#C0DDDF; */
 }
 
 .register-dropdown-item:hover {
@@ -136,16 +121,45 @@
 
 .reg-dropdown-link {
   text-decoration: none;
-  /* font-family: Rubik; */
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 150%;
-  color: #111111;
+  color: #313131;
 }
 
 .reg-dropdown-link > span {
   position: relative;
   top: 8px;
   left: 16px;
+}
+
+@media only screen and (max-width: 991px) {
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: 51px;
+    left: 0;
+    right: 0;
+    padding-bottom: 15px;
+    z-index: 10;
+    background: white;
+  }
+
+  .mobile-nav-show {
+    display: block;
+  }
+
+  .nav-dropdown-reg-parent {
+    margin: 15px;
+  }
+
+  .main-nav-item {
+    margin-left: 0;
+  }
+
+  .main-nav-item a {
+    display: block;
+    padding: 15px 0;
+  }
 }
