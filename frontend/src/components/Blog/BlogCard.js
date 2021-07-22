@@ -1,6 +1,6 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
-import placeholder from "./assets/placeholder.svg";
+import placeholder from "../../assets/placeholder.svg";
 
 const BlogCard = ({ title, desc, url }) => {
   return (
