@@ -1,32 +1,17 @@
-import styled from "styled-components";
 import { FaChevronDown } from "react-icons/fa";
-
 import "./Nav.css";
 
-const SavetiIcon = styled(FaChevronDown)`
-  position: absolute;
-  top: 6px;
-  left: 45px;
-
-  height: 12px;
-`;
-
-function Nav({ popUp }) {
+function Nav({ popUp, mobileNav }) {
   return (
-    <nav className="main-nav">
+    <nav className={`main-nav ${mobileNav ? "mobile-nav-show" : ""}`}>
       <li className="main-nav-item">
         <a className="main-nav-link" href="/#">
-          Pocetna
+          Udruženja
         </a>
       </li>
-      <li className="main-nav-item">
+      <li className="main-nav-item nav-dropdown-parent">
         <a className="main-nav-link" href="/#">
-          Udruzenje
-        </a>
-      </li>
-      <li className="nav-dropdown-parent">
-        <a className="main-nav-link" href="/#">
-          Saveti <SavetiIcon />
+          Saveti <FaChevronDown />
         </a>
         <ul className="nav-dropdown-list">
           <li className="nav-dropdown-item">
@@ -58,7 +43,7 @@ function Nav({ popUp }) {
       </li>
       <li className="nav-dropdown-reg-parent">
         <a className="nav-register-btn" href="/#">
-          <h5 className="register-btn-heading">Registruje se</h5>
+          Registruje se
         </a>
         <ul className="nav-dropdown-reg-list">
           <li className="register-dropdown-item">
