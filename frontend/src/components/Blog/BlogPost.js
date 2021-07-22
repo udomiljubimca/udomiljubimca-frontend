@@ -1,6 +1,6 @@
 import { React } from "react";
 import { useRouteMatch } from "react-router-dom";
-import placeholder from "./assets/placeholder.svg";
+import placeholder from "../../assets/placeholder.svg";
 
 const BlogPost = ({ blogPosts }) => {
   const { params } = useRouteMatch();

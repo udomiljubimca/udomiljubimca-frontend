@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "./Cards/Cards";
+import Cards from "./PetCard/Pets";
 import Testimanials from "./Testimanials/Testimonials";
 import KakoUdomitiLjubimca from "./KakoUdomitiLjubimca/KakoUdomitiLjubimca";
 import Popup from "./Popup/Popup";
