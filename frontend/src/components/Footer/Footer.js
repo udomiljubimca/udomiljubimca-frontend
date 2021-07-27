@@ -1,26 +1,26 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css';
 
 function Footer() {
   return (
-    <div className="footer">
-      <div className="footer-content container">
-        <ul className="footer-nav">
+    <div className='footer'>
+      <div className='footer-content container'>
+        <ul className='footer-nav'>
           <li>
-            <a href="/#">O Nama</a>
+            <a href='/#'>O Nama</a>
           </li>
           <li>
-            <a href="/#">Prijevi problem</a>
+            <a href='/#'>Prijavi problem</a>
           </li>
           <li>
-            <a href="/#">Uslovi korišćenja</a>
+            <a href='/#'>Uslovi korišćenja</a>
           </li>
           <li>
-            <a href="/#">Kontakt</a>
+            <a href='/#'>Kontakt</a>
           </li>
         </ul>
       </div>
-      <p className="footer-copyright">
+      <p className='footer-copyright'>
         &copy; 2021 Udomi Ljubimca | All Rights Reserved
       </p>
     </div>
