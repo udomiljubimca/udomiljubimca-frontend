@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "./PetCard/Pets";
-import Testimanials from "./Testimanials/Testimonials";
+import Testimonials from "./Testimanials/Testimonials";
 import KakoUdomitiLjubimca from "./KakoUdomitiLjubimca/KakoUdomitiLjubimca";
 import Popup from "./Popup/Popup";
 import BlogCard from "./Blog/BlogCard";
@@ -23,7 +23,7 @@ const Content = ({
       <h4>Udomi ljubimce</h4>
       <Cards ljubimci={podaci} isLike={like} trigger={isTrigger} />
 
-      <Testimanials />
+      <Testimonials />
 
       <KakoUdomitiLjubimca />
 
