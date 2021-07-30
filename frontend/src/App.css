@@ -9,9 +9,9 @@ body {
   box-sizing: border-box;
 }
 
-/**
+/***********
 ** Flex
-**/
+***********/
 
 .flex {
   display: flex;
@@ -31,6 +31,25 @@ body {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+/***********
+** Buttons
+***********/
+
+.btn {
+  min-width: 180px;
+  min-height: 50px;
+  border-radius: 30px;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 50px;
+}
+
+.btn-primary {
+  background: #f75451;
 }
 
 .container {
