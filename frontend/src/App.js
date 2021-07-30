@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 
 // router
 
-// import ErrorPage from './components/Error';
+import Error from "./components/Error/Error";
 import Blog from "./components/Blog/Blog";
 import BlogPost from "./components/Blog/BlogPost";
 import PetProfile from "./components/PetProfile/PetProfile";
@@ -108,9 +108,10 @@ function App() {
             {/* <Register /> */}
             <RegisterUserPage />
           </Route>
-          <Route>
+          <Route path="/ljubimac">
             <PetProfile />
           </Route>
+          <Route component={Error} />
 
           {/* <Route exact path='/filtriranjePsa'>
             <FiltriranjePsi
@@ -118,10 +119,6 @@ function App() {
               like={isLike}
               isTrigger={popup}
             />
-          </Route> */}
-          {/* 
-          <Route path='*'>
-            <ErrorPage />
           </Route> */}
         </Switch>
 
