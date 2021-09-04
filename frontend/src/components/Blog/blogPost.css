@@ -1,0 +1,42 @@
+.blog-post {
+  padding: 40px 90px;
+  border: 1px solid #f9ae05;
+  margin: 30px auto;
+}
+
+.blog-post__hero {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.blog-post__title {
+  text-align: center;
+}
+
+.blog-post__title {
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: normal;
+  margin: 30px 0 0 0;
+}
+
+.blog-post__author-info {
+  margin-top: 30px;
+}
+
+.blog-post__author-info p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.blog-post__desc {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.blog-post__author-info {
+  text-align: right;
+}

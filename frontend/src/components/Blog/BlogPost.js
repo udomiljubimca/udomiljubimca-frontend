@@ -1,6 +1,7 @@
 import { React } from "react";
 import { useRouteMatch } from "react-router-dom";
 import placeholder from "../../assets/placeholder.svg";
+import "./blogPost.css";
 
 const BlogPost = ({ blogPosts }) => {
   const { params } = useRouteMatch();
@@ -15,16 +16,16 @@ const BlogPost = ({ blogPosts }) => {
             alt={blogPost.title}
           />
           <h1 className="blog-post__title">{blogPost.title}</h1>
+          <p className="blog-post__desc">{blogPost.desc}</p>
           <div className="blog-post__author-info">
             <p>{blogPost.fullName}</p>
             <p>{blogPost.role}</p>
             <p>{blogPost.date}</p>
           </div>
-          <p className="blog-post__desc">{blogPost.desc}</p>
         </div>
       </div>
       {/* TODO blog slider */}
-      <div className="container blog-featured">featured</div>
+      <div className="container blog-featured">TODO "featured" slider</div>
     </>
   );
 };
