@@ -33,6 +33,29 @@ body {
   flex-wrap: wrap;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
+/***********
+** Reuse
+***********/
+
+.title-underline {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.title-underline:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 2px;
+  background: #f9ae05;
+}
+
 /***********
 ** Buttons
 ***********/
@@ -66,4 +89,19 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
+}
+
+/***********
+** Buttons
+***********/
+@media only screen and (max-width: 991px) {
+  [data-collapse="desktop"] {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  [data-collapse="tablet"] {
+    display: block !important;
+  }
 }
