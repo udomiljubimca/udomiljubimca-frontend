@@ -1,18 +1,17 @@
-import React from 'react';
-import RegUserForm from '../components/RegisterUser/RegUserForm';
+import React from "react";
 
-import './RegisterUserPage.css';
+// Assets
+import registerBg from "../assets/register-user.png";
+
+// components
+import RegisterForm from "../components/Register/RegisterForm";
+import RegisterUserForm from "../components/RegisterUser/RegisterUserForm";
 
 const RegisterUserPage = () => {
   return (
-    <div>
-      <div>
-        <h4>Registruj se i udomi ljubimca!</h4>
-        <p>lorem ipsum</p>
-        <img src='' alt='img2'></img>
-      </div>
-      <RegUserForm />
-    </div>
+    <RegisterForm title="REGISTRUJ SE" img={registerBg}>
+      <RegisterUserForm />
+    </RegisterForm>
   );
 };
 

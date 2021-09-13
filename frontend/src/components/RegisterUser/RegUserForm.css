@@ -1,9 +1,0 @@
-.invalid{
-    border: 2px solid red;
-    background-color: salmon;
-}
-
-.regUser-form{
-    display: flex;
-    flex-direction: column;
-}

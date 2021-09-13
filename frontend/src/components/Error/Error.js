@@ -8,7 +8,7 @@ const Error = () => {
     <div className="container flex flex--justify-center flex--align-center error-page">
       <img src={ErrorImage} alt="404" />
       <h2>Greška, stranica nije pronađena.</h2>
-      <Link to="/" className="btn btn-primary">
+      <Link to="/" className="custom-btn btn-primary">
         NAZAD
       </Link>
     </div>

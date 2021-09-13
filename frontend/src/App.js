@@ -1,6 +1,6 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useState, useEffect } from "react";
-
 import Content from "./components/Content";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -19,9 +19,6 @@ import animals from "./data/pets";
 
 // ne znam gde ce stajati
 // import FiltriranjePsi from './components/RezFiltriranjeZaPse/FiltriranjePsi';
-
-//
-import styled from "styled-components";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import RegisterUserPage from "./pages/RegisterUserPage";
@@ -69,22 +66,10 @@ function App() {
     );
   };
 
-  ////////////////// stil ///////////////
-
-  const AppDiv = styled.div`
-    background-color: ${({ showBackgraund }) =>
-      showBackgraund ? "#C4C4C4" : "#E5E5E5;"};
-  `;
-
-  // objasnjenje za strukturu home page
-  // Header
-  // Main
-  // footer
   return (
     <Router>
-      <AppDiv showBackgraund={popup}>
+      <div>
         <Header trigger={triggerPopUp} />
-
         <Switch>
           <Route exact path="/">
             <Content
@@ -104,8 +89,7 @@ function App() {
           <Route exact path="/blog/:id">
             <BlogPost blogPosts={blogPosts} />
           </Route>
-          <Route exact path="/register">
-            {/* <Register /> */}
+          <Route exact path="/registracija-korisnika">
             <RegisterUserPage />
           </Route>
           <Route path="/ljubimac">
@@ -123,7 +107,7 @@ function App() {
         </Switch>
 
         <Footer />
-      </AppDiv>
+      </div>
     </Router>
   );
 }

@@ -1,60 +1,57 @@
-import { FaChevronDown } from 'react-icons/fa';
-import './Nav.css';
+import { FaChevronDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import "./Nav.css";
 
 function Nav({ popUp, mobileNav }) {
   return (
-    <nav className={`main-nav ${mobileNav ? 'mobile-nav-show' : ''}`}>
-      <li className='main-nav-item'>
-        <a className='main-nav-link' href='/#'>
+    <nav className={`main-nav ${mobileNav ? "mobile-nav-show" : ""}`}>
+      <li className="main-nav-item">
+        <Link className="main-nav-link" to="/">
           Udruženja
-        </a>
+        </Link>
       </li>
-      <li className='main-nav-item nav-dropdown-parent'>
-        <a className='main-nav-link' href='/#'>
+      <li className="main-nav-item nav-dropdown-parent">
+        <span className="main-nav-link">
           Saveti <FaChevronDown />
-        </a>
-        <ul className='nav-dropdown-list'>
-          <li className='nav-dropdown-item'>
-            <a className='nav-dropdown-link' href='/#'>
+        </span>
+        <ul className="nav-dropdown-list">
+          <li className="nav-dropdown-item">
+            <Link className="nav-dropdown-link" to="#">
               Česta pitanja
-            </a>
+            </Link>
           </li>
-          <li className='nav-dropdown-item'>
-            <a className='nav-dropdown-link' href='/#'>
+          <li className="nav-dropdown-item">
+            <Link className="nav-dropdown-link" to="#">
               Veterinar
-            </a>
+            </Link>
           </li>
-          <li className='nav-dropdown-item'>
-            <a className='nav-dropdown-link' href='/#'>
+          <li className="nav-dropdown-item">
+            <Link className="nav-dropdown-link" to="#">
               Iskustva
-            </a>
+            </Link>
           </li>
         </ul>
       </li>
-      <li className='main-nav-item'>
-        <a className='main-nav-link' href='/blog'>
+      <li className="main-nav-item">
+        <Link className="main-nav-link" to="/blog">
           Blog
-        </a>
+        </Link>
       </li>
-      <li className='main-nav-item' onClick={() => popUp(true)}>
-        <a className='main-nav-link' href='/#'>
+      <li className="main-nav-item" onClick={() => popUp(true)}>
+        <Link className="main-nav-link" to="#">
           Prijavi se
-        </a>
+        </Link>
       </li>
-      <li className='nav-dropdown-reg-parent'>
-        <a className='nav-register-btn' href='/#'>
+      <li className="main-nav-item nav-dropdown-parent">
+        <span className="main-nav-link custom-btn btn-primary d-block">
           Registruj se
-        </a>
-        <ul className='nav-dropdown-reg-list'>
-          <li className='register-dropdown-item'>
-            <a className='reg-dropdown-link' href='/#'>
-              <span>Kao udruženje</span>
-            </a>
+        </span>
+        <ul className="nav-dropdown-list">
+          <li className="nav-dropdown-item">
+            <Link to="/registracija-korisnika">Kao korisnik</Link>
           </li>
-          <li className='register-dropdown-item'>
-            <a className='reg-dropdown-link' href='/#'>
-              <span>Kao korisnik</span>
-            </a>
+          <li className="nav-dropdown-item">
+            <Link to="/registracija-udruzenja">Kao udruzenje</Link>
           </li>
         </ul>
       </li>

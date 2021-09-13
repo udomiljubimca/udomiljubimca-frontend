@@ -20,6 +20,11 @@
   line-height: 24px;
 }
 
+.main-nav-link.custom-btn {
+  line-height: 44px;
+  color: var(--white);
+}
+
 .nav-dropdown-parent {
   list-style: none;
   position: relative;
@@ -45,7 +50,7 @@
   height: 124px;
   margin: 0px;
   padding: 0px;
-  background: #ffffff;
+  background: var(--white);
   border: 2px solid #169da8;
   box-sizing: border-box;
   border-radius: 4px;
@@ -71,18 +76,6 @@
   color: #313131;
 }
 
-.nav-register-btn {
-  display: block;
-  min-width: 180px;
-  height: 50px;
-  color: #ffffff;
-  background: #f75451;
-  border-radius: 30px;
-  text-decoration: none;
-  line-height: 50px;
-  text-align: center;
-}
-
 .nav-dropdown-reg-parent {
   list-style: none;
   position: relative;
@@ -97,7 +90,7 @@
 .nav-dropdown-reg-list {
   width: 140px;
   height: 84px;
-  background: #ffffff;
+  background: var(--white);
   box-sizing: border-box;
   border-radius: 4px;
   position: absolute;
@@ -143,7 +136,7 @@
     right: 0;
     padding-bottom: 15px;
     z-index: 10;
-    background: white;
+    background: var(--white);
   }
 
   .mobile-nav-show {
