@@ -11,17 +11,17 @@ import Error from "./components/Error/Error";
 import Blog from "./components/Blog/Blog";
 import BlogPost from "./components/Blog/BlogPost";
 import PetProfile from "./components/PetProfile/PetProfile";
+import RegisterUserPage from "./pages/RegisterUserPage";
+import RegisterOrgPage from "./pages/RegisterOrgPage";
 
 // fake blog data import, it is just for preview and demo
 import blogData from "./fakeBlogPostData";
-
 import animals from "./data/pets";
 
 // ne znam gde ce stajati
 // import FiltriranjePsi from './components/RezFiltriranjeZaPse/FiltriranjePsi';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import RegisterUserPage from "./pages/RegisterUserPage";
 
 function App() {
   const [popup, setPopup] = useState(false);
@@ -91,6 +91,9 @@ function App() {
           </Route>
           <Route exact path="/registracija-korisnika">
             <RegisterUserPage />
+          </Route>
+          <Route exact path="/registracija-udruzenja">
+            <RegisterOrgPage />
           </Route>
           <Route path="/ljubimac">
             <PetProfile />
