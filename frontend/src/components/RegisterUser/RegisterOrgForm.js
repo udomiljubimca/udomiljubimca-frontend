@@ -25,7 +25,7 @@ const RegisterOrgForm = () => {
   };
 
   const orgPassword = useRef({});
-  orgPassword.current = watch("password", "");
+  orgPassword.current = watch("orgPassword", "");
 
   return (
     <form className="regUser-form" onSubmit={handleSubmit()}>
@@ -123,7 +123,8 @@ const RegisterOrgForm = () => {
             {...register("orgPhone", {
               required: "Ovo polje je obavezno.",
               pattern: {
-                value: /^[0-9]{3}-[0-9]{2}-[0-9]{3}/,
+                value:
+                  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im,
                 message: "Broj telefona koji ste uneli nije validan.",
               },
             })}
