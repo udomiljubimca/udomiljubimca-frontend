@@ -101,7 +101,6 @@ a:hover {
 ***********/
 
 .custom-btn {
-  min-width: 180px;
   border-radius: 30px;
   font-size: 20px;
   text-align: center;
@@ -109,6 +108,8 @@ a:hover {
   text-decoration: none;
   line-height: 44px;
   cursor: pointer;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .custom-btn.btn-primary {

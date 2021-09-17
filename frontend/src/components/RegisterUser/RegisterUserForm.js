@@ -27,12 +27,15 @@ const RegisterUserForm = () => {
   const password = useRef({});
   password.current = watch("password", "");
 
-  const onSubmit = async (data) => {
+  const registerUserSubmitHandler = async (data) => {
     console.log(data);
   };
 
   return (
-    <form className="regUser-form" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className="regUser-form"
+      onSubmit={handleSubmit(registerUserSubmitHandler)}
+    >
       <Row>
         <Col sm={12} md={6}>
           <label>
@@ -186,12 +189,12 @@ const RegisterUserForm = () => {
       </Row>
       <Row>
         <Col>
-          <a href="#" className="custom-btn btn-square d-block">
+          <a href="/" className="custom-btn btn-square d-block">
             facebook
           </a>
         </Col>
         <Col>
-          <a href="#" className="custom-btn btn-square d-block">
+          <a href="/" className="custom-btn btn-square d-block">
             Google
           </a>
         </Col>

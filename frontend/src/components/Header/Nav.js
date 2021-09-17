@@ -37,8 +37,8 @@ function Nav({ popUp, mobileNav }) {
           Blog
         </Link>
       </li>
-      <li className="main-nav-item" onClick={() => popUp(true)}>
-        <Link className="main-nav-link" to="#">
+      <li className="main-nav-item">
+        <Link className="main-nav-link" to="/prijavi-se">
           Prijavi se
         </Link>
       </li>

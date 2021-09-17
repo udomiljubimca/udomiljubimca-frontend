@@ -27,8 +27,15 @@ const RegisterOrgForm = () => {
   const orgPassword = useRef({});
   orgPassword.current = watch("orgPassword", "");
 
+  const registerOrgSubmitHandler = async (data) => {
+    console.log(data);
+  };
+
   return (
-    <form className="regUser-form" onSubmit={handleSubmit()}>
+    <form
+      className="regUser-form"
+      onSubmit={handleSubmit(registerOrgSubmitHandler)}
+    >
       <Row>
         <Col sm={12} md={6}>
           <label>
