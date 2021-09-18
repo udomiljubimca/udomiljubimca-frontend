@@ -1,8 +1,12 @@
 import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { Row, Col } from "react-bootstrap";
 
+// Compoents
+import { Link } from "react-router-dom";
+import { Row, Col } from "react-bootstrap";
+import LoginSocial from "../Login/LoginSocial";
+
+// Assets
 import eyeIcon from "../../assets/eye_icon.png";
 
 const RegisterUserForm = () => {
@@ -188,16 +192,7 @@ const RegisterUserForm = () => {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <a href="/" className="custom-btn btn-square d-block">
-            facebook
-          </a>
-        </Col>
-        <Col>
-          <a href="/" className="custom-btn btn-square d-block">
-            Google
-          </a>
-        </Col>
+        <LoginSocial />
       </Row>
       <Row>
         <Col>

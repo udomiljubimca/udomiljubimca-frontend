@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Components
 import { Container, Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import LoginSocial from "./LoginSocial";
 
 // Assets
 import "./loginForm.css";
+import eyeIcon from "../../assets/eye_icon.png";
 
 const LoginForm = () => {
+  const [loginPassword, setLoginPassword] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -17,6 +21,10 @@ const LoginForm = () => {
 
   const loginSubmitHandler = async (data) => {
     console.log(data);
+  };
+
+  const showLoginPasswordHandler = () => {
+    setLoginPassword((prevState) => !prevState);
   };
 
   return (
@@ -46,11 +54,11 @@ const LoginForm = () => {
                   <p className="form-error">{errors.loginEmail.message}</p>
                 )}
               </Col>
-              <Col sm={12} md={6}>
+              <Col sm={12} md={6} className="password-input">
                 <label>Lozinka</label>
                 <input
                   className="w-100"
-                  type="password"
+                  type={loginPassword ? "password" : "text"}
                   {...register("loginPassword", {
                     required: "Lozinka mora imati najmanje 8 karaktera.",
                     minLength: {
@@ -62,6 +70,12 @@ const LoginForm = () => {
                 {errors.loginPassword && (
                   <p className="form-error">{errors.loginPassword.message}</p>
                 )}
+                <img
+                  className="pass-visibility"
+                  src={eyeIcon}
+                  onClick={showLoginPasswordHandler}
+                  alt="udomi ljubimca"
+                />
                 <Link to="/">Zaboravljena lozinka</Link>
               </Col>
               <Col md={12}>
@@ -77,18 +91,7 @@ const LoginForm = () => {
                 </p>
               </Col>
               <Col>
-                <Row>
-                  <Col sm={12} md={6} className="mb-sm-3">
-                    <a href="/" className="custom-btn btn-square d-block">
-                      facebook
-                    </a>
-                  </Col>
-                  <Col sm={12} md={6}>
-                    <a href="/" className="custom-btn btn-square d-block">
-                      Google
-                    </a>
-                  </Col>
-                </Row>
+                <LoginSocial />
               </Col>
               <Col md={12}>
                 <p className="text-center mt-4 mb-4">
