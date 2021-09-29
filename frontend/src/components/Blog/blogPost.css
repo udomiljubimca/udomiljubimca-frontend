@@ -1,6 +1,6 @@
 .blog-post {
   padding: 40px 90px;
-  border: 1px solid #f9ae05;
+  border: 1px solid var(--yellow);
   margin: 30px auto;
 }
 

@@ -1,81 +1,85 @@
 .petInfo {
-  border: 1px solid gray;
+  border: 2px solid var(--yellow);
   margin: 25px auto;
-  min-height: 100vh;
-  width: 75%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+  border-radius: 30px;
+  overflow: hidden;
 }
-.wrapper {
-  width: 90%;
+
+.petInfo_name {
+  padding: 50px 50px 20px;
 }
-.petName {
-  margin: 10px 10px 10px 0;
-  display: flex;
-  align-items: center;
+
+.petInfo_content {
+  padding: 20px 50px;
 }
-.heartIconPetName {
-  padding-left: 10px;
-}
-.sliderDiv {
-  flex: 1;
-}
-.infoAbout {
+
+.petInfo_adopt img {
+  max-width: 200px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
-.leftInfoAbout {
-  width: 69%;
+
+.petInfo_adopt h4 {
+  font-weight: normal;
 }
-.rightInfoAbout {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin-right: 60px;
+
+.petInfo_text-spacer p:not(:first-of-type) {
+  margin-left: 70px;
 }
-.infoAboutFirst {
-  display: flex;
-  align-items: center;
+
+.petInfo_story {
+  padding: 20px 50px 150px;
+  background-color: var(--lightGray);
+  position: relative;
+  margin-bottom: 200px;
 }
-.firstP {
-  margin: 0;
+
+.petInfo_story-video {
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
-.storyInfo {
+
+.petInfo_story-video video {
+  height: auto;
+  max-height: 300px;
+  max-width: 500px;
   width: 100%;
-  margin: 0 auto;
 }
-.pawIcon {
-  padding: 0 10px;
-  height: 10px;
-  width: 10px;
-}
-.favoriteImage {
-  height: 130px;
-}
-.videoDiv {
-  width: 100%;
-  height: 25%;
-  margin-bottom: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-.videoDiv a {
-  text-decoration: none;
-  margin-top: 10px;
-}
-.videoPet {
-  height: 300px;
-  width: 500px;
-  margin: 15px 0 25px 0;
-}
+
 .buttonDiv {
   width: 450px;
   display: flex;
   justify-content: space-between;
+}
+
+.sliderDiv {
+  flex: 1;
+}
+
+@media only screen and (max-width: 991px) {
+  .petInfo_story-video {
+    position: relative;
+    bottom: 0;
+  }
+
+  .petInfo_story {
+    padding: 50px 20px 50px 20px;
+    margin-bottom: 0;
+  }
+
+  .petInfo_name {
+    padding: 50px 20px 20px;
+  }
+
+  .petInfo_content {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .petInfo_text-spacer p:not(:first-of-type) {
+    margin-left: 0;
+  }
 }

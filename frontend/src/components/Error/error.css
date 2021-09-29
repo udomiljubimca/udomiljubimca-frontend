@@ -11,7 +11,7 @@
 
 .error-page h2 {
   text-align: center;
-  color: #f75451;
+  color: var(--red);
   font-weight: 400;
   margin-bottom: 50px;
   margin-top: 0;

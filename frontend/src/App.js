@@ -10,10 +10,10 @@ import Footer from "./components/Footer/Footer";
 import Error from "./components/Error/Error";
 import Blog from "./components/Blog/Blog";
 import BlogPost from "./components/Blog/BlogPost";
-import PetProfile from "./components/PetProfile/PetProfile";
 import RegisterUserPage from "./pages/RegisterUserPage";
 import RegisterOrgPage from "./pages/RegisterOrgPage";
 import LoginPage from "./pages/LoginPage";
+import PetProfilePage from "./pages/PetProfilePage";
 
 // fake blog data import, it is just for preview and demo
 import blogData from "./fakeBlogPostData";
@@ -55,8 +55,8 @@ function App() {
           <Route exact path="/registracija-udruzenja">
             <RegisterOrgPage />
           </Route>
-          <Route path="/ljubimac">
-            <PetProfile />
+          <Route path="/ljubimac/:name">
+            <PetProfilePage />
           </Route>
           <Route component={Error} />
 
