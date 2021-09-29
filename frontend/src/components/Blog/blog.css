@@ -16,7 +16,7 @@
 }
 
 .pagination__link--active {
-  color: #f9ae05;
+  color: var(--yellow);
 }
 
 .pagination_item,

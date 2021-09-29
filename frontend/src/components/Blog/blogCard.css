@@ -44,12 +44,12 @@
 }
 
 .blog-card-divider {
-  color: #f9ae05;
+  color: var(--yellow);
   margin: 0 5px;
 }
 
 .blog-card-link {
-  color: #f9ae05;
+  color: var(--yellow);
   font-size: 16px;
   line-height: 24px;
   width: 100%;

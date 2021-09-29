@@ -6,10 +6,17 @@
   --white: #ffffff;
   --black: #212529;
   --darkGray: #b9b9b9;
+  --yellow: #f9ae05;
 }
 
 body {
   background-color: var(--white);
+}
+
+@media only screen and (max-width: 991px) {
+  body {
+    padding-top: 86px;
+  }
 }
 
 * {
@@ -58,6 +65,7 @@ a:hover {
 .title-underline {
   position: relative;
   padding-bottom: 15px;
+  display: inline-block;
 }
 
 .title-underline:after {
@@ -65,9 +73,26 @@ a:hover {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 50%;
+  width: 100%;
   height: 2px;
-  background: #f9ae05;
+  background: var(--yellow);
+}
+
+.page-title {
+  position: relative;
+  color: var(--yellow);
+  padding-left: 40px;
+  font-weight: normal;
+}
+
+.page-title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: 2px;
+  width: 30px;
+  background-color: var(--yellow);
 }
 
 .divider-text {

@@ -1,0 +1,95 @@
+.slider-wrap {
+  padding: 0 50px;
+}
+
+.slider {
+  position: relative;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  object-fit: cover;
+}
+
+.sliderHeartIcon {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 30px;
+  border-radius: 50%;
+  padding: 14px;
+  font-size: 1.5rem;
+  color: var(--red);
+  background: rgba(255, 255, 255, 0.5);
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.slider-arrows {
+  position: absolute;
+  z-index: 1;
+  left: 25px;
+  right: 25px;
+  top: calc(50% - 1rem);
+}
+
+.right-arrow,
+.left-arrow {
+  font-size: 2rem;
+  color: var(--white);
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px;
+  box-sizing: content-box;
+}
+
+.slide {
+  height: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.slide.active {
+  height: 480px;
+  opacity: 1;
+}
+
+.sideImageDiv {
+  height: calc(440px / 3);
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+.sideImageDiv:last-of-type {
+  margin-bottom: 0;
+}
+
+.sideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.sideImageDiv.active {
+  opacity: 0.5;
+  cursor: initial;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .slider-wrap {
+    padding: 0 25px;
+  }
+
+  .sideImageDiv {
+    height: 100px;
+    margin-bottom: 0;
+  }
+}
