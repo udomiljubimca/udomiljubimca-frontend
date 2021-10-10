@@ -1,16 +1,22 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import BlogCard from "./BlogCard";
 import Hero from "../Sections/Hero";
-import BlogBg from "../../assets/blog.png";
 import "./blog.css";
 import ReactPaginate from "react-paginate";
 
-const Blog = ({ blogPosts }) => {
-  const [currentPage, setCurrentPage] = useState(0);
+/**
+ * @param page {string} [page]/:id
+ * @param posts {object} posts
+ * @param title {string} hero title
+ * @param desc {string} hero description
+ * @param background {string} hero background image
+ */
 
+const Blog = ({ page, posts, title, desc, background }) => {
+  const [currentPage, setCurrentPage] = useState(0);
   const POST_PER_PAGE = 2;
   const offset = currentPage * POST_PER_PAGE;
-  const pageCount = Math.ceil(blogPosts.length / POST_PER_PAGE);
+  const pageCount = Math.ceil(posts.length / POST_PER_PAGE);
 
   const handlePageClick = ({ selected: selectedPage }) => {
     setCurrentPage(selectedPage);
@@ -19,15 +25,14 @@ const Blog = ({ blogPosts }) => {
   return (
     <>
       <Hero
-        title={"BLOG"}
-        desc={
-          "Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam."
-        }
-        bg={BlogBg}
+        title={title}
+        desc={desc}
+        bg={background}
       />
       <div className="container">
-        {blogPosts.slice(offset, offset + POST_PER_PAGE).map((item) => (
+        {posts.slice(offset, offset + POST_PER_PAGE).map((item) => (
           <BlogCard
+            page={page}
             title={item.title}
             key={item.title}
             desc={item.desc}
