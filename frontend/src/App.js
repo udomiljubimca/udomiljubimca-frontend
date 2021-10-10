@@ -6,14 +6,15 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 // router
-
 import Error from "./components/Error/Error";
-import Blog from "./components/Blog/Blog";
-import BlogPost from "./components/Blog/BlogPost";
 import RegisterUserPage from "./pages/RegisterUserPage";
 import RegisterOrgPage from "./pages/RegisterOrgPage";
 import LoginPage from "./pages/LoginPage";
 import PetProfilePage from "./pages/PetProfilePage";
+import VetPage from "./pages/VetPage";
+import VetPostPage from "./pages/VetPostPage"
+import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
 
 // fake blog data import, it is just for preview and demo
 import blogData from "./fakeBlogPostData";
@@ -41,13 +42,6 @@ function App() {
           <Route exact path="/">
             <HomePage podaci={pets} like={isLike} blogPosts={blogPosts} />
           </Route>
-
-          <Route exact path="/blog">
-            <Blog blogPosts={blogPosts} />
-          </Route>
-          <Route exact path="/blog/:id">
-            <BlogPost blogPosts={blogPosts} />
-          </Route>
           <Route path="/prijavi-se" component={LoginPage} />
           <Route exact path="/registracija-korisnika">
             <RegisterUserPage />
@@ -57,6 +51,28 @@ function App() {
           </Route>
           <Route path="/ljubimac/:name">
             <PetProfilePage />
+          </Route>
+          <Route exact path="/blog">
+            <BlogPage
+              page="blog"
+              posts={blogPosts}
+              title="BLOG"
+              desc="Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam."
+            />
+          </Route>
+          <Route exact path="/blog/:id">
+            <BlogPostPage blogPosts={blogPosts} />
+          </Route>
+          <Route exact path="/veterinar">
+            <VetPage
+              page="veterinar"
+              posts={blogPosts}
+              title="VETERINAR"
+              desc="Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies."
+            />
+          </Route>
+          <Route exact path="/veterinar/:id">
+            <VetPostPage blogPosts={blogPosts} />
           </Route>
           <Route component={Error} />
 

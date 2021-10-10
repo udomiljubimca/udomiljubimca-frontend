@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 import placeholder from "../../assets/placeholder.svg";
 import "./blogCard.css";
 
-const BlogCard = ({ title, desc, url }) => {
+/**
+ * @param page {string} [page]/url
+ * @param title {string} blog title
+ * @param desc {string} blog description
+ * @param url {string} page/[url]
+ */
+const BlogCard = ({ page, title, desc, url }) => {
   return (
     <div className="flex blog-card" data-collapse="tablet">
       <div className="blog-card-image">
@@ -21,7 +27,7 @@ const BlogCard = ({ title, desc, url }) => {
           <span className="blog-card-divider"> | </span>
           <span>Ime i prezime </span>
         </div>
-        <Link to={`/blog/${url}`} className="blog-card-link">
+        <Link to={`/${page}/${url}`} className="blog-card-link">
           Pročitaj više
         </Link>
       </div>
