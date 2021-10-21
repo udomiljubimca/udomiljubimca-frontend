@@ -12,9 +12,10 @@ import RegisterOrgPage from "./pages/RegisterOrgPage";
 import LoginPage from "./pages/LoginPage";
 import PetProfilePage from "./pages/PetProfilePage";
 import VetPage from "./pages/VetPage";
-import VetPostPage from "./pages/VetPostPage"
+import VetPostPage from "./pages/VetPostPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
+import DonationsPage from "./pages/DonationsPage";
 
 // fake blog data import, it is just for preview and demo
 import blogData from "./fakeBlogPostData";
@@ -48,6 +49,9 @@ function App() {
           </Route>
           <Route exact path="/registracija-udruzenja">
             <RegisterOrgPage />
+          </Route>
+          <Route exact path="/donacije">
+            <DonationsPage />
           </Route>
           <Route path="/ljubimac/:name">
             <PetProfilePage />

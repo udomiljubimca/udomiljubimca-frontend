@@ -1,9 +1,9 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 
-import "./registerForm.css";
+import "./formPageWrap.css";
 
-const RegisterForm = ({ children, title, img }) => {
+const FormPageWrap = ({ children, title, img }) => {
   return (
     <Container className="register-wrap">
       <Row>
@@ -26,4 +26,4 @@ const RegisterForm = ({ children, title, img }) => {
   );
 };
 
-export default RegisterForm;
+export default FormPageWrap;
