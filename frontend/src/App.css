@@ -121,6 +121,18 @@ a:hover {
   z-index: 1;
 }
 
+.info-box {
+  border: 1px dashed var(--darkGray);
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.border-bottom-red {
+  border-bottom: 1px solid var(--red);
+  display: inline-block;
+}
+
 /***********
 ** Buttons
 ***********/
@@ -133,13 +145,24 @@ a:hover {
   text-decoration: none;
   line-height: 44px;
   cursor: pointer;
-  padding: 0 20px;
+  padding: 0 25px;
   box-sizing: border-box;
+}
+
+.custom-btn:active,
+.custom-btn:focus {
+  outline: none;
+  border: 0;
 }
 
 .custom-btn.btn-primary {
   background: var(--red);
   border: 0;
+}
+
+.custom-btn.btn-center {
+  display: inherit;
+  margin: 0 auto;
 }
 
 .btn-square {
@@ -157,7 +180,8 @@ a:hover {
   color: var(--red);
 }
 
-input:not([type="submit"]) {
+input:not([type="submit"]),
+textarea {
   height: 46px;
   background: var(--white);
   border: 2px solid var(--darkGray);
@@ -165,6 +189,10 @@ input:not([type="submit"]) {
   margin-bottom: 20px;
   padding: 5px;
   outline: var(--red);
+}
+
+textarea {
+  height: auto;
 }
 
 .password-input {

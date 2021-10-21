@@ -4,14 +4,14 @@ import React from "react";
 import registerBg from "../assets/register-org.png";
 
 // components
-import RegisterForm from "../components/Register/RegisterForm";
+import FormPageWrap from "../components/FormPageWrap/FormPageWrap";
 import RegisterOrgForm from "../components/RegisterUser/RegisterOrgForm";
 
 const RegisterUserPage = () => {
   return (
-    <RegisterForm title="REGISTRUJ SE" img={registerBg}>
+    <FormPageWrap title="REGISTRUJ SE" img={registerBg}>
       <RegisterOrgForm />
-    </RegisterForm>
+    </FormPageWrap>
   );
 };
 
