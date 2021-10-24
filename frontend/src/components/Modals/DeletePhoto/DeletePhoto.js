@@ -12,11 +12,17 @@ export default function DeletePhoto() {
 
   return (
     <div className='deletePopUp'>
-      <Button variant='primary' onClick={handleShow}>
-        Launch demo modal
+      <Button className='custom-btn btn-primary' onClick={handleShow}>
+        Delete photo
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        size='lg'
+        aria-labelledby='contained-modal-title-vcenter'
+        centered
+      >
         <Modal.Body>
           <span className='modal-text'>
             Da li sigurno želite da izbrišete fotografiju?

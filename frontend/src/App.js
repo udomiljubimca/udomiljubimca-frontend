@@ -5,9 +5,6 @@ import HomePage from './pages/HomePage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
-//test
-import DeletePhoto from './components/DeletePhoto/DeletePhoto';
-
 // router
 import Error from './components/Error/Error';
 import RegisterUserPage from './pages/RegisterUserPage';
@@ -19,6 +16,9 @@ import VetPostPage from './pages/VetPostPage';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import DonationsPage from './pages/DonationsPage';
+
+//testing modals
+import TestPage from './pages/TestPage';
 
 // fake blog data import, it is just for preview and demo
 import blogData from './fakeBlogPostData';
@@ -80,6 +80,9 @@ function App() {
           </Route>
           <Route exact path='/veterinar/:id'>
             <VetPostPage blogPosts={blogPosts} />
+          </Route>
+          <Route exact path='/test'>
+            <TestPage />
           </Route>
           <Route component={Error} />
 

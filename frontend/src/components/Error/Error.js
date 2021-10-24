@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import ErrorImage from '../../assets/error.svg';
 import './error.css';
 
-//test
-import DeletePhoto from '../DeletePhoto/DeletePhoto';
-
 const Error = () => {
   return (
     <div className='container flex flex--justify-center flex--align-center error-page'>
@@ -14,7 +11,6 @@ const Error = () => {
       <Link to='/' className='custom-btn btn-primary'>
         NAZAD
       </Link>
-      <DeletePhoto />
     </div>
   );
 };
