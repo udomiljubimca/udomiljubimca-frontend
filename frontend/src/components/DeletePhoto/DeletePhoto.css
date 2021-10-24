@@ -1,0 +1,24 @@
+.deletePopUp {
+  position: absolute;
+  width: 612px;
+  height: 355px;
+  left: 654px;
+  top: 331px;
+
+  background: #ffffff;
+  border-radius: 6px;
+}
+.btn-primary {
+  margin: 20px;
+  margin-top: 50px;
+}
+
+.modal-body {
+  margin: auto !important;
+  padding: 80px;
+}
+
+.modal-text {
+  text-align: center;
+  margin-bottom: 5px !important;
+}
