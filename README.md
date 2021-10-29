@@ -1,6 +1,6 @@
 # udomiljubimca-frontend
 
-  Koristiti bootstrap komponente (<Col>, <Row>, <Container>, ...)
+  Koristiti bootstrap komponente (Col, Row, Container, ...)
   https://react-bootstrap.github.io/components/alerts
   kao i bootstrap klase ako je potrebno.
 
