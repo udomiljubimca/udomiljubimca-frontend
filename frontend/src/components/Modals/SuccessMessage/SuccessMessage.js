@@ -12,7 +12,7 @@ export default function SuccessMessage(props) {
     <>
       <Modal
         {...props}
-        // size='lg'
+        size='lg'
         aria-labelledby='contained-modal-title-vcenter'
         centered
         show={show}
@@ -23,7 +23,7 @@ export default function SuccessMessage(props) {
           <Modal.Title id='contained-modal-title-vcenter'></Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src={check} alt='check' height='256px' width='256px' />
+          <img src={check} alt='check' height='200px' width='200px' />
           <h3>Uspešno!</h3>
           <p>Poruka je uspešno poslata</p>
           <Button className='custom-btn btn-primary' onClick={handleClose}>
