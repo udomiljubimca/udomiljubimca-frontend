@@ -1,5 +1,7 @@
 # udomiljubimca-frontend
 
+  dizajn: https://www.figma.com/file/ssdaaTP5s2tPmDSyOUHjAf/UDOMI-LJUBIMCA?node-id=2%3A5658
+
   Koristiti bootstrap komponente (Col, Row, Container, ...)
   https://react-bootstrap.github.io/components/alerts
   kao i bootstrap klase ako je potrebno.
