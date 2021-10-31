@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
-import './App.css';
-import { SliderData } from './components/pet-profile/Slider/SliderData';
-import Header from './components/Header';
-import Cards from './components/pet-profile/Cards/Cards';
-import PetInfo from './components/pet-profile/PetInfo/PetInfo';
-import Footer from './components/Footer';
+import { useState } from "react";
+
+import { SliderData } from "./components/pet-profile/Slider/SliderData";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
+import Cards from "./components/pet-profile/Cards/Cards";
+import PetInfo from "./components/pet-profile/PetInfo/PetInfo";
+import UserProfile from "./components/user-profile/UserProfile/UserProfile";
 
 function App() {
   const [current, setCurrent] = useState(0);
@@ -20,15 +24,16 @@ function App() {
   };
 
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
-      <PetInfo
+      {/* <PetInfo
         slides={SliderData}
         current={current}
         prevSlide={prevSlide}
         nextSlide={nextSlide}
-      />
-      <Cards />
+      /> */}
+      <UserProfile />
+      {/* <Cards /> */}
       <Footer />
     </div>
   );

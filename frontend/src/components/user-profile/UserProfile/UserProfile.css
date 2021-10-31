@@ -1,0 +1,54 @@
+:root {
+  --border: 1px solid var(--yellow);
+}
+
+.user-profile {
+  padding-bottom: 80px;
+}
+
+.page-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  /* margin: 46px 0 15px; */
+}
+
+.user-profile__inner {
+  border: var(--border);
+  border-radius: 5px;
+  padding: 116px 93px 102px;
+  margin-top: 25px;
+}
+
+.user-profile__intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: var(--border);
+}
+
+.user-profile__intro img {
+  margin-bottom: 48px;
+}
+
+.user-profile__intro h2,
+.user-profile__about h3 {
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.user-profile__details {
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+  margin-top: 6px;
+}
+
+.user-profile__about {
+  margin-top: 40px;
+}
+
+.user-profile__about h3 {
+  margin-bottom: 8px;
+}
