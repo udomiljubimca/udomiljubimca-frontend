@@ -21,7 +21,7 @@ function Nav({ popUp, mobileNav }) {
             </Link>
           </li>
           <li className="nav-dropdown-item">
-            <Link className="nav-dropdown-link" to="#">
+            <Link className="nav-dropdown-link" to="/veterinar">
               Veterinar
             </Link>
           </li>
@@ -48,10 +48,14 @@ function Nav({ popUp, mobileNav }) {
         </span>
         <ul className="nav-dropdown-list">
           <li className="nav-dropdown-item">
-            <Link className="nav-dropdown-link" to="/registracija-korisnika">Kao korisnik</Link>
+            <Link className="nav-dropdown-link" to="/registracija-korisnika">
+              Kao korisnik
+            </Link>
           </li>
           <li className="nav-dropdown-item">
-            <Link className="nav-dropdown-link" to="/registracija-udruzenja">Kao udruzenje</Link>
+            <Link className="nav-dropdown-link" to="/registracija-udruzenja">
+              Kao udruzenje
+            </Link>
           </li>
         </ul>
       </li>
