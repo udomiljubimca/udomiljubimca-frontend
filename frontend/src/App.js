@@ -1,30 +1,30 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import { useState } from 'react';
-import HomePage from './pages/HomePage';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { useState } from "react";
+import HomePage from "./pages/HomePage";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 // router
-import Error from './components/Error/Error';
-import RegisterUserPage from './pages/RegisterUserPage';
-import RegisterOrgPage from './pages/RegisterOrgPage';
-import LoginPage from './pages/LoginPage';
-import PetProfilePage from './pages/PetProfilePage';
-import VetPage from './pages/VetPage';
-import VetPostPage from './pages/VetPostPage';
-import BlogPage from './pages/BlogPage';
-import BlogPostPage from './pages/BlogPostPage';
-import DonationsPage from './pages/DonationsPage';
+import Error from "./components/Error/Error";
+import RegisterUserPage from "./pages/RegisterUserPage";
+import RegisterOrgPage from "./pages/RegisterOrgPage";
+import LoginPage from "./pages/LoginPage";
+import PetProfilePage from "./pages/PetProfilePage";
+import VetPage from "./pages/VetPage";
+import VetPostPage from "./pages/VetPostPage";
+import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
+import DonationsPage from "./pages/DonationsPage";
 
 //testing modals
-import TestPage from './pages/TestPage';
+import TestPage from "./pages/TestPage";
 
 // fake blog data import, it is just for preview and demo
-import blogData from './fakeBlogPostData';
-import animals from './data/pets';
+import blogData from "./fakeBlogPostData";
+import animals from "./data/pets";
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   const [pets, setPets] = useState(animals);
@@ -43,45 +43,45 @@ function App() {
       <div>
         <Header />
         <Switch>
-          <Route exact path='/'>
+          <Route exact path="/">
             <HomePage podaci={pets} like={isLike} blogPosts={blogPosts} />
           </Route>
-          <Route path='/prijavi-se' component={LoginPage} />
-          <Route exact path='/registracija-korisnika'>
+          <Route path="/prijavi-se" component={LoginPage} />
+          <Route exact path="/registracija-korisnika">
             <RegisterUserPage />
           </Route>
-          <Route exact path='/registracija-udruzenja'>
+          <Route exact path="/registracija-udruzenja">
             <RegisterOrgPage />
           </Route>
-          <Route exact path='/donacije'>
+          <Route exact path="/donacije">
             <DonationsPage />
           </Route>
-          <Route path='/ljubimac/:name'>
+          <Route path="/ljubimac/:name">
             <PetProfilePage />
           </Route>
-          <Route exact path='/blog'>
+          <Route exact path="/blog">
             <BlogPage
-              page='blog'
+              page="blog"
               posts={blogPosts}
-              title='BLOG'
-              desc='Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam.'
+              title="BLOG"
+              desc="Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam."
             />
           </Route>
-          <Route exact path='/blog/:id'>
+          <Route exact path="/blog/:id">
             <BlogPostPage blogPosts={blogPosts} />
           </Route>
-          <Route exact path='/veterinar'>
+          <Route exact path="/veterinar">
             <VetPage
-              page='veterinar'
+              page="veterinar"
               posts={blogPosts}
-              title='VETERINAR'
-              desc='Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies.'
+              title="VETERINAR"
+              desc="Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies."
             />
           </Route>
-          <Route exact path='/veterinar/:id'>
+          <Route exact path="/veterinar/:id">
             <VetPostPage blogPosts={blogPosts} />
           </Route>
-          <Route exact path='/test'>
+          <Route exact path="/test">
             <TestPage />
           </Route>
           <Route component={Error} />
