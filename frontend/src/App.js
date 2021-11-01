@@ -17,6 +17,9 @@ import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import DonationsPage from "./pages/DonationsPage";
 
+//testing modals
+import TestPage from "./pages/TestPage";
+
 // fake blog data import, it is just for preview and demo
 import blogData from "./fakeBlogPostData";
 import animals from "./data/pets";
@@ -77,6 +80,9 @@ function App() {
           </Route>
           <Route exact path="/veterinar/:id">
             <VetPostPage blogPosts={blogPosts} />
+          </Route>
+          <Route exact path="/test">
+            <TestPage />
           </Route>
           <Route component={Error} />
 

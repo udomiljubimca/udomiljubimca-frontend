@@ -160,6 +160,11 @@ a:hover {
   border: 0;
 }
 
+.custom-btn.btn-secondary {
+  background: #818181;
+  border: 0;
+}
+
 .custom-btn.btn-center {
   display: inherit;
   margin: 0 auto;
