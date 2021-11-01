@@ -16,6 +16,7 @@ import VetPostPage from "./pages/VetPostPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import DonationsPage from "./pages/DonationsPage";
+import PetProfileOrganizationPage from "./pages/PetProfileOrganizationPage";
 
 //testing modals
 import TestPage from "./pages/TestPage";
@@ -58,6 +59,9 @@ function App() {
           </Route>
           <Route path="/ljubimac/:name">
             <PetProfilePage />
+          </Route>
+          <Route exact path="/udruzenje/:name">
+            <PetProfileOrganizationPage />
           </Route>
           <Route exact path="/blog">
             <BlogPage
