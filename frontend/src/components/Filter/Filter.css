@@ -2,8 +2,36 @@
   margin: 0;
   padding: 0;
 }
+
+.filters {
+  border: 1px solid pink;
+}
+.d-inline {
+  margin: 2px;
+  color: white;
+}
+
 .input {
   max-width: 20%;
-  padding-bottom: 25px !important;
   text-align: center;
+  margin-right: 10px;
+}
+.input:focus {
+  border-color: #f9ae05;
+  box-shadow: 0 0 0 0.2rem rgba(249, 174, 5, 0.5);
+}
+
+#primeni {
+  border-radius: 30px;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+  line-height: 44px;
+  cursor: pointer;
+  padding: 0 2.5em;
+  box-sizing: border-box;
+  background: var(--red);
+  border: 0;
+  margin-bottom: 48px;
 }
