@@ -146,6 +146,7 @@ a:hover {
   line-height: 44px;
   cursor: pointer;
   padding: 0 25px;
+  min-width: 180px;
   box-sizing: border-box;
 }
 
@@ -229,6 +230,18 @@ label .asterix {
 .form-title .title-underline:after {
   width: 100%;
   border: 2px solid var(--red);
+}
+
+/***********
+** Modal
+***********/
+
+.modal-text {
+  text-align: center;
+}
+
+.modal-body {
+  padding: 2rem;
 }
 
 /***********
