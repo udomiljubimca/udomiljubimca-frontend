@@ -3,7 +3,7 @@ import { Modal, Button } from "react-bootstrap";
 import "./successMessage.css";
 import check from "../../../assets/check.svg";
 
-export default function SuccessMessage(props) {
+export default function SuccessMessage({ title, bodyText, btnText }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -11,7 +11,6 @@ export default function SuccessMessage(props) {
   return (
     <>
       <Modal
-        {...props}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
@@ -30,8 +29,8 @@ export default function SuccessMessage(props) {
             width="200px"
             className="mb-3"
           />
-          <h3 className="mt-1 mb-4">Uspešno!</h3>
-          <p className="mb-0">Poruka je uspešno poslata</p>
+          <h3 className="mt-1 mb-4">{title}</h3>
+          <p className="mb-0">{bodyText}</p>
           <Button className="custom-btn btn-primary mt-4" onClick={handleClose}>
             OK
           </Button>
@@ -41,7 +40,7 @@ export default function SuccessMessage(props) {
         className="custom-btn btn-primary mx-auto d-block mt-5"
         onClick={handleShow}
       >
-        Open success modal
+        {btnText}
       </Button>{" "}
     </>
   );
