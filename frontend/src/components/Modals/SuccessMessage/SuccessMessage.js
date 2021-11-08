@@ -3,6 +3,14 @@ import { Modal, Button } from "react-bootstrap";
 import "./successMessage.css";
 import check from "../../../assets/check.svg";
 
+/**
+ * Success Modal
+ * @param {String} title Modal Title
+ * @param {String} bodyText Modal Body Text
+ * @param {String} btnText Open Modal Button Text
+ * @returns {JSX.Element} Success Modal Component
+ */
+
 export default function SuccessMessage({ title, bodyText, btnText }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -41,7 +49,7 @@ export default function SuccessMessage({ title, bodyText, btnText }) {
         onClick={handleShow}
       >
         {btnText}
-      </Button>{" "}
+      </Button>
     </>
   );
 }
