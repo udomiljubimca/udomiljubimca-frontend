@@ -2,10 +2,6 @@
   --border: 1px solid var(--yellow);
 }
 
-.user-profile {
-  padding-bottom: 80px;
-}
-
 .page-title {
   font-size: 20px;
   text-transform: uppercase;

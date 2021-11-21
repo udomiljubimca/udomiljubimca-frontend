@@ -1,0 +1,129 @@
+.container {
+    padding: 0;
+}
+
+.pet-slider {
+    background: var(--lightGray);
+    padding: 20px;
+    margin: 90px auto;
+}
+
+.page-title {
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-size: 30px;
+    line-height: 42px;
+}
+  
+
+.slick-slide > div {
+    padding: 0 0.5rem;
+  }
+  
+
+
+.card-cover {
+    height: 214px;
+    position: relative;
+}
+
+.card-cover img {
+    width: 100%;
+    max-height: 214px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.fav-btn {
+    background: white;
+
+}
+
+.fav-btn {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    background: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    border: none;
+    transition: transform .2s ease;
+}
+
+.fav-btn:hover {
+    transform: scale(1.1);
+}
+
+.fav-btn .icon {
+    fill: var(--red);
+    width: 20px;
+    height: 24px;
+}
+
+.slick-arrow::before {
+    content: url('../../assets/arrow.svg')
+}
+
+
+.slick-prev {
+    transform: rotate(-180deg);
+}
+
+
+.slick-prev, .slick-next {
+    top: 30%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    background: var(--yellow);
+    border-radius: 100%;
+    transition: color .3s ease;
+}
+
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+ opacity: 0.7;
+}
+
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    background: var(--yellow);
+    border-radius: 100%;
+    color: white;
+}
+
+
+.card-details {
+    background: var(--white);
+    border-radius: 6px;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 26px;
+}
+
+.card-details > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-details h3 {
+    font-size: 20px;
+    line-height: 30px;
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--yellow);
+    display: inline-block;
+}
+
+.card-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-detail h4{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--darkGray);
+}

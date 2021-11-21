@@ -8,9 +8,10 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 import Cards from "./components/pet-profile/Cards/Cards";
-import PetInfo from "./components/pet-profile/PetInfo/PetInfo";
+// import PetInfo from "./components/pet-profile/PetInfo/PetInfo";
 
 import UserProfile from "./components/user-profile/UserProfile/UserProfile";
+import PetSlider from "./components/PetSlider/PetSlider";
 
 function App() {
   const [isUserView, setIsUserView] = useState(true);
@@ -37,6 +38,7 @@ function App() {
         nextSlide={nextSlide}
       /> */}
       <UserProfile isUserView={isUserView} />
+      <PetSlider sliderData={SliderData} isUserView={isUserView} />
       {/* <Cards /> */}
       <Footer />
     </div>
