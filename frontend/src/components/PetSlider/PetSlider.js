@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import { FaRegHeart } from 'react-icons/fa';
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { MdArrowForwardIos } from 'react-icons/md';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,7 +20,6 @@ function PetSlider({ sliderData, isUserView }) {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
                 }
             },
             {
@@ -28,14 +27,16 @@ function PetSlider({ sliderData, isUserView }) {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2
+                    initialSlide: 2,
+                    infinite: true,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: true,
                 }
             }
         ]
@@ -59,7 +60,9 @@ function PetSlider({ sliderData, isUserView }) {
                                     </button>
                                 </div>
                                 <div className='card-details'>
-                                    <h3>{pet.name}</h3>
+                                    <a href=''>
+                                        <h3>{pet.name}</h3>
+                                    </a>
                                     <div>
                                         <div className='card-detail'>
                                             <h4>Pol</h4>
@@ -79,6 +82,7 @@ function PetSlider({ sliderData, isUserView }) {
                         )
                     })}
                 </Slider>
+                <a class='slider-link' href=''>Svi ljubimci <MdArrowForwardIos /></a>
             </div>
         </section>
     );
