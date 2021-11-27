@@ -1,0 +1,41 @@
+.blog-hero {
+  border-bottom: 1px solid #aaaaaa;
+  padding: 100px 0 95px 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+  min-height: 500px;
+}
+
+.blog-hero__info {
+  text-align: left;
+}
+
+.blog-hero__info h3 {
+  font-size: 40px;
+  line-height: 52px;
+  margin: 0;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+}
+
+.blog-hero__info p {
+  font-size: 24px;
+  line-height: 30px;
+  color: #fff;
+  max-width: 450px;
+  width: 100%;
+  font-weight: 400;
+}
+
+.blog-hero img {
+  width: 100%;
+}
+
+.blog-post__hero {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}

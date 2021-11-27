@@ -146,6 +146,7 @@ a:hover {
   line-height: 44px;
   cursor: pointer;
   padding: 0 25px;
+  min-width: 180px;
   box-sizing: border-box;
 }
 
@@ -157,6 +158,11 @@ a:hover {
 
 .custom-btn.btn-primary {
   background: var(--red);
+  border: 0;
+}
+
+.custom-btn.btn-secondary {
+  background: #818181;
   border: 0;
 }
 
@@ -227,6 +233,18 @@ label .asterix {
 }
 
 /***********
+** Modal
+***********/
+
+.modal-text {
+  text-align: center;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+/***********
 ** Responsive
 ***********/
 @media only screen and (max-width: 991px) {
@@ -253,6 +271,16 @@ label .asterix {
   .form-image-wrap {
     height: 400px;
   }
+
+  /**
+   form register
+  **/
+  .form-image-wrap {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
 }
 
 @media only screen and (max-width: 767px) {

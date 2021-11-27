@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
-import { MdArrowForwardIos } from 'react-icons/md';
+import { IoIosArrowForward } from 'react-icons/io';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -53,7 +53,7 @@ function FeaturedSlider({ sliderData, isUserView }) {
                             <div key={index} className='slider-card'>
                                 <div className='card-cover'>
                                     <img src={pet.image} alt="{pet.name}" />
-                                    <button class='fav-btn'>
+                                    <button className='fav-btn'>
                                         {isUserView ? <FaHeart className='icon' />
                                             : <FaRegHeart className='icon' />
                                         }
@@ -82,7 +82,7 @@ function FeaturedSlider({ sliderData, isUserView }) {
                         )
                     })}
                 </Slider>
-                <a class='slider-link' href='#'>Svi ljubimci <MdArrowForwardIos /></a>
+                <a class='slider-link' href='#'>Svi ljubimci <IoIosArrowForward /></a>
             </div>
         </section>
     );

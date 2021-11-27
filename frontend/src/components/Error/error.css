@@ -1,0 +1,18 @@
+.error-page {
+  flex-direction: column;
+  min-height: 500px;
+  height: calc(100vh - 250px);
+}
+
+.error-page img {
+  max-width: 340px;
+  width: 100%;
+}
+
+.error-page h2 {
+  text-align: center;
+  color: var(--red);
+  font-weight: 400;
+  margin-bottom: 50px;
+  margin-top: 0;
+}

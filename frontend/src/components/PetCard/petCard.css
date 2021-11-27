@@ -1,0 +1,66 @@
+.pet-cards-wrapper {
+  gap: 10px;
+}
+
+.pet-card {
+  width: calc(25% - 10px);
+  height: 371px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 2px solid #c4c4c4;
+  box-sizing: border-box;
+  line-height: 20px;
+  color: #767676;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pet-card--desc {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.pet-card--desc p {
+  margin: 0;
+}
+
+.pet-card--desc h3 {
+  margin: 0;
+}
+
+.pet-card img {
+  box-sizing: border-box;
+  border-collapse: collapse;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.pet-like svg {
+  width: 32px;
+  height: 27px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  fill: #111111;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 991px) {
+  .pet-card {
+    width: calc(50% - 10px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pet-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .pet-card img {
+    height: 300px;
+  }
+}

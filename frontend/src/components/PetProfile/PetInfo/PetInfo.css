@@ -1,0 +1,85 @@
+.petInfo {
+  border: 2px solid var(--yellow);
+  margin: 25px auto;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.petInfo_name {
+  padding: 50px 50px 20px;
+}
+
+.petInfo_content {
+  padding: 20px 50px;
+}
+
+.petInfo_adopt img {
+  max-width: 200px;
+  width: 100%;
+}
+
+.petInfo_adopt h4 {
+  font-weight: normal;
+}
+
+.petInfo_text-spacer p:not(:first-of-type) {
+  margin-left: 70px;
+}
+
+.petInfo_story {
+  padding: 20px 50px 150px;
+  background-color: var(--lightGray);
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.petInfo_story-video {
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.petInfo_story-video video {
+  height: auto;
+  max-height: 300px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.buttonDiv {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sliderDiv {
+  flex: 1;
+}
+
+@media only screen and (max-width: 991px) {
+  .petInfo_story-video {
+    position: relative;
+    bottom: 0;
+  }
+
+  .petInfo_story {
+    padding: 50px 20px 50px 20px;
+    margin-bottom: 0;
+  }
+
+  .petInfo_name {
+    padding: 50px 20px 20px;
+  }
+
+  .petInfo_content {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .petInfo_text-spacer p:not(:first-of-type) {
+    margin-left: 0;
+  }
+}

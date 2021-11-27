@@ -1,0 +1,42 @@
+.blog-desc {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #111111;
+  margin-top: 5px;
+}
+
+.pagination {
+  list-style-type: none;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.pagination__link--active {
+  color: var(--yellow);
+}
+
+.pagination_item,
+.pagination__link {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pagination__link--disabled {
+  opacity: 0.2;
+}
+
+/**
+**
+** responsive
+**
+**/
+
+@media only screen and (max-width: 991px) {
+  .blog-post {
+    padding: 40px;
+  }
+}

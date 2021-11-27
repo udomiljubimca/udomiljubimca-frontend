@@ -1,46 +1,113 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
 import { useState } from "react";
-
-import { SliderData } from "./components/pet-profile/Slider/SliderData";
+import HomePage from "./pages/HomePage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-import Cards from "./components/pet-profile/Cards/Cards";
-// import PetInfo from "./components/pet-profile/PetInfo/PetInfo";
+// router
+import Error from "./components/Error/Error";
+import RegisterUserPage from "./pages/RegisterUserPage";
+import RegisterOrgPage from "./pages/RegisterOrgPage";
+import LoginPage from "./pages/LoginPage";
+import PetProfilePage from "./pages/PetProfilePage";
+import VetPage from "./pages/VetPage";
+import VetPostPage from "./pages/VetPostPage";
+import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
+import DonationsPage from "./pages/DonationsPage";
+import PetProfileOrganizationPage from "./pages/PetProfileOrganizationPage";
+import UserProfilePage from './pages/UserProfilePage';
 
-import UserProfile from "./components/user-profile/UserProfile/UserProfile";
-import FeaturedSlider from "./components/FeaturedSlider/FeaturedSlider";
+//testing modals
+import TestPage from "./pages/TestPage";
+
+// fake blog data import, it is just for preview and demo
+import blogData from "./fakeBlogPostData";
+import animals from "./data/pets";
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
-  const [isUserView, setIsUserView] = useState(true);
+  const [pets, setPets] = useState(animals);
+  const [blogPosts, setBlogPosts] = useState(blogData);
 
-  const [current, setCurrent] = useState(0);
-  const length = SliderData.length;
-
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+  const isLike = (id) => {
+    setPets(
+      pets.map((petData) =>
+        petData.id === id ? { ...petData, isLike: !petData.isLike } : petData
+      )
+    );
   };
 
   return (
-    <div className="App">
-      <Header />
-      {/* <PetInfo
-        slides={SliderData}
-        current={current}
-        prevSlide={prevSlide}
-        nextSlide={nextSlide}
-      /> */}
-      <UserProfile isUserView={isUserView} />
-      <FeaturedSlider sliderData={SliderData} isUserView={isUserView} />
-      {/* <Cards /> */}
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <HomePage podaci={pets} like={isLike} blogPosts={blogPosts} />
+          </Route>
+          <Route path="/prijavi-se" component={LoginPage} />
+          <Route exact path="/registracija-korisnika">
+            <RegisterUserPage />
+          </Route>
+          <Route exact path="/registracija-udruzenja">
+            <RegisterOrgPage />
+          </Route>
+          <Route exact path="/donacije">
+            <DonationsPage />
+          </Route>
+          <Route path="/ljubimac/:name">
+            <PetProfilePage />
+          </Route>
+          <Route exact path="/udruzenje/:name">
+            <PetProfileOrganizationPage />
+          </Route>
+          <Route exact path="/blog">
+            <BlogPage
+              page="blog"
+              posts={blogPosts}
+              title="BLOG"
+              desc="Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam."
+            />
+          </Route>
+          <Route exact path="/blog/:id">
+            <BlogPostPage blogPosts={blogPosts} />
+          </Route>
+          <Route exact path="/veterinar">
+            <VetPage
+              page="veterinar"
+              posts={blogPosts}
+              title="VETERINAR"
+              desc="Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies."
+            />
+          </Route>
+          <Route exact path="/veterinar/:id">
+            <VetPostPage blogPosts={blogPosts} />
+          </Route>
+          <Route exact path="/korisnici/profil-korisnika">
+            <UserProfilePage isUser={false} />
+          </Route>
+          <Route exact path="/profil">
+            <UserProfilePage isUser={true} />
+          </Route>
+          <Route exact path="/test">
+            <TestPage />
+          </Route>
+          <Route component={Error} />
+          {/* <Route exact path='/filtriranjePsa'>
+            <FiltriranjePsi
+              podaci={podaciLjubimci}
+              like={isLike}
+              isTrigger={popup}
+            />
+          </Route> */}
+        </Switch>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
