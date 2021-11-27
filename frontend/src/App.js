@@ -11,11 +11,10 @@ import Cards from "./components/pet-profile/Cards/Cards";
 // import PetInfo from "./components/pet-profile/PetInfo/PetInfo";
 
 import UserProfile from "./components/user-profile/UserProfile/UserProfile";
-import PetSlider from "./components/PetSlider/PetSlider";
+import FeaturedSlider from "./components/FeaturedSlider/FeaturedSlider";
 
 function App() {
   const [isUserView, setIsUserView] = useState(true);
-  console.log(SliderData);
 
   const [current, setCurrent] = useState(0);
   const length = SliderData.length;
@@ -38,7 +37,7 @@ function App() {
         nextSlide={nextSlide}
       /> */}
       <UserProfile isUserView={isUserView} />
-      <PetSlider sliderData={SliderData} isUserView={isUserView} />
+      <FeaturedSlider sliderData={SliderData} isUserView={isUserView} />
       {/* <Cards /> */}
       <Footer />
     </div>

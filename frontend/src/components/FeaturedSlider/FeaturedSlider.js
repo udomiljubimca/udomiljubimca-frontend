@@ -5,9 +5,9 @@ import { MdArrowForwardIos } from 'react-icons/md';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './PetSlider.css'
+import './FeaturedSlider.css'
 
-function PetSlider({ sliderData, isUserView }) {
+function FeaturedSlider({ sliderData, isUserView }) {
     var settings = {
         infinite: false,
         slidesToShow: 4,
@@ -43,7 +43,7 @@ function PetSlider({ sliderData, isUserView }) {
     };
 
     return (
-        <section className='pet-slider'>
+        <section className='featured-slider'>
             <div className='container'>
                 <h2 className="page-title mt-4">DOSTUPNI LJUBIMCI</h2>
                 <h3 className="section-title">Moji omiljeni ljubimci</h3>
@@ -60,7 +60,7 @@ function PetSlider({ sliderData, isUserView }) {
                                     </button>
                                 </div>
                                 <div className='card-details'>
-                                    <a href=''>
+                                    <a href='#'>
                                         <h3>{pet.name}</h3>
                                     </a>
                                     <div>
@@ -82,10 +82,10 @@ function PetSlider({ sliderData, isUserView }) {
                         )
                     })}
                 </Slider>
-                <a class='slider-link' href=''>Svi ljubimci <MdArrowForwardIos /></a>
+                <a class='slider-link' href='#'>Svi ljubimci <MdArrowForwardIos /></a>
             </div>
         </section>
     );
 }
 
-export default PetSlider;
+export default FeaturedSlider;
