@@ -26,7 +26,7 @@ export const UserData =
             habits: "barking",
             goodFor: "kids",
             badFor: "cats",
-            isLiked: 'true'
+            isLike: true
         },
         {
             id: 2,
@@ -45,7 +45,7 @@ export const UserData =
             habits: "barking",
             goodFor: "kids",
             badFor: "cats",
-            isLiked: 'true'
+            isLike: true
         },
         {
             id: 3,
@@ -64,7 +64,7 @@ export const UserData =
             habits: "barking",
             goodFor: "kids",
             badFor: "cats",
-            isLiked: 'true'
+            isLike: true
         },
         {
             id: 4,
@@ -83,7 +83,7 @@ export const UserData =
             habits: "walking",
             goodFor: "kids",
             badFor: "cats",
-            isLiked: 'true'
+            isLike: true
         },
         {
             id: 5,
@@ -103,7 +103,7 @@ export const UserData =
             habits: "eating shoes",
             goodFor: "kids",
             badFor: "cats",
-            isLiked: 'true'
+            isLike: true
         },
     ]
 };

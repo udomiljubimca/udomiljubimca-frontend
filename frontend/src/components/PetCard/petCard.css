@@ -37,7 +37,7 @@
   object-fit: cover;
 }
 
-.pet-like svg {
+/*.pet-like svg {
   width: 32px;
   height: 27px;
   position: absolute;
@@ -46,7 +46,7 @@
   cursor: pointer;
   fill: #111111;
   z-index: 1;
-}
+} */
 
 @media only screen and (max-width: 991px) {
   .pet-card {

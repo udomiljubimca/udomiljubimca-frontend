@@ -1,0 +1,31 @@
+.pet-like  {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    cursor: pointer;
+    fill: var(--red);
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .3s ease;
+  }
+    
+.pet-like:hover {
+    transform: scale(1.1);
+}
+
+.pet-like svg {
+    fill: var(--red);
+    width: 24px;
+    height: 20px;
+    transition: fill .3s ease;
+}
+  
+.pet-like.liked svg {
+    fill: var(--red);
+}

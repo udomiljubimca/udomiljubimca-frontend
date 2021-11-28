@@ -89,12 +89,12 @@ function App() {
           <Route exact path="/korisnici/profil-korisnika">
             <UserProfilePage isUser={false} isLike={isLike} />
           </Route>
-          <Route exact path="/profil">
+          <Route exact path="/profil/:name">
             <UserProfilePage isUser={true} isLike={isLike} />
           </Route>
-          <Route exact path="/test">
+          {/* <Route exact path="/test">
             <TestPage />
-          </Route>
+          </Route> */}
           <Route component={Error} />
           {/* <Route exact path='/filtriranjePsa'>
             <FiltriranjePsi

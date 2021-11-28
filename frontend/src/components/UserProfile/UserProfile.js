@@ -1,6 +1,7 @@
 import React from "react";
 import "./UserProfile.css";
 import Avatar from "../../assets/avatar.svg"
+
 function UserProfile({ userData, isUserView }) {
   return (
     <section className="user-profile container">

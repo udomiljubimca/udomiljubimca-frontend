@@ -4,7 +4,7 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
 
 
-import Heart from '../PetCard/Heart';
+import Heart from '../Heart/Heart';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -56,11 +56,7 @@ function FeaturedSlider({ sliderData, isUserView, isLike }) {
                             <div key={index} className='slider-card'>
                                 <div className='card-cover'>
                                     <img src={pet.image} alt="{pet.name}" />
-                                    {/* <button className='fav-btn'>
-                                        <Heart isLike={isLike} kojeSrce={sliderData} />
-                                    </button> */}
-                                    <Heart isLike={isLike} kojeSrce={sliderData} />
-
+                                    <Heart isLike={isLike} kojeSrce={pet} />
                                 </div>
                                 <div className='card-details'>
                                     <a href='#'>
