@@ -41,6 +41,7 @@
 .user-profile__details {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   line-height: 30px;
   margin-top: 6px;
 }
@@ -48,6 +49,12 @@
 .user-profile__details p {
   font-size: 20px;
 }
+
+.user-profile__details > div > p:first-of-type,
+.user-profile__details .easy-edit-wrapper {
+  margin-right: 15px;
+}
+
 
 .user-profile__about {
   margin-top: 40px;

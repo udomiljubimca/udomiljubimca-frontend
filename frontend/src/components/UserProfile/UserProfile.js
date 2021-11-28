@@ -20,8 +20,6 @@ function UserProfile({ userData, isUserView }) {
     console.log(e);
   }
 
-
-
   return (
     <section className="user-profile container">
       <h1 className="page-title mt-4">PROFIL KORISNIKA</h1>
@@ -36,31 +34,33 @@ function UserProfile({ userData, isUserView }) {
         </div>
 
         <div className="user-profile__details">
-          {isEditing ?
-            <EasyEdit
-              type="text"
-              onSave={(e) => saveEdit(e, 'age')}
-              onCancel={cancelEdit}
-              placeholder={userData.age}
-              saveButtonLabel={<AiOutlineCheck />}
-              cancelButtonLabel={<AiOutlineClose />}
-              attributes={{ name: "age", id: 'age' }}
-            /> :
-            <p>{userData.age}</p>
-          }
-
-          {isEditing ?
-            <EasyEdit
-              type="text"
-              onSave={(e) => saveEdit(e, 'location')}
-              onCancel={cancelEdit}
-              placeholder={userData.location}
-              saveButtonLabel={<AiOutlineCheck />}
-              cancelButtonLabel={<AiOutlineClose />}
-              attributes={{ name: "location", id: 'location' }}
-            /> :
-            <p>{userData.location}</p>
-          }
+          <div className="d-flex">
+            {isEditing ?
+              <EasyEdit
+                type="text"
+                onSave={(e) => saveEdit(e, 'age')}
+                onCancel={cancelEdit}
+                placeholder={userData.age}
+                saveButtonLabel={<AiOutlineCheck />}
+                cancelButtonLabel={<AiOutlineClose />}
+                attributes={{ name: "age", id: 'age' }}
+              /> :
+              <p>{userData.age} godine,</p>
+            }
+            <br />
+            {isEditing ?
+              <EasyEdit
+                type="text"
+                onSave={(e) => saveEdit(e, 'location')}
+                onCancel={cancelEdit}
+                placeholder={userData.location}
+                saveButtonLabel={<AiOutlineCheck />}
+                cancelButtonLabel={<AiOutlineClose />}
+                attributes={{ name: "location", id: 'location' }}
+              /> :
+              <p>{userData.location}</p>
+            }
+          </div>
           <p>Korisnik od {userData.registrationDate}.</p>
         </div>
 
