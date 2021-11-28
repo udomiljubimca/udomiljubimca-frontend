@@ -87,10 +87,10 @@ function App() {
             <VetPostPage blogPosts={blogPosts} />
           </Route>
           <Route exact path="/korisnici/profil-korisnika">
-            <UserProfilePage isUser={false} />
+            <UserProfilePage isUser={false} isLike={isLike} />
           </Route>
           <Route exact path="/profil">
-            <UserProfilePage isUser={true} />
+            <UserProfilePage isUser={true} isLike={isLike} />
           </Route>
           <Route exact path="/test">
             <TestPage />

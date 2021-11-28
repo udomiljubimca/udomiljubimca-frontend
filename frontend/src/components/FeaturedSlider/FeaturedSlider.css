@@ -30,7 +30,7 @@
   border-radius: 6px 6px 0px 0px;
 }
 
-.fav-btn {
+/* .fav-btn {
   background: white;
 }
 
@@ -55,7 +55,7 @@
   fill: var(--red);
   width: 20px;
   height: 24px;
-}
+} */
 
 .slick-arrow::before {
   content: url('../../assets/arrow.svg')

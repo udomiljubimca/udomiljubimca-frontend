@@ -24,6 +24,11 @@
 
 .user-profile__intro img {
   margin-bottom: 48px;
+  width: 210px;
+  height: 210px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .user-profile__intro h2,

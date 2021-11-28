@@ -3,11 +3,14 @@ import Slider from "react-slick";
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
 
+
+import Heart from '../PetCard/Heart';
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './FeaturedSlider.css'
 
-function FeaturedSlider({ sliderData, isUserView }) {
+function FeaturedSlider({ sliderData, isUserView, isLike }) {
     var settings = {
         infinite: false,
         slidesToShow: 4,
@@ -53,11 +56,11 @@ function FeaturedSlider({ sliderData, isUserView }) {
                             <div key={index} className='slider-card'>
                                 <div className='card-cover'>
                                     <img src={pet.image} alt="{pet.name}" />
-                                    <button className='fav-btn'>
-                                        {isUserView ? <FaHeart className='icon' />
-                                            : <FaRegHeart className='icon' />
-                                        }
-                                    </button>
+                                    {/* <button className='fav-btn'>
+                                        <Heart isLike={isLike} kojeSrce={sliderData} />
+                                    </button> */}
+                                    <Heart isLike={isLike} kojeSrce={sliderData} />
+
                                 </div>
                                 <div className='card-details'>
                                     <a href='#'>
@@ -82,7 +85,7 @@ function FeaturedSlider({ sliderData, isUserView }) {
                         )
                     })}
                 </Slider>
-                <a class='slider-link' href='#'>Svi ljubimci <IoIosArrowForward /></a>
+                <a className='slider-link' href='#'>Svi ljubimci <IoIosArrowForward /></a>
             </div>
         </section>
     );
