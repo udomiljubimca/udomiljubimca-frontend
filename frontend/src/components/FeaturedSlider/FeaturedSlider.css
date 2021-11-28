@@ -30,32 +30,17 @@
   border-radius: 6px 6px 0px 0px;
 }
 
-/* .fav-btn {
-  background: white;
-} */
-
 .fav-btn {
   position: absolute;
   top: 9px;
   right: 9px;
   z-index: 1;
-  /* background: white; */
   width: 44px;
   height: 44px;
   border-radius: 100%;
   border: none;
   transition: transform .2s ease;
 }
-/* 
-.fav-btn:hover {
-  transform: scale(1.1);
-}
-
-.fav-btn .icon {
-  fill: var(--red);
-  width: 20px;
-  height: 24px;
-}  */
 
 .slick-arrow::before {
   content: url('../../assets/arrow.svg')

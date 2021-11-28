@@ -86,7 +86,7 @@ function App() {
           <Route exact path="/veterinar/:id">
             <VetPostPage blogPosts={blogPosts} />
           </Route>
-          <Route exact path="/korisnici/profil-korisnika">
+          <Route exact path="/korisnici/:name">
             <UserProfilePage isUser={false} isLike={isLike} />
           </Route>
           <Route exact path="/profil/:name">

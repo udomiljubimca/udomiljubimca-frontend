@@ -1,8 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
-
 
 import Heart from '../Heart/Heart';
 
@@ -49,14 +47,15 @@ function FeaturedSlider({ sliderData, isUserView, isLike }) {
         <section className='featured-slider'>
             <div className='container'>
                 <h2 className="page-title mt-4">DOSTUPNI LJUBIMCI</h2>
-                <h3 className="section-title">Moji omiljeni ljubimci</h3>
+                <h3 className="section-title">{isUserView ? 'Moji omiljeni ljubimci' : 'Ljubimci za udomljivanje'}</h3>
                 <Slider {...settings}>
                     {sliderData.map((pet, index) => {
                         return (
                             <div key={index} className='slider-card'>
                                 <div className='card-cover'>
                                     <img src={pet.image} alt="{pet.name}" />
-                                    <Heart isLike={isLike} kojeSrce={pet} />
+                                    {isUserView && <Heart isLike={isLike} kojeSrce={pet} />
+                                    }
                                 </div>
                                 <div className='card-details'>
                                     <a href='#'>
