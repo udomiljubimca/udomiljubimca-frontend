@@ -1,5 +1,5 @@
 import React from "react";
-import Heart from "./Heart";
+import Heart from "../Heart/Heart";
 import placeholder from "../../assets/placeholder.svg";
 import "./petCard.css";
 

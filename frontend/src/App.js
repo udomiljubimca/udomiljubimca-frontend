@@ -17,6 +17,7 @@ import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import DonationsPage from "./pages/DonationsPage";
 import PetProfileOrganizationPage from "./pages/PetProfileOrganizationPage";
+import UserProfilePage from './pages/UserProfilePage';
 
 //testing modals
 import TestPage from "./pages/TestPage";
@@ -85,11 +86,16 @@ function App() {
           <Route exact path="/veterinar/:id">
             <VetPostPage blogPosts={blogPosts} />
           </Route>
-          <Route exact path="/test">
-            <TestPage />
+          <Route exact path="/korisnici/:name">
+            <UserProfilePage isUser={false} isLike={isLike} />
           </Route>
+          <Route exact path="/profil/:name">
+            <UserProfilePage isUser={true} isLike={isLike} />
+          </Route>
+          {/* <Route exact path="/test">
+            <TestPage />
+          </Route> */}
           <Route component={Error} />
-
           {/* <Route exact path='/filtriranjePsa'>
             <FiltriranjePsi
               podaci={podaciLjubimci}

@@ -271,6 +271,16 @@ label .asterix {
   .form-image-wrap {
     height: 400px;
   }
+
+  /**
+   form register
+  **/
+  .form-image-wrap {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
 }
 
 @media only screen and (max-width: 767px) {

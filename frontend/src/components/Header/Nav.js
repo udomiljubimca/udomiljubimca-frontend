@@ -30,6 +30,11 @@ function Nav({ popUp, mobileNav }) {
               Iskustva
             </Link>
           </li>
+          <li className="nav-dropdown-item">
+            <Link className="nav-dropdown-link" to="/profil-korisnika">
+              Profil
+            </Link>
+          </li>
         </ul>
       </li>
       <li className="main-nav-item">

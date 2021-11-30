@@ -1,0 +1,129 @@
+:root {
+  --border: 1px solid var(--yellow);
+}
+
+.page-title {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.user-profile__inner {
+  border: var(--border);
+  border-radius: 5px;
+  padding: 116px 93px 102px;
+  margin-top: 25px;
+}
+
+.user-profile__intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: var(--border);
+}
+
+.user-profile__intro img {
+  margin-bottom: 48px;
+  width: 210px;
+  height: 210px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.user-profile__intro h2,
+.user-profile__about h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.user-profile__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  line-height: 30px;
+  margin-top: 6px;
+}
+
+.user-profile__details p {
+  font-size: 20px;
+}
+
+.user-profile__details > div > p:first-of-type,
+.user-profile__details .easy-edit-wrapper {
+  margin-right: 15px;
+}
+
+
+.user-profile__about {
+  margin-top: 40px;
+}
+
+.user-profile__about h3 {
+  margin-bottom: 8px;
+}
+
+.user-profile__about .custom-btn {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.easy-edit-wrapper {
+  display: flex;
+  min-height: 46px;
+  height: 100%;
+  background: var(--white);
+  border: var(--border);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 5px;
+  outline: var(--red);
+  font-size: 18px;
+}
+
+.easy-edit-wrapper:hover {
+  font-style: normal;
+  opacity: 0.8;
+}
+
+.easy-edit-inline-wrapper {
+  display: flex;
+}
+
+.easy-edit-component-wrapper {
+  width: 100%;
+}
+
+.easy-edit-button-wrapper {
+  display: flex!important;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.easy-edit-button-wrapper button{
+  background: transparent;
+  height: max-content;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .user-profile__inner {
+    padding: 40px 40px 60px;
+  }
+
+  .user-profile__intro img {
+    max-width: 150px;
+  }
+
+  .user-profile__details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-profile__details p {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+}
