@@ -7,10 +7,10 @@ import EasyEdit from 'react-easy-edit';
 function UserProfile({ userData, isUserView }) {
 
   const [isEditing, setIsEditing] = useState(false);
-  const [profileData, setProfileInfo] = useState(userData);
+  const [profileData, setProfileData] = useState(userData);
 
   const onSaveFieldEdit = (value, fieldName) => {
-    setProfileInfo((current) => { return { ...current, [fieldName]: value } })
+    setProfileData((current) => { return { ...current, [fieldName]: value } })
   }
 
   const uploadedImage = useRef(null);
