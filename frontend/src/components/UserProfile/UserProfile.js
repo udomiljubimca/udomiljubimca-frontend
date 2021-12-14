@@ -1,24 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./UserProfile.css";
 import Avatar from "../../assets/avatar.svg"
-import { AiOutlineEdit, AiOutlineCheck, AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineCheck, AiOutlineClose } from 'react-icons/ai'
 import EasyEdit from 'react-easy-edit';
 
 function UserProfile({ userData, isUserView }) {
 
   const [isEditing, setIsEditing] = useState(false);
+  const [profileData, setProfileData] = useState(userData);
 
-  const saveEdit = () => {
-    console.log('click');
+  const onSaveFieldEdit = (value, fieldName) => {
+    setProfileData((current) => { return { ...current, [fieldName]: value } })
   }
 
-  const cancelEdit = () => {
-    console.log('canceled');
-  }
+  const uploadedImage = useRef(null);
+  const imageUploader = useRef(null);
 
-  const handleFieldEdit = (e) => {
-    console.log(e);
-  }
+  const handleImageUpload = e => {
+    const [file] = e.target.files;
+    if (file) {
+      const reader = new FileReader();
+      const { current } = uploadedImage;
+      current.file = file;
+      reader.onload = e => {
+        current.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
 
   return (
     <section className="user-profile container">
@@ -26,11 +36,21 @@ function UserProfile({ userData, isUserView }) {
 
       <div className="user-profile__inner">
         <div className="user-profile__intro">
-          <div>
-            <img src={userData.image ? userData.image : Avatar} alt={userData.name} />
-            {/* {isEditing && <AiOutlineEdit />} */}
+          <div onClick={() => isEditing && imageUploader.current.click()} style={{
+            cursor: isEditing && 'pointer'
+          }}>
+            <img ref={uploadedImage} src={profileData.image ? profileData.image : Avatar} alt={profileData.name} />
           </div>
-          <h2>{userData.name}</h2>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageUpload}
+            ref={imageUploader}
+            style={{
+              display: "none"
+            }}
+          />
+          <h2>{profileData.name}</h2>
         </div>
 
         <div className="user-profile__details">
@@ -38,30 +58,28 @@ function UserProfile({ userData, isUserView }) {
             {isEditing ?
               <EasyEdit
                 type="text"
-                onSave={(e) => saveEdit(e, 'age')}
-                onCancel={cancelEdit}
-                placeholder={userData.age}
+                onSave={(e) => onSaveFieldEdit(e, 'age')}
+                placeholder={profileData.age}
                 saveButtonLabel={<AiOutlineCheck />}
                 cancelButtonLabel={<AiOutlineClose />}
                 attributes={{ name: "age", id: 'age' }}
               /> :
-              <p>{userData.age} godine,</p>
+              <p>{profileData.age} godine,</p>
             }
             <br />
             {isEditing ?
               <EasyEdit
                 type="text"
-                onSave={(e) => saveEdit(e, 'location')}
-                onCancel={cancelEdit}
-                placeholder={userData.location}
+                onSave={(e) => onSaveFieldEdit(e, 'location')}
+                placeholder={profileData.location}
                 saveButtonLabel={<AiOutlineCheck />}
                 cancelButtonLabel={<AiOutlineClose />}
                 attributes={{ name: "location", id: 'location' }}
               /> :
-              <p>{userData.location}</p>
+              <p>{profileData.location}</p>
             }
           </div>
-          <p>Korisnik od {userData.registrationDate}.</p>
+          <p>Korisnik od {profileData.registrationDate}.</p>
         </div>
 
         <div className="user-profile__about">
@@ -70,14 +88,13 @@ function UserProfile({ userData, isUserView }) {
           {isEditing ?
             <EasyEdit
               type="textarea"
-              onSave={(e) => saveEdit(e, 'about')}
-              onCancel={cancelEdit}
-              placeholder={userData.about}
+              onSave={(e) => onSaveFieldEdit(e, 'about')}
+              placeholder={profileData.about}
               saveButtonLabel={<AiOutlineCheck />}
               cancelButtonLabel={<AiOutlineClose />}
               attributes={{ name: "about", id: 'about' }}
             /> :
-            <p>{userData.about}</p>
+            <p>{profileData.about}</p>
           }
 
           {isUserView && (

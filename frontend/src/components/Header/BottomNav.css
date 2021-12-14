@@ -1,0 +1,156 @@
+.bottom-nav {
+  justify-content: space-between;
+  align-items: flex-end;    
+  margin: 6px auto;
+}
+
+.bottom-nav a {
+  color: #4F4F4F;
+  transition: color .3s ease;
+}
+
+.bottom-nav svg {
+  fill: #4F4F4F;
+  transition: fill .3s ease;
+}
+
+.bottom-nav a:hover {
+  color: var(--red);
+}
+  
+.bottom-nav a:hover svg {
+  fill: var(--red);
+}
+
+.bottom-nav__stores {
+  background: var(--lightGray);
+  border-radius: 6px;
+  padding: 9px 33px 11px;
+}
+
+.bottom-nav__stores p {
+  margin-bottom: 0;
+}
+
+.bottom-nav__stores svg {
+  font-size: 25px;
+  margin: 0 8px;
+}
+
+.bottom-nav__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 30px;
+}
+
+.bottom-nav__search {
+  border-bottom: 2px solid #4F4F4F;
+  margin-bottom: 16px;
+  margin-right: 10px;
+}
+
+.bottom-nav__search input {
+  border: none;
+  margin-bottom: 0;
+}
+
+.bottom-nav__search svg {
+  font-size: 22px;
+}
+
+.bottom-nav__user {
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.bottom-nav__user svg {
+  font-size: 28px;
+  margin-right: 8px;
+}
+
+.bottom-nav__user a:first-of-type {
+  margin-right: 18px;
+}
+
+
+@media only screen and (max-width: 992px) {
+
+  .bottom-nav {
+    margin: 10px auto 40px;
+  }
+
+  .bottom-nav a {
+    min-width: 30px;
+    min-height: 30px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .link-text {
+    display: none;
+  }
+  
+  .bottom-nav__stores {
+    padding: 3px;
+  }
+
+  .bottom-nav__left {
+    min-width: unset;
+    padding-left: 0;
+  }
+  
+  .bottom-nav__stores p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .bottom-nav__stores svg {
+    font-size: 22px;
+  }
+
+  .bottom-nav__search {
+    /* max-width: 40%; */
+    margin: auto 10px 0;
+    position: relative;
+  }  
+
+  .bottom-nav__search input {
+    max-width: 100%;
+    font-size: 14px;
+  }
+  
+  .bottom-nav__search svg {
+    position: absolute;
+    top: 30%;
+    right: 0;
+  }  
+  
+  .bottom-nav__user {
+    margin-bottom: 0;
+  }
+
+  .bottom-nav__user svg {
+    font-size: 21px;
+    margin-right: 0;
+  }
+
+  .bottom-nav__user a:first-of-type {
+    margin-right: 5px;
+  }
+
+  .bottom-nav__user a {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width: 1192px) {
+  .bottom-nav__left {
+    min-width: 772px;
+  }
+    
+  .bottom-nav__search input {
+    min-width: 396px;
+  }
+}
