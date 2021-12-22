@@ -7,13 +7,6 @@
   text-transform: uppercase;
 }
 
-.user-profile__inner {
-  border: var(--border);
-  border-radius: 5px;
-  padding: 116px 93px 102px;
-  margin-top: 25px;
-}
-
 .user-profile__intro {
   display: flex;
   justify-content: center;
