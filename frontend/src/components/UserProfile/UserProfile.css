@@ -7,12 +7,17 @@
   text-transform: uppercase;
 }
 
+.user-profile {
+  padding: 50px 0;
+}
+
 .user-profile__intro {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-bottom: var(--border);
+  
 }
 
 .user-profile__intro img {

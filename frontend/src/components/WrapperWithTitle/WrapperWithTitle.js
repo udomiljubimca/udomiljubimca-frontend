@@ -7,7 +7,7 @@ const WrapperWithTitle = ({ title, children }) => {
         <section className='container'>
             <h1 className="page-title mt-4">{title}</h1>
             <div className='wrapper-with-title'>
-                {children.length ? children.map(child => child) : children}
+                {children && children.length ? children.map(child => child) : children}
             </div>
         </section>
 

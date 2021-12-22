@@ -1,0 +1,91 @@
+.image-upload {
+    background: var(--lightGray);
+    border-radius: 6px;
+    position: relative;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+  }
+
+.wrapper:before {
+    content: '';
+    display: block;
+}
+
+.wrapper > img {
+    bottom: -9999px;
+    left: -9999px;
+    margin: auto;
+    max-width: none;
+    min-width: 100%;
+    position: absolute;
+    right: -9999px;
+    top: -9999px;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-upload--rect.wrapper:before {
+    padding-bottom: 58.25%;
+}
+
+.image-upload--square.wrapper:before {
+    padding-bottom: 93%;
+}
+
+
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: var(--darkGray)
+}
+
+input {
+    display: none;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.label--l {
+    font-size: 24px;
+}
+
+.label--l span {
+    margin-top: 20px;
+}
+
+.label--s {
+    font-size: 16px;
+}
+
+.label--2 span {
+    margin-top: 12px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.icon--l {
+    width: 74px;
+    height: 74px;
+}
+
+.icon--s {
+    width: 45px;
+    height: 45px;
+}
