@@ -1,6 +1,5 @@
-.org-cover {
+.create-org-cover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }

@@ -2,14 +2,13 @@ import React from "react";
 
 // Components
 import WrapperWithTitle from '../components/WrapperWithTitle/WrapperWithTitle'
-import CoverPhotos from '../components/CreateOrgCover/OrgCoverPhotos/CreateOrgCover';
-// Fake data
+import CreateOrgForm from '../components/CreateOrgProfile/CreateOrgForm/CreateOrgForm'
 
 const CreateOrgProfilePage = () => {
 
     return <>
         <WrapperWithTitle title={'NAPRAVI PROFIL UDRUŽENJA'}>
-            <CoverPhotos />
+            <CreateOrgForm />
         </WrapperWithTitle>
     </>
 }

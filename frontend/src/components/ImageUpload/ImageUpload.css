@@ -39,20 +39,20 @@
 }
 
 
-form {
+.image-upload form {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    color: var(--darkGray)
+    color: var(--darkGray);
 }
 
-input {
+.image-upload input {
     display: none;
 }
 
-.label {
+.image-upload .label {
     display: flex;
     flex-direction: column;
     text-align: center;

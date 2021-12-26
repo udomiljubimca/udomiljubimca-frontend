@@ -1,0 +1,22 @@
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.required {
+    color: var(--red);
+}
+
+.input-wrapper {
+    max-width: 480px;
+    width: 100%;
+}
+
+.input-wrapper.full-width {
+    max-width: 100%;
+}
+
+.input-wrapper input {
+    border-color: #4F4F4F;
+    padding: 5px 16px;
+}

@@ -1,0 +1,41 @@
+.file-input-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    width: 100%;
+}
+
+.required {
+    color: var(--red);
+    margin-left: 3px;
+}
+
+.file-input-group.full-width {
+    max-width: 100%;
+}
+
+.file-input-wrapper {
+    border: 2px solid #4F4F4F;
+    border-radius: 8px;
+    position: relative;
+ }
+
+.file-input-wrapper input {
+   opacity: 0;
+   margin-bottom: 0;
+   width: 100%;
+}
+
+
+.file-input-wrapper svg {
+    position: absolute;
+    left: 16px;
+    bottom: 15px;
+}
+
+.file-input-wrapper .placeholder {
+    position: absolute;
+    left: 50px;
+    bottom: 12px;
+    background: unset;
+}

@@ -22,8 +22,8 @@ const ImageUpload = ({ shape, maxWidth, iconSize, placeholder }) => {
     }
     return (
         <div style={{ maxWidth: `${maxWidth}px` }} className={`image-upload ${shape === 'square' ? 'image-upload--square' : 'image-upload--rect'} wrapper`}>
-            <img src={src.imagePreviewUrl} alt="" />
-            <form style={src.imagePreviewUrl && { zIndex: '-1' }}>
+            {src.imagePreviewUrl && <img src={src.imagePreviewUrl} alt="" />}
+            <form class='image-upload-form' style={src.imagePreviewUrl && { zIndex: '-1' }}>
                 <input id={uniqueID} type="file" onChange={(e) => onImgUpload(e)} />
                 <label htmlFor={uniqueID} className={`label label--${iconSize}`}>
                     <AddIcon className={`icon icon--${iconSize}`} />
