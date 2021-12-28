@@ -1,0 +1,10 @@
+.homepageImage {
+  border-bottom: 1px solid #aaaaaa;
+  padding: 100px 0 95px 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+  min-height: 500px;
+
+}
