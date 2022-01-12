@@ -1,0 +1,32 @@
+
+.select-group {
+    max-width: 480px;
+    width: 100%;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-group select {
+    padding: 5px 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    border-color: #4F4F4F;
+    background: transparent;
+}
+
+.select-group svg {
+    position: absolute;
+    top: 13px;
+    right: 22px;
+    font-size: 20px;
+    z-index: -1;
+}
+
+
+.select-group option {
+    background: white;
+}

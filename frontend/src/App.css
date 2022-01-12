@@ -133,6 +133,9 @@ a:hover {
   display: inline-block;
 }
 
+.full-width {
+  max-width: 100%!important;
+}
 /***********
 ** Buttons
 ***********/
@@ -187,7 +190,7 @@ a:hover {
 }
 
 input:not([type="submit"]),
-textarea {
+textarea, select {
   height: 46px;
   background: var(--white);
   border: 2px solid var(--darkGray);

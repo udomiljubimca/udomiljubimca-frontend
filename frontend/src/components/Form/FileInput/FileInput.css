@@ -1,17 +1,6 @@
 .file-input-group {
-    display: flex;
-    flex-direction: column;
     max-width: 480px;
     width: 100%;
-}
-
-.required {
-    color: var(--red);
-    margin-left: 3px;
-}
-
-.file-input-group.full-width {
-    max-width: 100%;
 }
 
 .file-input-wrapper {

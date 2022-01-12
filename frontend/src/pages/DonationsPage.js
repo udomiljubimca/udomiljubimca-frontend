@@ -36,7 +36,7 @@ const DonationsPage = () => {
       </Row>
       <Row>
         <Col>
-          <p class="divider-text">
+          <p className="divider-text">
             <span>ili putem</span>
           </p>
         </Col>

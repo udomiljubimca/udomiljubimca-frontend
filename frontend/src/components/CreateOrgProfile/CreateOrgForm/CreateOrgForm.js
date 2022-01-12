@@ -2,6 +2,7 @@ import React from 'react';
 import Input from '../../Form/Input/Input';
 import FileInput from '../../Form/FileInput/FileInput';
 import CreateOrgCover from '../CreateOrgCover/CreateOrgCover';
+import Select from '../../Form/Select/Select';
 
 const CreateOrgForm = () => {
     return (
@@ -10,7 +11,7 @@ const CreateOrgForm = () => {
             <small className='d-flex justify-content-end'><span className='required'>*</span>Obavezna polja</small>
             <div className='d-flex flex--space-between'>
                 <Input type={'text'} label={'Naziv udruženja'} placeholder={'Unesi naziv udruženja'} isRequired={true} id={'name'}></Input>
-                <Input type={'text'} label={'Mesto (grad)'} placeholder={'Unesi grad'} isRequired={true} id={'city'}></Input>
+                <Select label={'Mesto (grad)'} defaultValue={'Izaberi grad'} isRequired={true} name={'city'} id={'city'} options={['Nis', 'Beograd', 'Novi Sad']}></Select>
             </div>
             <div className='d-flex flex--space-between'>
                 <Input type={'email'} label={'Email'} placeholder={'Unesi email adresu'} isRequired={true} id={'email'}></Input>

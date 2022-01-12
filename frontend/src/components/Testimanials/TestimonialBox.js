@@ -2,7 +2,7 @@ import React from "react";
 
 function TestimonialBox({ text }) {
   return (
-    <div class="testimonial-box flex flex--align-center">
+    <div className="testimonial-box flex flex--align-center">
       <p>{text}</p>
     </div>
   );
