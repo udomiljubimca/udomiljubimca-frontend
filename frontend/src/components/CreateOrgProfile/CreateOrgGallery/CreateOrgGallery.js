@@ -10,7 +10,6 @@ const CreateOrgGallery = () => {
 
     const onGalleryUpload = (e) => {
         e.preventDefault();
-        // const reader = new FileReader();
         const files = e.target.files;
 
         Array.from(files).forEach(file => {
@@ -21,11 +20,14 @@ const CreateOrgGallery = () => {
                     file: file,
                     imagePreviewUrl: reader.result
                 }]);
-
             }
             reader.readAsDataURL(file);
-
         })
+    }
+
+    const onDeleteImg = (deleteImg) => {
+        const removeIndex = images.findIndex(item => item.file === deleteImg.file);
+        setImages(prevState => prevState.filter(img => images.indexOf(img) !== removeIndex));
     }
 
     return (
@@ -47,7 +49,7 @@ const CreateOrgGallery = () => {
                             <>
                                 <picture className='gallery-img-wrapper'>
                                     <img className='gallery-img' src={img.imagePreviewUrl} alt="" />
-                                    <button type='button' className='delete-btn delete-btn--s d-flex justify-content-center align-items-center'>
+                                    <button onClick={() => onDeleteImg(img)} type='button' className='delete-btn delete-btn--s d-flex justify-content-center align-items-center'>
                                         <AiOutlineClose />
                                     </button>
                                 </picture>
