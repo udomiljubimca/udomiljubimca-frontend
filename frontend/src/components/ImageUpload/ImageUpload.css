@@ -128,3 +128,53 @@
 .delete-btn--l svg {
     font-size: 25px;
 }
+
+
+/* Create Org Gallery images */
+
+
+.hidden {
+    display: none;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.gallery-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+}
+
+.gallery-img-wrapper:before {
+    content: '';
+    display: block;
+    padding-bottom: 56.25%;
+}
+
+.gallery-img {
+    bottom: -9999px;
+    left: -9999px;
+    margin: auto;
+    max-width: none;
+    min-width: 100%;
+    position: absolute;
+    right: -9999px;
+    top: -9999px;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-img-wrapper .delete-btn {
+    visibility: hidden;
+}
+
+.gallery-img-wrapper:hover .delete-btn {
+    visibility: visible;
+}

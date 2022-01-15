@@ -2,6 +2,7 @@ import React from 'react';
 import Input from '../../Form/Input/Input';
 import FileInput from '../../Form/FileInput/FileInput';
 import CreateOrgCover from '../CreateOrgCover/CreateOrgCover';
+import CreateOrgGallery from '../CreateOrgGallery/CreateOrgGallery';
 import Select from '../../Form/Select/Select';
 
 const CreateOrgForm = () => {
@@ -24,6 +25,7 @@ const CreateOrgForm = () => {
             <div>
                 <FileInput label={'Dodaj uslove za udomljavanje'} isRequired={true} id={'documents'} isFullWidth={true}></FileInput>
             </div>
+            <CreateOrgGallery />
         </form>
     );
 }
