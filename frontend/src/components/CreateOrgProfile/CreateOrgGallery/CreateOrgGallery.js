@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ReactComponent as AddIcon } from '../../../assets/add.svg'
-import '../../ImageUpload/ImageUpload'
 import { AiOutlineClose } from 'react-icons/ai'
 import { v4 as uuid } from 'uuid';
 
@@ -32,8 +31,8 @@ const CreateOrgGallery = () => {
 
     return (
         <>
-            <label htmlFor="">Dodaj fotografije u galeriju</label>
-            <div style={{ maxWidth: '490px' }} className={`image-upload image-upload--rect wrapper ${images.length > 0 ? 'hidden' : ''}`}>
+            <label htmlFor={uniqueID} className="gallery-label">{images.length > 0 ? 'Fotografije:' : 'Dodaj fotografije u galeriju'}</label>
+            <div className={`image-upload image-upload--rect gallery-image-upload wrapper ${images.length > 0 ? 'hidden' : ''}`}>
                 <div className='image-upload-form'>
                     <input id={uniqueID} type="file" multiple onChange={(e) => onGalleryUpload(e)} />
                     <label htmlFor={uniqueID} className={`label label--l`}>
@@ -44,17 +43,14 @@ const CreateOrgGallery = () => {
             </div>
             {images.length > 0 &&
                 <div className="gallery">
-                    {
-                        images.map(img => (
-                            <>
-                                <picture className='gallery-img-wrapper'>
-                                    <img className='gallery-img' src={img.imagePreviewUrl} alt="" />
-                                    <button onClick={() => onDeleteImg(img)} type='button' className='delete-btn delete-btn--s d-flex justify-content-center align-items-center'>
-                                        <AiOutlineClose />
-                                    </button>
-                                </picture>
-                            </>
-                        ))
+                    {images.map(img => (
+                        <picture className='gallery-img-wrapper'>
+                            <img className='gallery-img' src={img.imagePreviewUrl} alt="" />
+                            <button onClick={() => onDeleteImg(img)} type='button' className='delete-btn delete-btn--s d-flex justify-content-center align-items-center'>
+                                <AiOutlineClose />
+                            </button>
+                        </picture>
+                    ))
                     }
                 </div>
             }

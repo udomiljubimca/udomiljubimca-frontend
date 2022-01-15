@@ -217,7 +217,7 @@ textarea {
   cursor: pointer;
 }
 
-label .asterix {
+.asterix {
   color: var(--red);
   font-weight: 300;
 }
@@ -233,6 +233,10 @@ label .asterix {
 .form-title .title-underline:after {
   width: 100%;
   border: 2px solid var(--red);
+}
+
+.small {
+  margin: 13px 0 35px
 }
 
 /***********

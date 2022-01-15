@@ -4,12 +4,13 @@ import FileInput from '../../Form/FileInput/FileInput';
 import CreateOrgCover from '../CreateOrgCover/CreateOrgCover';
 import CreateOrgGallery from '../CreateOrgGallery/CreateOrgGallery';
 import Select from '../../Form/Select/Select';
+import Textarea from '../../Form/Textarea/Textarea';
 
 const CreateOrgForm = () => {
     return (
         <form className='create-org-form'>
             <CreateOrgCover />
-            <small className='d-flex justify-content-end'><span className='required'>*</span>Obavezna polja</small>
+            <small className='small d-flex justify-content-end'><span className='asterix'>*</span>Obavezna polja</small>
             <div className='d-flex flex--space-between'>
                 <Input type={'text'} label={'Naziv udruženja'} placeholder={'Unesi naziv udruženja'} isRequired={true} id={'name'}></Input>
                 <Select label={'Mesto (grad)'} defaultValue={'Izaberi grad'} isRequired={true} name={'city'} id={'city'} options={['Nis', 'Beograd', 'Novi Sad']}></Select>
@@ -24,6 +25,9 @@ const CreateOrgForm = () => {
             </div>
             <div>
                 <FileInput label={'Dodaj uslove za udomljavanje'} isRequired={true} id={'documents'} isFullWidth={true}></FileInput>
+            </div>
+            <div>
+                <Textarea label={'O udruženju'} placeholder={'Dodaj o udruženju'} isRequired={true} id={'documents'} isFullWidth={true}></Textarea>
             </div>
             <CreateOrgGallery />
         </form>

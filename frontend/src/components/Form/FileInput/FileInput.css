@@ -1,6 +1,7 @@
 .file-input-group {
     max-width: 480px;
     width: 100%;
+    margin-bottom: 40px;
 }
 
 .file-input-wrapper {
@@ -27,4 +28,8 @@
     left: 50px;
     bottom: 12px;
     background: unset;
+}
+
+.file-input-filename {
+    margin-top: 8px;
 }

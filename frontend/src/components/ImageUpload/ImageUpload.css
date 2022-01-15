@@ -133,14 +133,15 @@
 /* Create Org Gallery images */
 
 
-.hidden {
-    display: none;
-}
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+}
+
+.gallery-image-upload{
+    max-width: 490px;
+    margin: 8px auto 100px;
 }
 
 .gallery-img-wrapper {
@@ -154,7 +155,7 @@
 .gallery-img-wrapper:before {
     content: '';
     display: block;
-    padding-bottom: 56.25%;
+    padding-bottom: 58.36%;
 }
 
 .gallery-img {
@@ -177,4 +178,8 @@
 
 .gallery-img-wrapper:hover .delete-btn {
     visibility: visible;
+}
+
+.hidden {
+    display: none;
 }
