@@ -144,6 +144,10 @@
     margin: 8px auto 100px;
 }
 
+.gallery-image-upload--inline {
+    margin: unset;
+}
+
 .gallery-img-wrapper {
     position: relative;
     overflow: hidden;

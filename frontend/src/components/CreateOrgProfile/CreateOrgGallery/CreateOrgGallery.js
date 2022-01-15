@@ -52,6 +52,15 @@ const CreateOrgGallery = () => {
                         </picture>
                     ))
                     }
+                    <div className={`image-upload image-upload--rect gallery-image-upload gallery-image-upload--inline wrapper ${images.length > 0 ? '' : 'hidden'}`}>
+                        <div className='image-upload-form'>
+                            <input id={uniqueID} type="file" multiple onChange={(e) => onGalleryUpload(e)} />
+                            <label htmlFor={uniqueID} className={`label label--s`}>
+                                <AddIcon className='icon icon--s' />
+                                <span>Dodaj fotografije</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             }
         </>
