@@ -25,7 +25,7 @@ const ImageUpload = ({ shape, maxWidth, iconSize, placeholder }) => {
     const onDeleteImg = () => setSrc({ file: null, imagePreviewUrl: null });
 
     return (
-        <div style={{ maxWidth: `${maxWidth}px` }} className={`image-upload ${shape === 'square' ? 'image-upload--square' : 'image-upload--rect'} wrapper`}>
+        <div style={{ maxWidth: `${maxWidth}px` }} className={`image-upload ${shape === 'square' ? 'image-upload--square' : 'image-upload--rect'} media-wrapper`}>
             {src.imagePreviewUrl &&
                 <>
                     <img src={src.imagePreviewUrl} alt="" />

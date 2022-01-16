@@ -30,6 +30,7 @@ const CreateOrgForm = () => {
                 <Textarea label={'O udruženju'} placeholder={'Dodaj o udruženju'} isRequired={true} id={'documents'} isFullWidth={true}></Textarea>
             </div>
             <CreateOrgGallery />
+            <button type="submit" className="custom-btn btn-primary d-flex justify-content-center" style={{ margin: 'auto' }}>Postavi</button>
         </form>
     );
 }

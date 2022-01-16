@@ -181,6 +181,34 @@ a:hover {
   border: 2px solid var(--darkGray);
 }
 
+.media-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.media-wrapper:before {
+  content: '';
+  display: block;
+  padding-bottom: 58.25%;
+}
+
+.media-wrapper > img {
+  bottom: -9999px;
+  left: -9999px;
+  margin: auto;
+  max-width: none;
+  min-width: 100%;
+  position: absolute;
+  right: -9999px;
+  top: -9999px;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 /***********
 ** Forms
 ***********/

@@ -32,7 +32,7 @@ const CreateOrgGallery = () => {
     return (
         <>
             <label htmlFor={uniqueID} className="gallery-label">{images.length > 0 ? 'Fotografije:' : 'Dodaj fotografije u galeriju'}</label>
-            <div className={`image-upload image-upload--rect gallery-image-upload wrapper ${images.length > 0 ? 'hidden' : ''}`}>
+            <div className={`image-upload image-upload--rect image-upload-bg media-wrapper ${images.length > 0 ? 'hidden' : ''}`}>
                 <div className='image-upload-form'>
                     <input id={uniqueID} type="file" multiple onChange={(e) => onGalleryUpload(e)} />
                     <label htmlFor={uniqueID} className={`label label--l`}>
@@ -44,7 +44,7 @@ const CreateOrgGallery = () => {
             {images.length > 0 &&
                 <div className="gallery">
                     {images.map(img => (
-                        <picture className='gallery-img-wrapper'>
+                        <picture className='media-wrapper'>
                             <img className='gallery-img' src={img.imagePreviewUrl} alt="" />
                             <button onClick={() => onDeleteImg(img)} type='button' className='delete-btn delete-btn--s d-flex justify-content-center align-items-center'>
                                 <AiOutlineClose />
@@ -52,10 +52,10 @@ const CreateOrgGallery = () => {
                         </picture>
                     ))
                     }
-                    <div className={`image-upload image-upload--rect gallery-image-upload gallery-image-upload--inline wrapper ${images.length > 0 ? '' : 'hidden'}`}>
+                    <div className={`image-upload image-upload--rect image-upload--inline media-wrapper ${images.length > 0 ? '' : 'hidden'}`}>
                         <div className='image-upload-form'>
                             <input id={uniqueID} type="file" multiple onChange={(e) => onGalleryUpload(e)} />
-                            <label htmlFor={uniqueID} className={`label label--s`}>
+                            <label htmlFor={uniqueID} className="label label--s">
                                 <AddIcon className='icon icon--s' />
                                 <span>Dodaj fotografije</span>
                             </label>
