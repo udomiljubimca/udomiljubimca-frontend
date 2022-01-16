@@ -1,5 +1,25 @@
 .create-org-cover {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
+
+.create-org-cover .image-upload--rect {
+    margin-right: 117px;
+}
+
+/***********
+** Responsive
+***********/
+  
+@media only screen and (max-width: 767px) {
+
+    .create-org-cover {
+        flex-direction: column;
+    }
+
+    .create-org-cover .image-upload--rect {
+        margin-right: initial;
+        margin-bottom: 15px;
+    }
+}
+  

@@ -136,6 +136,11 @@ a:hover {
 .full-width {
   max-width: 100%!important;
 }
+
+.hidden {
+  display: none!important;
+}
+
 /***********
 ** Buttons
 ***********/
@@ -264,7 +269,7 @@ textarea {
 }
 
 .small {
-  margin: 13px 0 35px
+  margin: 20px 0 35px
 }
 
 /***********
@@ -313,9 +318,19 @@ textarea {
   .form-image-wrap {
     height: 400px;
   }
+
+    
+  /**
+   flex
+  **/
+
+  .d-mobile-column {
+    flex-direction: column;
+  }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1200px) {
+  
 }
 
 @media only screen and (max-width: 767px) {

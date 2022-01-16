@@ -2,6 +2,7 @@
 .select-group {
     max-width: 480px;
     width: 100%;
+    margin-bottom: 40px;
 }
 
 .select-wrapper {
@@ -30,3 +31,22 @@
 .select-group option {
     background: white;
 }
+
+
+/***********
+** Responsive
+***********/
+  
+@media only screen and (min-width:767px) and (max-width: 1200px) {
+    .select-group {
+        margin: 5px;
+    }
+}
+  
+  
+@media only screen and (min-width:1200px) {
+    .select-group {
+        max-width: 48%;
+    }
+}
+  

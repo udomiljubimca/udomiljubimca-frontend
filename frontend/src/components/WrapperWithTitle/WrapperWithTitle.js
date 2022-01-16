@@ -5,7 +5,7 @@ const WrapperWithTitle = ({ title, children }) => {
 
     return (
         <section className='container'>
-            <h1 className="page-title mt-4">{title}</h1>
+            <h1 className="page-title">{title}</h1>
             <div className='wrapper-with-title'>
                 {children && children.length ? children.map(child => child) : children}
             </div>

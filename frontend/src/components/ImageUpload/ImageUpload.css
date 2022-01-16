@@ -59,7 +59,7 @@
     font-size: 16px;
 }
 
-.label--2 span {
+.label--s span {
     margin-top: 12px;
 }
 
@@ -116,7 +116,9 @@
     font-size: 25px;
 }
 
-/* Create Org Gallery Image Upload */
+/***********
+** Create Org Gallery Images Upload
+***********/
 
 .gallery {
     display: grid;
@@ -142,6 +144,37 @@
     visibility: visible;
 }
 
-.hidden {
-    display: none;
+
+
+/***********
+** Responsive
+***********/
+  
+@media only screen and (max-width: 992px) {
+
+    .icon--l {
+        width: 54px;
+        height: 54px;
+    }
+    
+    .icon--s {
+        width: 35px;
+        height: 35px;
+    }
+
+    .label--l {
+        font-size: 18px;
+    }
+        
+    .label--s {
+        font-size: 14px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        margin-bottom: 100px;
+    }
 }
+  

@@ -10,4 +10,18 @@
 .page-title {
     font-size: 20px;
     text-transform: uppercase;
-  }
+    margin-top: 57px;
+}
+
+
+/***********
+** Responsive
+***********/
+  
+@media only screen and (max-width: 767px) {
+
+    .wrapper-with-title {
+        padding: 27px;
+    }
+}
+  

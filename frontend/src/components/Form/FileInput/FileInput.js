@@ -30,7 +30,7 @@ const FileInput = ({ label, isRequired, id, isFullWidth }) => {
                 <input onChange={(e) => onFileUpload(e)} id={id} type='file' required={isRequired} placeholder={label}></input>
                 <span className='placeholder'>{label}</span>
             </div>
-            {file.fileName && <p class='file-input-filename'>{file.fileName}</p>}
+            {file.fileName && <span class='file-input'>{file.fileName}</span>}
         </div>
     );
 }

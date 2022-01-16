@@ -14,6 +14,7 @@
    opacity: 0;
    margin-bottom: 0;
    width: 100%;
+   cursor: pointer;
 }
 
 
@@ -28,6 +29,7 @@
     left: 50px;
     bottom: 12px;
     background: unset;
+    z-index: -1;
 }
 
 .file-input-filename {
