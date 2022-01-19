@@ -4,7 +4,7 @@ import { ReactComponent as AddIcon } from '../../assets/add.svg'
 import { AiOutlineClose } from 'react-icons/ai'
 import { v4 as uuid } from 'uuid';
 
-const ImageUpload = ({ shape, maxWidth, iconSize, placeholder }) => {
+const ImageUpload = ({ shape, maxWidth, iconSize, placeholder, register, name }) => {
 
     const [src, setSrc] = useState({ file: null, imagePreviewUrl: null })
     const uniqueID = uuid();
@@ -35,7 +35,7 @@ const ImageUpload = ({ shape, maxWidth, iconSize, placeholder }) => {
                 </>
             }
             <div className='image-upload-form' style={src.imagePreviewUrl && { zIndex: '-1' }}>
-                <input id={uniqueID} type="file" onChange={(e) => onImgUpload(e)} />
+                <input id={uniqueID} type="file" onChange={(e) => onImgUpload(e)} {...register(name, { required: false })} />
                 <label htmlFor={uniqueID} className={`label label--${iconSize}`}>
                     <AddIcon className={`icon icon--${iconSize}`} />
                     {placeholder && <span>{placeholder}</span>}

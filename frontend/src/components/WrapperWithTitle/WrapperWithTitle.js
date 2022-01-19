@@ -13,5 +13,4 @@ const WrapperWithTitle = ({ title, children }) => {
 
     );
 }
-
 export default WrapperWithTitle;

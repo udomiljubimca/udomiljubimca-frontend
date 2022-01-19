@@ -318,15 +318,6 @@ textarea {
   .form-image-wrap {
     height: 400px;
   }
-
-    
-  /**
-   flex
-  **/
-
-  .d-mobile-column {
-    flex-direction: column;
-  }
 }
 
 @media only screen and (max-width: 1200px) {

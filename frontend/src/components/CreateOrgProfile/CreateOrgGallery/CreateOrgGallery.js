@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { ReactComponent as AddIcon } from '../../../assets/add.svg'
 import { AiOutlineClose } from 'react-icons/ai'
 import { v4 as uuid } from 'uuid';
-
-const CreateOrgGallery = () => {
+import { Controller } from 'react-hook-form'
+const CreateOrgGallery = ({ register, name, control }) => {
     const [images, setImages] = useState([])
     const uniqueID = uuid();
 
@@ -34,7 +34,21 @@ const CreateOrgGallery = () => {
             <label htmlFor={uniqueID} className="gallery-label">{images.length > 0 ? 'Fotografije:' : 'Dodaj fotografije u galeriju'}</label>
             <div className={`image-upload image-upload--rect image-upload-bg media-wrapper ${images.length > 0 ? 'hidden' : ''}`}>
                 <div className='image-upload-form'>
-                    <input id={uniqueID} type="file" multiple onChange={(e) => onGalleryUpload(e)} />
+                    {/* <input id={uniqueID} type="file" multiple {...register(name, { onChange: (e) => console.log(e) })} /> */}
+                    <Controller
+                        name={name}
+                        control={control}
+                        defaultValue=""
+                        render={({ field: { ref, onChange, ...field } }) => (
+                            <input
+                                {...field}
+                                id={uniqueID} type="file" multiple
+                                innerRef={ref}
+                                onChange={(e) => onChange(onGalleryUpload(e))}
+                            />
+                        )}
+                    />
+
                     <label htmlFor={uniqueID} className={`label label--l`}>
                         <AddIcon className='icon icon--l' />
                         <span>Dodaj fotografije</span>
@@ -43,8 +57,8 @@ const CreateOrgGallery = () => {
             </div>
             {images.length > 0 &&
                 <div className="gallery">
-                    {images.map(img => (
-                        <picture className='media-wrapper'>
+                    {images.map((img, key) => (
+                        <picture className='media-wrapper' key={key}>
                             <img className='gallery-img' src={img.imagePreviewUrl} alt="" />
                             <button onClick={() => onDeleteImg(img)} type='button' className='delete-btn delete-btn--s d-flex justify-content-center align-items-center'>
                                 <AiOutlineClose />
@@ -54,7 +68,19 @@ const CreateOrgGallery = () => {
                     }
                     <div className={`image-upload image-upload--rect image-upload--inline media-wrapper ${images.length > 0 ? '' : 'hidden'}`}>
                         <div className='image-upload-form'>
-                            <input id={uniqueID} type="file" multiple onChange={(e) => onGalleryUpload(e)} />
+                            <Controller
+                                name={name}
+                                control={control}
+                                defaultValue=""
+                                render={({ field: { ref, onChange, ...field } }) => (
+                                    <input
+                                        {...field}
+                                        id={uniqueID} type="file" multiple
+                                        innerRef={ref}
+                                        onChange={(e) => onChange(onGalleryUpload(e))}
+                                    />
+                                )}
+                            />
                             <label htmlFor={uniqueID} className="label label--s">
                                 <AddIcon className='icon icon--s' />
                                 <span>Dodaj fotografije</span>

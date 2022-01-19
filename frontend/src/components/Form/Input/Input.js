@@ -1,14 +1,17 @@
 import React from 'react';
 import './Input.css'
-const Input = ({ type, label, placeholder, isRequired, id, isFullWidth }) => {
+const Input = ({ type, label, placeholder, isRequired, isFullWidth, register, name, errors }) => {
 
     return (
         <div className={`input-wrapper d-flex flex-column ${isFullWidth ? 'full-width' : ''}`}>
-            <label htmlFor={id}>
+            <label htmlFor={name}>
                 {label}
                 {isRequired && <span className='asterix'>*</span>}
             </label>
-            <input id={id} type={type} required={isRequired} placeholder={placeholder}></input>
+            <input type={type} placeholder={placeholder} id={name} {...register(name, { required: isRequired })}></input>
+            {errors.name && (
+                <p className="form-error">Proverite unos</p>
+            )}
         </div>
     );
 }

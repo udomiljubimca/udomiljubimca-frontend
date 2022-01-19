@@ -1,6 +1,4 @@
 .input-wrapper {
-    max-width: 480px;
-    width: 100%;
     border-radius: 6px;
 }
 
@@ -18,12 +16,6 @@
 @media only screen and (min-width:767px) and (max-width: 1200px) {
     .input-wrapper {
         margin: 5px;
-    }
-}
-  
-@media only screen and (min-width:1200px) {
-    .input-wrapper {
-        max-width: 48%;
     }
 }
   
