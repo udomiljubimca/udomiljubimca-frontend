@@ -34,7 +34,6 @@ const CreateOrgGallery = ({ register, name, control }) => {
             <label htmlFor={uniqueID} className="gallery-label">{images.length > 0 ? 'Fotografije:' : 'Dodaj fotografije u galeriju'}</label>
             <div className={`image-upload image-upload--rect image-upload-bg media-wrapper ${images.length > 0 ? 'hidden' : ''}`}>
                 <div className='image-upload-form'>
-                    {/* <input id={uniqueID} type="file" multiple {...register(name, { onChange: (e) => console.log(e) })} /> */}
                     <Controller
                         name={name}
                         control={control}
