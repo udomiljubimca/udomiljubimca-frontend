@@ -35,7 +35,9 @@ const ImageUpload = ({ shape, maxWidth, iconSize, placeholder, register, name })
                 </>
             }
             <div className='image-upload-form' style={src.imagePreviewUrl && { zIndex: '-1' }}>
-                <input id={uniqueID} type="file" onChange={(e) => onImgUpload(e)} {...register(name, { required: false })} />
+                {/* <input id={uniqueID} type="file" onChange={(e) => onImgUpload(e)} {...register(name, { required: false })} /> */}
+                <input id={uniqueID} type="file" onChange={(e) => onImgUpload(e)} />
+
                 <label htmlFor={uniqueID} className={`label label--${iconSize}`}>
                     <AddIcon className={`icon icon--${iconSize}`} />
                     {placeholder && <span>{placeholder}</span>}

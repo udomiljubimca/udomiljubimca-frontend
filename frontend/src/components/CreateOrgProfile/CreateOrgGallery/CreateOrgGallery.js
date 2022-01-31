@@ -3,6 +3,7 @@ import { ReactComponent as AddIcon } from '../../../assets/add.svg'
 import { AiOutlineClose } from 'react-icons/ai'
 import { v4 as uuid } from 'uuid';
 import { Controller } from 'react-hook-form'
+
 const CreateOrgGallery = ({ register, name, control }) => {
     const [images, setImages] = useState([])
     const uniqueID = uuid();
@@ -67,7 +68,9 @@ const CreateOrgGallery = ({ register, name, control }) => {
                     }
                     <div className={`image-upload image-upload--rect image-upload--inline media-wrapper ${images.length > 0 ? '' : 'hidden'}`}>
                         <div className='image-upload-form'>
-                            <Controller
+                            <input id={uniqueID} type="file" multiple onChange={(e) => onGalleryUpload(e)} />
+
+                            {/* <Controller
                                 name={name}
                                 control={control}
                                 defaultValue=""
@@ -75,11 +78,10 @@ const CreateOrgGallery = ({ register, name, control }) => {
                                     <input
                                         {...field}
                                         id={uniqueID} type="file" multiple
-                                        innerRef={ref}
                                         onChange={(e) => onChange(onGalleryUpload(e))}
                                     />
                                 )}
-                            />
+                            /> */}
                             <label htmlFor={uniqueID} className="label label--s">
                                 <AddIcon className='icon icon--s' />
                                 <span>Dodaj fotografije</span>
