@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useState } from "react";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/home/index";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 

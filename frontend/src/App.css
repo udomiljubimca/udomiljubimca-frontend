@@ -244,6 +244,104 @@ label .asterix {
   padding: 2rem;
 }
 
+
+/***********
+** Home Page
+***********/
+
+.home .hero {
+  min-height: 600px;
+  background-color: #313131;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 88px 0 0;
+}
+
+.home .hero__caption {
+  max-width: 428px;
+  width: 100%;
+}
+
+.home .hero__caption h1,
+.home .hero__caption p {
+  color: #fff;
+}
+
+.home .hero__caption h1 {
+  font-size: 40px;
+  max-width: 370px;
+}
+
+.home .hero__caption p {
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 50px;
+}
+
+.search-widget {
+  padding: 60px 0;
+}
+
+.search-widget .form {
+  display: flex;
+  align-items: center;
+}
+
+.search-widget .btn {
+  background-color: #f9ae05;
+  padding: 0 42px;
+  height: 60px;
+  outline: none;
+}
+
+.search-widget .btn:not(:last-child) {
+  margin-right: 4px;
+}
+
+.search-widget .input {
+  background-color: transparent;
+  border: 3px solid #f9ae05;
+  height: 60px;
+  padding: 0 20px;
+  margin-right: 4px;
+}
+
+.search-widget .btn,
+.search-widget .input {
+  border-radius: 0;
+}
+
+.btn--default {
+  width: 180px;
+  height: 50px;
+  line-height: 52px;
+}
+
+
+.available-for-adopt .featured-slider {
+  margin-bottom: 0;
+}
+
+/*  TESTIMONIAL SECTION  */
+.testimonial-section {
+  padding: 100px 0;
+}
+
+.testimonial-section .text-placeholder {
+  max-width: 576px;
+}
+
+.testimonial-section .text-placeholder p {
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: #818181;
+}
+
+.testimonial-section .text-placeholder p:last-of-type {
+  margin-bottom: 60px;
+}
+
 /***********
 ** Responsive
 ***********/

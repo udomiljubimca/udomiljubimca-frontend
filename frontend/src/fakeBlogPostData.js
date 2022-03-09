@@ -1,6 +1,6 @@
-function blogData() {
-  return [
+export const blogData = [
     {
+      thumbnail: 'https://moj.pet-centar.rs/images/stories/moj_ljubimac/PSI/labrador_270x330.jpg',
       title: "Lorem ipsum dolor sit amet, consec tetur adipiscing elit",
       desc: "Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metuLorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet consectetur. Vivamus eget elementum ligula, vitae pharetra quam. Nullam at ligula sed metu",
       url: "url1",
@@ -9,6 +9,7 @@ function blogData() {
       date: "25.5.2020",
     },
     {
+      thumbnail: 'https://moj.pet-centar.rs/images/stories/moj_ljubimac/PSI/labrador_270x330.jpg',
       title: "Vestibulum rhoncudsa s dui vel eros laoreet consectetur",
       desc: "Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.",
       url: "url2",
@@ -17,6 +18,7 @@ function blogData() {
       date: "5.7.2021",
     },
     {
+      thumbnail: 'https://moj.pet-centar.rs/images/stories/moj_ljubimac/PSI/labrador_270x330.jpg',
       title: "WW Praesent bibendum ligula, in rhoncus d",
       desc: "Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed. Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.",
       url: "url3",
@@ -25,6 +27,7 @@ function blogData() {
       date: "1.2.2021",
     },
     {
+      thumbnail: 'https://moj.pet-centar.rs/images/stories/moj_ljubimac/PSI/labrador_270x330.jpg',
       title: "SPraesent biben32dum ligula lacus, in rhoncus ",
       desc: "Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.Nullam fermentum leo nec lorem ultricies faucibus. Nulla sit amet pellentesque est. Praesent bibendum ligula lacus, in rhoncus sapien ullamcorper sed.",
       url: "url4",
@@ -72,7 +75,6 @@ function blogData() {
       role: "Direktor",
       date: "2.7.2021",
     },
-  ];
-}
+  ]
 
 export default blogData;
