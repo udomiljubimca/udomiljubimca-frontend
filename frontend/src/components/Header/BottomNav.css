@@ -1,7 +1,7 @@
 .bottom-nav {
   justify-content: space-between;
   align-items: flex-end;    
-  margin: 6px auto;
+  margin: 20px auto;
 }
 
 .bottom-nav a {

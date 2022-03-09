@@ -7,9 +7,10 @@ import Heart from '../Heart/Heart';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './FeaturedSlider.css'
+import SectionName from "../SectionName";
 
 function FeaturedSlider({ sliderData, isUserView, isLike }) {
-    var settings = {
+    let settings = {
         infinite: false,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -46,15 +47,17 @@ function FeaturedSlider({ sliderData, isUserView, isLike }) {
     return (
         <section className='featured-slider'>
             <div className='container'>
-                <h2 className="page-title mt-4">DOSTUPNI LJUBIMCI</h2>
-                <h3 className="section-title">{isUserView ? 'Moji omiljeni ljubimci' : 'Ljubimci za udomljivanje'}</h3>
+                {/* Section Name - Orange letters with cross line on the left */}
+                <SectionName text='Dostupni ljubimci' />
+                <h3 className="section-title">{sliderData.isUserView ? 'Moji omiljeni ljubimci' : 'Ljubimci za udomljivanje'}</h3>
                 <Slider {...settings}>
                     {sliderData.map((pet, index) => {
                         return (
                             <div key={index} className='slider-card'>
                                 <div className='card-cover'>
                                     <img src={pet.image} alt="{pet.name}" />
-                                    {isUserView && <Heart isLike={isLike} kojeSrce={pet} />
+                                    {
+                                        isUserView && <Heart isLike={isLike} kojeSrce={pet} />
                                     }
                                 </div>
                                 <div className='card-details'>
