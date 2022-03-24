@@ -133,6 +133,14 @@ a:hover {
   display: inline-block;
 }
 
+.full-width {
+  max-width: 100%!important;
+}
+
+.hidden {
+  display: none!important;
+}
+
 /***********
 ** Buttons
 ***********/
@@ -178,6 +186,34 @@ a:hover {
   border: 2px solid var(--darkGray);
 }
 
+.media-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.media-wrapper:before {
+  content: '';
+  display: block;
+  padding-bottom: 58.25%;
+}
+
+.media-wrapper > img {
+  bottom: -9999px;
+  left: -9999px;
+  margin: auto;
+  max-width: none;
+  min-width: 100%;
+  position: absolute;
+  right: -9999px;
+  top: -9999px;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 /***********
 ** Forms
 ***********/
@@ -187,7 +223,7 @@ a:hover {
 }
 
 input:not([type="submit"]),
-textarea {
+textarea, select {
   height: 46px;
   background: var(--white);
   border: 2px solid var(--darkGray);
@@ -214,7 +250,7 @@ textarea {
   cursor: pointer;
 }
 
-label .asterix {
+.asterix {
   color: var(--red);
   font-weight: 300;
 }
@@ -230,6 +266,10 @@ label .asterix {
 .form-title .title-underline:after {
   width: 100%;
   border: 2px solid var(--red);
+}
+
+.small {
+  margin: 20px 0 35px
 }
 
 /***********
@@ -378,7 +418,8 @@ label .asterix {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1200px) {
+  
 }
 
 @media only screen and (max-width: 767px) {

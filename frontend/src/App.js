@@ -18,6 +18,7 @@ import BlogPostPage from "./pages/BlogPostPage";
 import DonationsPage from "./pages/DonationsPage";
 import PetProfileOrganizationPage from "./pages/PetProfileOrganizationPage";
 import UserProfilePage from './pages/UserProfilePage';
+import CreateOrgProfilePage from './pages/CreateOrgProfilePage'
 
 //testing modals
 import TestPage from "./pages/TestPage";
@@ -91,6 +92,9 @@ function App() {
           </Route>
           <Route exact path="/profil/:name">
             <UserProfilePage isUser={true} isLike={isLike} />
+          </Route>
+          <Route exact path="/napravi-profil">
+            <CreateOrgProfilePage />
           </Route>
           {/* <Route exact path="/test">
             <TestPage />

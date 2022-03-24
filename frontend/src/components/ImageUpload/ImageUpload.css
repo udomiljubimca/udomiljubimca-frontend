@@ -1,0 +1,180 @@
+.image-upload {
+    background: var(--lightGray);
+    border-radius: 6px;
+    position: relative;
+}
+
+.image-upload--rect.media-wrapper:before {
+    padding-bottom: 58.25%;
+}
+
+.image-upload--square.media-wrapper:before {
+    padding-bottom: 93%;
+}
+
+.image-upload-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: var(--darkGray);
+    transition: transform .4s ease;
+}
+
+.image-upload-form svg{
+    transition: transform .4s ease;
+}
+
+.image-upload-form:hover svg{
+    transform: scale(1.1);
+}
+
+.image-upload-form:active svg{
+    transform: scale(0.9);
+}
+
+.image-upload input {
+    display: none;
+}
+
+.image-upload .label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.label--l {
+    font-size: 24px;
+}
+
+.label--l span {
+    margin-top: 20px;
+}
+
+.label--s {
+    font-size: 16px;
+}
+
+.label--s span {
+    margin-top: 12px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.icon--l {
+    width: 74px;
+    height: 74px;
+}
+
+.icon--s {
+    width: 45px;
+    height: 45px;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    background: #F75451;
+    opacity: 0.7;
+    border-radius: 100%;
+    border-color: transparent;
+    transition: opacity .4s ease;
+    padding: 0;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.delete-btn--s {
+    width: 25px;
+    height: 25px;
+}
+
+.delete-btn--l {
+    width: 42px;
+    height: 42px;
+}
+
+.delete-btn svg {
+    fill: var(--white);
+}
+
+.delete-btn--s svg {
+    font-size: 15px;
+}
+
+.delete-btn--l svg {
+    font-size: 25px;
+}
+
+/***********
+** Create Org Gallery Images Upload
+***********/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 100px;
+}
+
+.image-upload-bg {
+    max-width: 490px;
+    margin: 8px auto 100px;
+}
+
+.image-upload--inline {
+    margin: unset;
+}
+
+.gallery .media-wrapper .delete-btn {
+    visibility: hidden;
+}
+
+.gallery .media-wrapper:hover .delete-btn {
+    visibility: visible;
+}
+
+
+
+/***********
+** Responsive
+***********/
+  
+@media only screen and (max-width: 992px) {
+
+    .icon--l {
+        width: 54px;
+        height: 54px;
+    }
+    
+    .icon--s {
+        width: 35px;
+        height: 35px;
+    }
+
+    .label--l {
+        font-size: 18px;
+    }
+        
+    .label--s {
+        font-size: 14px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        margin-bottom: 100px;
+    }
+}
+  

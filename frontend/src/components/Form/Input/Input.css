@@ -1,0 +1,21 @@
+.input-wrapper {
+    border-radius: 6px;
+}
+
+.input-wrapper input {
+    border-color: #4F4F4F;
+    padding: 5px 16px;
+    margin-bottom: 40px;
+}
+
+
+/***********
+** Responsive
+***********/
+  
+@media only screen and (min-width:767px) and (max-width: 1200px) {
+    .input-wrapper {
+        margin: 5px;
+    }
+}
+  

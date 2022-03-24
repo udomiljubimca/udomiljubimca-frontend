@@ -31,9 +31,7 @@ function UserProfile({ userData, isUserView }) {
 
 
   return (
-    <section className="user-profile container">
-      <h1 className="page-title mt-4">PROFIL KORISNIKA</h1>
-
+    <section className="user-profile">
       <div className="user-profile__inner">
         <div className="user-profile__intro">
           <div onClick={() => isEditing && imageUploader.current.click()} style={{

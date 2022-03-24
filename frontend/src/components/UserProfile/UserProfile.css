@@ -7,11 +7,8 @@
   text-transform: uppercase;
 }
 
-.user-profile__inner {
-  border: var(--border);
-  border-radius: 5px;
-  padding: 116px 93px 102px;
-  margin-top: 25px;
+.user-profile {
+  padding: 50px 0;
 }
 
 .user-profile__intro {
@@ -20,6 +17,7 @@
   align-items: center;
   flex-direction: column;
   border-bottom: var(--border);
+  
 }
 
 .user-profile__intro img {

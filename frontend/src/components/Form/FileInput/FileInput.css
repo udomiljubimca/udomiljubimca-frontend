@@ -1,0 +1,37 @@
+.file-input-group {
+    max-width: 480px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.file-input-wrapper {
+    border: 2px solid #4F4F4F;
+    border-radius: 8px;
+    position: relative;
+ }
+
+.file-input-wrapper input {
+   opacity: 0;
+   margin-bottom: 0;
+   width: 100%;
+   cursor: pointer;
+}
+
+
+.file-input-wrapper svg {
+    position: absolute;
+    left: 16px;
+    bottom: 15px;
+}
+
+.file-input-wrapper .placeholder {
+    position: absolute;
+    left: 50px;
+    bottom: 12px;
+    background: unset;
+    z-index: -1;
+}
+
+.file-input-filename {
+    margin-top: 8px;
+}

@@ -1,0 +1,27 @@
+.wrapper-with-title {
+    border: 1px solid var(--yellow);
+    border-radius: 5px;
+    padding: 57px;
+    margin-top: 25px;  
+    margin-bottom: 80px;
+    height: 100%;
+}
+
+.page-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 57px;
+}
+
+
+/***********
+** Responsive
+***********/
+  
+@media only screen and (max-width: 767px) {
+
+    .wrapper-with-title {
+        padding: 27px;
+    }
+}
+  
